@@ -15,6 +15,8 @@ reset_data_description = "Önbelleğe alınan verileri temizleyin ve uygulamayı
 checking_for_update = "Güncelleme Kontrol Ediliyor...";
 update_available = "Güncelleme Mevcut";
 
+restart_is_required_description = "Değişiklikten sonra uygulamanın yeniden başlatılması gerekiyor.";
+
 // Patching
 
 do_not_patch_premium = "Premium için olan Yamayı Yapma";
@@ -22,11 +24,14 @@ patching_description = "Yama, kullanıcı verilerini yüklemek için yapılan is
 
 Aktif bir Premium aboneliğiniz varsa, Premium'u Yama Yapma seçeneğini açabilirsiniz. Yama, verileri yamalamaz veya Premium sunucu tarafı özelliklerinin kullanımını kısıtlamaz. Değişiklikten sonra uygulamanın yeniden başlatılması gerekir.";
 
+%@";
+
 overwrite_configuration = "Yapılandırmayı Üzerine Yaz";
 overwrite_configuration_description = "Uzaktan yapılandırmayı Premium ile değiştirilmiş yapılandırma ile değiştirin. Bu yapılandırma çoğu UI/UX parametresini tanımlar ve yararlı olabilir, ancak sorunlara yol açabilir.";
 
 // Lyrics
 
+do_not_replace_lyrics = "Şarkı Sözlerini Değiştirmeyin";
 lyrics_source = "Şarkı Sözü Kaynağı";
 lyrics_source_description = "Tercih ettiğiniz şarkı sözü kaynağını seçebilirsiniz.
 
@@ -72,10 +77,11 @@ dark_popups = "Koyu Açılır Pencereler";
 
 /* MARK: Premium PopUps */
 
-have_premium_popup = "Aktif bir Premium aboneliğiniz var gibi görünüyor, bu yüzden yama, verileri yama yapmayacak veya Premium sunucu tarafı özelliklerinin kullanımını kısıtlamayacaktır. Bunu EeveeSpotify ayarlarında yönetebilirsiniz.";
+have_premium_popup = "Aktif bir Premium aboneliğiniz var gibi görünüyor, bu yüzden yama, verileri yamalamayacak veya Premium sunucu tarafı özelliklerinin kullanımını kısıtlamayacaktır. Bunu EeveeSpotify ayarlarında yönetebilirsiniz.";
 
 high_audio_quality_popup = "Çok yüksek ses kalitesi sunucu taraflıdır ve bu yamayla mevcut değildir.";
 playlist_downloading_popup = "Uygulama içi çalma listesi indirme sunucu taraflıdır ve bu yamayla mevcut değildir. Ancak podcast bölümlerini indirebilirsiniz.";
+download_local_playlist = "Yerel çalma listesini indir";
 
 /* MARK: Lyrics */
 
@@ -102,3 +108,5 @@ let_the_music_play = "Müzik çalmaya devam etsin...";
 // liked songs title, should match official spotify loc
 
 liked_songs = "Beğenilen Şarkılar";
+
+contributors = "Katkıda bulunanlar";
