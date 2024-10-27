@@ -15,6 +15,7 @@ Please refrain from opening issues about the following features, as they are ser
 - Very High audio quality
 - Native playlist downloading (you can download podcast episodes though)
 - Jam (hosting a Spotify Jam and joining it remotely requires Premium; only joining in-person works)
+- AI DJ/Playlist
 
 It's possible to implement downloading locally, but it will never be included in EeveeSpotify (unless someone opens a pull request).
 
