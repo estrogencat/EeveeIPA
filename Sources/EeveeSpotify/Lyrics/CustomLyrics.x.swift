@@ -126,7 +126,7 @@ class LyricsOnlyViewControllerHook: ClassHook<UIViewController> {
 
 private func loadLyricsForCurrentTrack() throws {
     guard let track = HookedInstances.currentTrack else {
-        throw LyricsError.NoCurrentTrack
+        throw LyricsError.noCurrentTrack
     }
     
     //
@@ -145,7 +145,7 @@ private func loadLyricsForCurrentTrack() throws {
         case .lrclib: LrcLibLyricsRepository()
         case .musixmatch: MusixmatchLyricsRepository.shared
         case .petit: PetitLyricsRepository()
-        case .notReplaced: throw LyricsError.InvalidSource
+        case .notReplaced: throw LyricsError.invalidSource
     }
     
     let lyricsDto: LyricsDto
@@ -163,7 +163,7 @@ private func loadLyricsForCurrentTrack() throws {
             
             switch error {
                 
-            case .InvalidMusixmatchToken:
+            case .invalidMusixmatchToken:
                 if !hasShownUnauthorizedPopUp {
                     PopUpHelper.showPopUp(
                         delayed: false,
@@ -174,7 +174,7 @@ private func loadLyricsForCurrentTrack() throws {
                     hasShownUnauthorizedPopUp.toggle()
                 }
             
-            case .MusixmatchRestricted:
+            case .musixmatchRestricted:
                 if !hasShownRestrictedPopUp {
                     PopUpHelper.showPopUp(
                         delayed: false,
@@ -190,7 +190,7 @@ private func loadLyricsForCurrentTrack() throws {
             }
         }
         else {
-            lastLyricsState.fallbackError = .UnknownError
+            lastLyricsState.fallbackError = .unknownError
         }
         
         if source == .genius || !UserDefaults.geniusFallback {
@@ -221,7 +221,7 @@ private func loadLyricsForCurrentTrack() throws {
 
 func getLyricsForCurrentTrack(originalLyrics: Lyrics? = nil) throws -> Data {
     guard let track = HookedInstances.currentTrack else {
-        throw LyricsError.NoCurrentTrack
+        throw LyricsError.noCurrentTrack
     }
     
     var lyrics = preloadedLyrics
@@ -232,7 +232,7 @@ func getLyricsForCurrentTrack(originalLyrics: Lyrics? = nil) throws -> Data {
     }
     
     guard var lyrics = lyrics else {
-        throw LyricsError.UnknownError
+        throw LyricsError.unknownError
     }
     
     let lyricsColorsSettings = UserDefaults.lyricsColors

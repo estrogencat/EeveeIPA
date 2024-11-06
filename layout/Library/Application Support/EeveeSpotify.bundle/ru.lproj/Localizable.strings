@@ -108,3 +108,6 @@ let_the_music_play = "Пусть заиграет музыка...";
 liked_songs = "Тебе понравилось";
 
 contributors = "Участники";
+
+request_anonymous_token = "Запросить анонимный токен";
+request_anonymous_token_description = "Нажмите Запросить анонимный токен, и EeveeSpotify попытается запросить токен у Musixmatch без авторизации.";

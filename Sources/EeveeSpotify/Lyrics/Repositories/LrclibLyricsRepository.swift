@@ -97,7 +97,7 @@ struct LrcLibLyricsRepository: LyricsRepository {
         let songs = try searchSong("\(strippedTitle) \(query.primaryArtist)")
         
         guard let song = mostRelevantSong(songs: songs, strippedTitle: strippedTitle) else {
-            throw LyricsError.NoSuchSong
+            throw LyricsError.noSuchSong
         }
         
         if let syncedLyrics = song.syncedLyrics {
@@ -110,7 +110,7 @@ struct LrcLibLyricsRepository: LyricsRepository {
         }
         
         guard let plainLyrics = song.plainLyrics else {
-            throw LyricsError.DecodingError
+            throw LyricsError.decodingError
         }
         
         let lines = Array(plainLyrics.components(separatedBy: "\n").dropLast())

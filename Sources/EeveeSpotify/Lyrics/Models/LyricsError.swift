@@ -1,23 +1,23 @@
 import Foundation
 
 enum LyricsError: Error, CustomStringConvertible {
-    case NoCurrentTrack
-    case MusixmatchRestricted
-    case InvalidMusixmatchToken
-    case DecodingError
-    case NoSuchSong
-    case UnknownError
-    case InvalidSource
+    case noCurrentTrack
+    case musixmatchRestricted
+    case invalidMusixmatchToken
+    case decodingError
+    case noSuchSong
+    case unknownError
+    case invalidSource
     
     var description: String {
         switch self {
-        case .NoSuchSong: "no_such_song".localized
-        case .MusixmatchRestricted: "musixmatch_restricted".localized
-        case .InvalidMusixmatchToken: "invalid_musixmatch_token".localized
-        case .DecodingError: "decoding_error".localized
-        case .NoCurrentTrack: "no_current_track".localized
-        case .UnknownError: "unknown_error".localized
-        case .InvalidSource: ""
+        case .noSuchSong: "no_such_song".localized
+        case .musixmatchRestricted: "musixmatch_restricted".localized
+        case .invalidMusixmatchToken: "invalid_musixmatch_token".localized
+        case .decodingError: "decoding_error".localized
+        case .noCurrentTrack: "no_current_track".localized
+        case .unknownError: "unknown_error".localized
+        case .invalidSource: ""
         }
     }
 }

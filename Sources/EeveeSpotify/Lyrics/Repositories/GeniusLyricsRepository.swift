@@ -53,7 +53,7 @@ struct GeniusLyricsRepository: LyricsRepository {
         }
 
         guard let rootResponse = try? jsonDecoder.decode(GeniusRootResponse.self, from: data!) else {
-            throw LyricsError.DecodingError
+            throw LyricsError.decodingError
         }
         return rootResponse.response
     }
@@ -67,7 +67,7 @@ struct GeniusLyricsRepository: LyricsRepository {
             case .sections(let sectionsResponse) = data,
             let section = sectionsResponse.sections.first
         else {
-            throw LyricsError.DecodingError
+            throw LyricsError.decodingError
         }
         
         return section.hits
@@ -77,7 +77,7 @@ struct GeniusLyricsRepository: LyricsRepository {
         let data = try perform("/songs/\(songId)", query: ["text_format": "plain"])
         
         guard case .song(let songResponse) = data else {
-            throw LyricsError.DecodingError
+            throw LyricsError.decodingError
         }
         
         return songResponse.song
@@ -131,7 +131,7 @@ struct GeniusLyricsRepository: LyricsRepository {
         let hits = try searchSong("\(strippedTitle) \(query.primaryArtist)")
     
         guard !hits.isEmpty else {
-            throw LyricsError.NoSuchSong
+            throw LyricsError.noSuchSong
         }
         
         var hasFoundRomanizedLyrics = false

@@ -25,7 +25,7 @@ extension EeveeLyricsSettingsView {
         }
         .onChange(of: lyricsSource) { [lyricsSource] newSource in
             if newSource == .musixmatch && musixmatchToken.isEmpty {
-                showMusixmatchTokenAlert(lyricsSource)
+                showMusixmatchTokenAlert(lyricsSource, showAnonymousTokenOption: true)
                 return
             }
 

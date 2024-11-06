@@ -13,10 +13,17 @@ extension EeveeLyricsSettingsView {
         return nil
     }
     
-    func showMusixmatchTokenAlert(_ oldSource: LyricsSource) {
+    func showMusixmatchTokenAlert(_ oldSource: LyricsSource, showAnonymousTokenOption: Bool) {
+        var message = "enter_user_token_message".localized
+        
+        if showAnonymousTokenOption {
+            message.append("\n\n")
+            message.append("request_anonymous_token_description".localized)
+        }
+        
         let alert = UIAlertController(
             title: "enter_user_token".localized,
-            message: "enter_user_token_message".localized,
+            message: message,
             preferredStyle: .alert
         )
         
@@ -27,6 +34,25 @@ extension EeveeLyricsSettingsView {
         alert.addAction(UIAlertAction(title: "Cancel".uiKitLocalized, style: .cancel) { _ in
             lyricsSource = oldSource
         })
+        
+        if showAnonymousTokenOption {
+            alert.addAction(UIAlertAction(title: "request_anonymous_token".localized, style: .default) { _ in
+                Task {
+                    defer {
+                        isRequestingMusixmatchToken.toggle()
+                    }
+                    do {
+                        isRequestingMusixmatchToken.toggle()
+                        
+                        musixmatchToken = try await AnonymousTokenHelper.requestAnonymousMusixmatchToken()
+                        UserDefaults.lyricsSource = .musixmatch
+                    }
+                    catch {
+                        showMusixmatchTokenAlert(oldSource, showAnonymousTokenOption: false)
+                    }
+                }
+            })
+        }
 
         alert.addAction(UIAlertAction(title: "OK".uiKitLocalized, style: .default) { _ in
             let text = alert.textFields!.first!.text!

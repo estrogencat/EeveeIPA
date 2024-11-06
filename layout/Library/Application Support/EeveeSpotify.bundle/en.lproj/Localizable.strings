@@ -110,3 +110,6 @@ let_the_music_play = "Let the music play...";
 liked_songs = "Liked songs";
 
 contributors = "Contributors";
+
+request_anonymous_token = "Request Anonymous Token";
+request_anonymous_token_description = "Tap “Request Anonymous Token,” so EeveeSpotify will try to request the token from Musixmatch without authorization.";

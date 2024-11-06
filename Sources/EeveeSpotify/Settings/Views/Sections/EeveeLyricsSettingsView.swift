@@ -4,9 +4,11 @@ struct EeveeLyricsSettingsView: View {
     @State var musixmatchToken = UserDefaults.musixmatchToken
     @State var lyricsSource = UserDefaults.lyricsSource
     @State var geniusFallback = UserDefaults.geniusFallback
-    @State var lyricsOptions = UserDefaults.lyricsOptions
-
-    @State var showLanguageWarning = false
+    
+    @State private var lyricsOptions = UserDefaults.lyricsOptions
+    
+    @State var isRequestingMusixmatchToken = false
+    @State private var isShowingLanguageWarning = false
     
     var body: some View {
         List {
@@ -46,7 +48,7 @@ struct EeveeLyricsSettingsView: View {
                 if lyricsSource == .musixmatch {
                     Section {
                         HStack {
-                            if showLanguageWarning {
+                            if isShowingLanguageWarning {
                                 Image(systemName: "exclamationmark.triangle")
                                     .font(.title3)
                                     .foregroundColor(.yellow)
@@ -75,8 +77,11 @@ struct EeveeLyricsSettingsView: View {
         }
         .listStyle(GroupedListStyle())
         
+        .disabled(isRequestingMusixmatchToken)
+        
         .animation(.default, value: lyricsSource)
-        .animation(.default, value: showLanguageWarning)
+        .animation(.default, value: isRequestingMusixmatchToken)
+        .animation(.default, value: isShowingLanguageWarning)
         .animation(.default, value: geniusFallback)
         
         .onChange(of: geniusFallback) { geniusFallback in
@@ -87,7 +92,7 @@ struct EeveeLyricsSettingsView: View {
             let selectedLanguage = lyricsOptions.musixmatchLanguage
             
             if selectedLanguage.isEmpty || selectedLanguage ~= "^[\\w\\d]{2}$" {
-                showLanguageWarning = false
+                isShowingLanguageWarning = false
                 
                 MusixmatchLyricsRepository.shared.selectedLanguage = selectedLanguage
                 UserDefaults.lyricsOptions = lyricsOptions
@@ -95,7 +100,7 @@ struct EeveeLyricsSettingsView: View {
                 return
             }
             
-            showLanguageWarning = true
+            isShowingLanguageWarning = true
         }
     }
 }
