@@ -31,7 +31,7 @@ overwrite_configuration_description = "Înlocuiți configurația de la distanț�
 
 // Lyrics
 
-do_not_replace_lyrics = "Do Not Replace Versuri";
+do_not_replace_lyrics = "Nu înlocuiți versurile";
 lyrics_source = "Versuri Sursa";
 lyrics_source_description = "Puteți selecta sursa de versuri pe care o preferați.
 
