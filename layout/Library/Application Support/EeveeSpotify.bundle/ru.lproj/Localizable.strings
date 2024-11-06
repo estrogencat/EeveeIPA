@@ -110,4 +110,4 @@ liked_songs = "Тебе понравилось";
 contributors = "Участники";
 
 request_anonymous_token = "Запросить анонимный токен";
-request_anonymous_token_description = "Нажмите Запросить анонимный токен, и EeveeSpotify попытается запросить токен у Musixmatch без авторизации.";
+request_anonymous_token_description = "Нажмите Запросить анонимный токен, чтобы запросить токен у Musixmatch без авторизации.";
