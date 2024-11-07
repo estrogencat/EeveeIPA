@@ -110,3 +110,6 @@ let_the_music_play = "Lad musikken spille...";
 liked_songs = "Sange, du synes godt om";
 
 contributors = "Bidragydere";
+
+request_anonymous_token = "Anmod om anonymt token";
+request_anonymous_token_description = "Tryk på \"Anmod om anonymt token\" for at anmode om et token fra Musixmatch uden autorisation."
