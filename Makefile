@@ -1,5 +1,6 @@
 TARGET := iphone:clang:latest:14.0
 INSTALL_TARGET_PROCESSES = Spotify
+ARCHS = arm64
 
 include $(THEOS)/makefiles/common.mk
 
