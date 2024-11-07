@@ -112,4 +112,4 @@ liked_songs = "الأغاني التي أعجبتك";
 contributors = "المساهمون";
 
 request_anonymous_token = "طلب رمز مجهول الهوية";
-request_anonymous_token_description = "اضغط على ”طلب رمز مميز مجهول“، لذا سيحاول EeveeSpotify طلب الرمز المميز من Musixmatch دون إذن.";
+request_anonymous_token_description = "انقر على ”طلب رمز مجهول الهوية“ لطلب رمز مميز من Musixmatch بدون تصريح.";

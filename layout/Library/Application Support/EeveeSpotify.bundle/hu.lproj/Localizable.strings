@@ -112,4 +112,4 @@ liked_songs = "Kedvelt dalok";
 contributors = "Hozzájárulók";
 
 request_anonymous_token = "Névtelen token kérése";
-request_anonymous_token_description = "Koppintson a „Névtelen token kérése” lehetőségre, így az EeveeSpotify megpróbálja engedély nélkül lekérni a tokent a Musixmatch-től.";
+request_anonymous_token_description = "Érintse meg a „Névtelen token kérése” lehetőséget, ha engedély nélkül szeretne tokent kérni a Musixmatch-től.";

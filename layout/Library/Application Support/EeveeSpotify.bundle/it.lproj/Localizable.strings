@@ -110,4 +110,4 @@ liked_songs = "Brani che ti piacciono";
 contributors = "Contributori";
 
 request_anonymous_token = "Richiedi Token Anonimo";
-request_anonymous_token_description = "Clicca “Richiedi Token Anonimo”, in modo che EeveeSpotify provi a richiedere il token a Musixmatch senza autorizzazione.";
+request_anonymous_token_description = "Clicca “Richiedi Token Anonimo” per richiedere un token a Musixmatch senza autorizzazione.";
