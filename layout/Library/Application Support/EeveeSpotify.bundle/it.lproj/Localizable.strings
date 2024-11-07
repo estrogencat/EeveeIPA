@@ -108,3 +108,6 @@ let_the_music_play = "Lascia che la musica suoni...";
 liked_songs = "Brani che ti piacciono";
 
 contributors = "Contributori";
+
+request_anonymous_token = "Richiedi Token Anonimo";
+request_anonymous_token_description = "Clicca “Richiedi Token Anonimo”, in modo che EeveeSpotify provi a richiedere il token a Musixmatch senza autorizzazione.";

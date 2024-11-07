@@ -110,3 +110,6 @@ let_the_music_play = "Lăsați muzica să cânte...";
 liked_songs = "Cântece apreciate";
 
 contributors = "Contributori";
+
+request_anonymous_token = "Solicitare Token anonim";
+request_anonymous_token_description = "Atingeți „Solicitare Token anonim”, astfel încât EeveeSpotify va încerca să solicite tokenul de la Musixmatch fără autorizație.";

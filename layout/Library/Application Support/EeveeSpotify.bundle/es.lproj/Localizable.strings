@@ -110,3 +110,6 @@ let_the_music_play = "Deja la música sonar...";
 liked_songs = "Canciones que te gustan";
 
 contributors = "Colaboradores";
+
+request_anonymous_token = "Solicitar Token Anónimo";
+request_anonymous_token_description = "Pulse “Solicitar Token Anónimo” para solicitar un token a Musixmatch sin autorización.";
