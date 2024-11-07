@@ -15,6 +15,8 @@ reset_data_description = "清除缓存数据并重新启动应用程序。";
 checking_for_update = "正在检查更新...";
 update_available = "发现可用更新";
 
+restart_is_required_description = "更改后需要重启应用程序。";
+
 // Patching
 
 do_not_patch_premium = "不启用 Premium 补丁";
@@ -25,6 +27,7 @@ overwrite_configuration_description = "用转存的 Premium 配置替换远程�
 
 // Lyrics
 
+do_not_replace_lyrics = "请勿替换歌词";
 lyrics_source = "歌词来源";
 lyrics_source_description = "可以自由选择自己喜欢的歌词来源。\n\nGenius：拥有最优质的歌词，提供最多的歌曲，歌词更新速度最快。但是，不会进行实时同步。\nLRCLIB：最开放的服务，提供实时同步的歌词。但是，它缺少很多歌曲的歌词。\nMusixmatch：Spotify 本身所使用的服务，为很多歌曲提供实时同步的歌词，但需要用户令牌才能使用此来源。";
 lyrics_additional_info = "如果插件无法找到歌曲或处理歌词，将看到“无法加载这首歌的歌词”的提示。使用 Genius 时，由于插件搜索歌曲的方式，某些歌词可能会有误。在大多数情况下，它都正常工作。";
@@ -92,7 +95,9 @@ let_the_music_play = "让音乐播放...";
 // liked songs title, should match official spotify loc
 liked_songs = "喜欢的歌曲";
 
-
 contributors = "参与者";
 Developement = "开发";
 Localization = "本地化翻译";
+
+request_anonymous_token = "请求匿名令牌";
+request_anonymous_token_description = "点击“请求匿名令牌”即可在无需授权的情况下向 Musixmatch 请求令牌。";
