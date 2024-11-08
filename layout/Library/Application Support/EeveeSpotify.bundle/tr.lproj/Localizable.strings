@@ -22,7 +22,7 @@ restart_is_required_description = "Değişiklikten sonra uygulamanın yeniden ba
 do_not_patch_premium = "Premium için olan Yamayı Yapma";
 patching_description = "Yama, kullanıcı verilerini yüklemek için yapılan istekleri keser, serileştirilen verileri açar ve parametreleri gerçek zamanlı olarak değiştirir.
 
-Aktif bir Premium aboneliğiniz varsa, Premium'u Yama Yapma seçeneğini açabilirsiniz. Yama, verileri yamalamaz veya Premium sunucu tarafı özelliklerinin kullanımını kısıtlamaz. Değişiklikten sonra uygulamanın yeniden başlatılması gerekir.";
+Aktif bir Premium aboneliğiniz varsa, Premium'u Yama Yapma seçeneğini açabilirsiniz. Yama, verileri yamalamaz veya Premium sunucu tarafı özelliklerinin kullanımını kısıtlamaz. Değişiklikten sonra uygulamanın yeniden başlatılması gerekir.
 
 %@";
 
@@ -110,3 +110,6 @@ let_the_music_play = "Müzik çalmaya devam etsin...";
 liked_songs = "Beğenilen Şarkılar";
 
 contributors = "Katkıda bulunanlar";
+
+request_anonymous_token = "Anonim Token Talep Et";
+request_anonymous_token_description = "Yetkilendirme olmadan Musixmatch'ten bir token talep etmek için "Anonim Token Talep Et"e dokun.";
