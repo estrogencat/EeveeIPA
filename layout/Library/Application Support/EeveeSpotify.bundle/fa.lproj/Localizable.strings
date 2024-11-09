@@ -108,3 +108,6 @@ let_the_music_play = "بگذار موسیقی پخش شود...";
 liked_songs = "آهنگ های لایک شده";
 
 contributors = "مشارکت کنندگان";
+
+request_anonymous_token = "درخواست توکن ناشناس";
+request_anonymous_token_description = "برای درخواست توکن از Musixmatch بدون مجوز روی «درخواست توکن ناشناس» ضربه بزنید.";
