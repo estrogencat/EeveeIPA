@@ -109,3 +109,6 @@ let_the_music_play = "讓音樂演奏吧...";
 liked_songs = "已按讚的歌曲";
 
 contributors = "貢獻者";
+
+request_anonymous_token = "請求匿名使用者權杖";
+request_anonymous_token_description = "點擊 「請求匿名使用者權杖」 後 EeveeSpotify 會嘗試在未授權的情況下從 Musixmatch 取得使用者權杖.";
