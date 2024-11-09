@@ -22,7 +22,7 @@ restart_is_required_description = "Aby zmiany zostały zastosowane wymagany jest
 do_not_patch_premium = "Nie używaj łatki premium";
 patching_description = "Łatka przechwytuje żądania danych użytkownika, deserializuje je i modyfikuje parametry w czasie rzeczywistym.
 
-Jeśli masz aktywną subskrypcję premium, możesz włączyć łatkę premium. Łatka nie będzie modyfikowała żadnych danych ani ograniczać korzystania z funkcji po stronie serwera premium. Po zmianie wymagane jest ponowne uruchomienie aplikacji.";
+Jeśli masz aktywną subskrypcję premium, możesz włączyć łatkę premium. Łatka nie będzie modyfikowała żadnych danych ani ograniczać korzystania z funkcji po stronie serwera premium. Po zmianie wymagane jest ponowne uruchomienie aplikacji
 
 %@";
 
@@ -63,7 +63,7 @@ musixmatch_language_description = "Możesz wprowadzić 2-literowy kod języka Mu
 // UI
 
 lyrics_background_color_section = "Kolor tła tekstu utworu";
-lyrics_background_color_section_description = "Po włączeniu opcji "Wyświetlaj oryginalne kolory", teksty będą wyświetlane w oryginalnych kolorach Spotify dla utworów, które je posiadają.
+lyrics_background_color_section_description = "Po włączeniu opcji \"Wyświetlaj oryginalne kolory\", teksty będą wyświetlane w oryginalnych kolorach Spotify dla utworów, które je posiadają.
 
 Możesz ustawić statyczny kolor lub współczynnik normalizacji oparty na kolorze okładki utworu. Współczynnik ten określa stopień rozjaśnienia ciemnych i przyciemnienia jasnych kolorów. Zwykle przy wyższym współczynniku normalizacji kolory będą jaśniejsze.";
 
