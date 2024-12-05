@@ -11,7 +11,7 @@ func exitApplication() {
 struct PremiumPatchingGroup: HookGroup { }
 
 struct EeveeSpotify: Tweak {
-    static let version = "5.8.1"
+    static let version = "5.8.2"
     static let isOldSpotifyVersion = NSClassFromString("Lyrics_NPVCommunicatorImpl.LyricsOnlyViewController") == nil
     
     init() {
