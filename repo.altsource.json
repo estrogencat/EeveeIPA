@@ -9,14 +9,28 @@
       "developerName": "",
       "localizedDescription": "",
       "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/0c/1f/61/0c1f6144-af80-f395-3204-1d14fd8b2be7/AppIcon-0-0-1x_U007emarketing-0-6-0-0-85-220.png/512x512bb.jpg",
-      "downloadURL": "https://github.com/whoeevee/EeveeSpotify/releases/download/swift5.8.1/EeveeSpotify-5.8.1-8.9.94.ipa",
+      "downloadURL": "https://github.com/whoeevee/EeveeSpotify/releases/download/swift5.8.2/EeveeSpotify-5.8.2-8.9.96.ipa",
       "versions": [
+        {
+          "version": "8.9.96",
+          "date": "2024-12-05",
+          "localizedDescription": "Spotify v8.9.96 injected with EeveeSpotify",
+          "downloadURL": "https://github.com/whoeevee/EeveeSpotify/releases/download/swift5.8.2/EeveeSpotify-5.8.2-8.9.96.ipa",
+          "size": 83513957
+        },
         {
           "version": "8.9.94",
           "date": "2024-11-19",
           "localizedDescription": "Spotify v8.9.94 injected with EeveeSpotify",
           "downloadURL": "https://github.com/whoeevee/EeveeSpotify/releases/download/swift5.8.1/EeveeSpotify-5.8.1-8.9.94.ipa",
           "size": 84039862
+        },
+        {
+          "version": "8.9.92",
+          "date": "2024-11-18",
+          "localizedDescription": "Spotify v8.9.92 injected with EeveeSpotify",
+          "downloadURL": "https://github.com/whoeevee/EeveeSpotify/releases/download/swift5.8.1/EeveeSpotify-5.8.1-8.9.92.ipa",
+          "size": 84064527
         },
         {
           "version": "8.9.92",
