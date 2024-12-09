@@ -1,51 +1,51 @@
 /* MARK: Settings */
 
-patching = "Patching";
+patching = "Applicando le modifiche";
 lyrics = "Testi";
 customization = "Personalizzazione";
 
 common_issues_tip_title = "Riscontri problemi?";
 
-common_issues_tip_message = "Se stai riscontrando un problema, come l'impossibilità di riprodurre canzoni, controlla";
-common_issues_tip_button = "Problemi Comuni";
+common_issues_tip_message = "Se stai riscontrando un problema, come l'impossibilità di riprodurre le canzoni, vedi";
+common_issues_tip_button = "Problemi comuni";
 
-reset_data = "Reimposta Dati";
-reset_data_description = "Cancella i dati memorizzati nella cache e riavvia l'app.";
+reset_data = "Svuota la Cache";
+reset_data_description = "Cancella i dati salvati nella cache e riavvia l'app.";
 
-checking_for_update = "Verifica aggiornamenti...";
+checking_for_update = "Verificando la presenza di aggiornamenti...";
 update_available = "Aggiornamento disponibile";
 
-restart_is_required_description = "Dopo la modifica è necessario riavviare l'app.";
+restart_is_required_description = "È necessario riavviare l'app per applicare le modifiche";
 
 // Patching
 
-do_not_patch_premium = "Non patchare Premium";
-patching_description = "Il tweak intercetta le richieste per caricare i dati utente, li deserializza e modifica i parametri in tempo reale.
+do_not_patch_premium = "Ho già un abbonamento a Spotify Premium";
+patching_description = "EeveeSpotify intercetta le richieste per caricare i dati dell'utente, deserializzandoli e modificandone i parametri in tempo reale.
 
-Se hai un abbonamento Premium attivo, puoi attivare Non patchare Premium. Il tweak non modificherà i dati né limiterà l'uso delle funzionalità Premium lato server. È necessario riavviare l'app dopo aver modificato questa impostazione.";
+Se invece hai già un abbonamento Premium attivo, puoi attivare questa opzione, cosi da non modificare i dati o limitare le funzionalità Premium lato server (è necessario riavviare l'app per applicare le modifiche).";
 
 overwrite_configuration = "Sovrascrivi Configurazione";
-overwrite_configuration_description = "Sostituisci la configurazione remota con il dump di quella Premium. Potrebbe risolvere alcuni problemi, come la comparsa di annunci pubblicitari, ma non è garantito.";
+overwrite_configuration_description = "Sostituisci la configurazione remota con quella Premium precedentemente estratta. Verrebbero cosi definiti la maggior parte dei parametri per l'interfaccia e l'esperienza dell'utente, tornando utile (potrebbe causare problemi)";
 
 // Lyrics
 
 do_not_replace_lyrics = "Non sostituire i testi";
 lyrics_source = "Fonte dei testi";
-lyrics_source_description = "Puoi selezionare la fonte dei testi che preferisci.
+lyrics_source_description = "Puoi selezionare, per i testi, la fonte che preferisci.
 
-Genius: Offre testi con la migliore qualità, per il maggior numero di canzoni e li aggiorna più rapidamente. Non sono sincronizzati con il brano e non lo saranno mai.
+Genius: Qualitativamente la migliore per il maggior numero di canzoni (e i testi vengono aggiornati più rapidamente). Non è possibile sincronizzarli con il corrispettivo brano.
 
-LRCLIB: Il servizio più aperto, offre testi sincronizzati. Tuttavia, mancano i testi per molte canzoni.
+LRCLIB: Il servizio più aperto (purtroppo per un numero minore di canzoni). Permette di visualizzare i testi sincronizzati con il brano.
 
-Musixmatch: Il servizio utilizzato da Spotify. Fornisce testi sincronizzati per molte canzoni, ma sarà necessario un token utente per utilizzare questa fonte.";
-lyrics_additional_info = "Se il tweak non riesce a trovare una canzone o a processare i testi, vedrai il messaggio \"Impossibile caricare il testo per questa canzone\". I testi potrebbero essere errati per alcune canzoni quando si utilizza Genius a causa del modo in cui il tweak cerca le canzoni. Ho fatto in modo che funzioni nella maggior parte dei casi.";
-petitlyrics_description = "PetitLyrics: Offre numerosi testi sincronizzati in giapponese e alcuni internazionali.";
+Musixmatch: Lo stesso servizio utilizzato da Spotify. Fornisce testi sincronizzati per molte canzoni, ma sarà necessario un token utente per utilizzare questa fonte.";
+lyrics_additional_info = "Se EeveeSpotify non riesce a trovare una canzone o a processare i testi, vedrai il messaggio \"Impossibile caricare il testo per questa canzone\". I testi potrebbero comunque essere errati per alcune canzoni quando viene utilizzato Genius, a causa del modo in cui il tweak cerca le canzoni. Ho fatto in modo che funzioni nella maggior parte dei casi.";
+petitlyrics_description = "PetitLyrics: Offre numerosi testi sincronizzati in giapponese e altri internazionali (non sincronizzati).";
 
 musixmatch_user_token = "Token Utente Musixmatch";
-user_token_placeholder = "Inserisci Token Utente o Incolla Informazioni di Debug";
+user_token_placeholder = "Inserisci Token Utente o allega Informazioni di Debug";
 
 enter_user_token = "Inserisci il Token Utente";
-enter_user_token_message = "Per utilizzare Musixmatch, devi recuperare il tuo token utente dall'app ufficiale. Scarica Musixmatch dall'App Store, registrati, poi vai su Impostazioni > Assistenza > Copia info debug e incollale qui. Puoi anche estrarre il token usando MITM.";
+enter_user_token_message = "Per utilizzare Musixmatch, devi recuperare il tuo token utente dall'app ufficiale. Scarica Musixmatch dall'App Store, registrati, poi vai su Impostazioni > Assistenza > Copia info di debug e incollale qui. Puoi anche estrarre il token utilizzando MITM.";
 
 genius_fallback = "Fallback Genius";
 genius_fallback_description = "Carica i testi da Genius se c'è un problema con %@.";
@@ -60,10 +60,10 @@ musixmatch_language_description = "Puoi inserire un codice di lingua a 2 lettere
 
 // UI
 
-lyrics_background_color_section = "Colore Sfondo dei Testi delle tracce";
+lyrics_background_color_section = "Colore Sfondo Testi delle tracce";
 lyrics_background_color_section_description = "Se attivi Mostra Colori Originali, i testi appariranno nei colori originali di Spotify per le tracce che li hanno.
 
-Puoi impostare un colore statico o un fattore di normalizzazione basato sul colore estratto della copertina del brano. Questo fattore determina quanto i colori scuri vengono schiariti e i colori chiari vengono scuriti. Generalmente, vedrai colori più chiari con un fattore di normalizzazione più alto.";
+Puoi impostare un colore statico o un fattore di normalizzazione basato sul colore estratto della copertina del brano. Questo fattore determina rispettivamente quanto i colori scuri vengano schiariti e i colori chiari scuriti. Generalmente, vedrai colori più chiari con un fattore di normalizzazione più alto.";
 
 display_original_colors = "Mostra Colori Originali";
 
@@ -75,10 +75,10 @@ dark_popups = "Pop-up Scuri";
 
 /* MARK: Premium PopUps */
 
-have_premium_popup = "Sembra che tu abbia un abbonamento Premium attivo, quindi il tweak non modificherà i dati né limiterà l'uso delle funzionalità Premium lato server. Puoi gestire questa opzione nelle impostazioni di EeveeSpotify.";
+have_premium_popup = "Sembra che tu abbia un abbonamento Premium attivo, dunque il tweak non modificherà i dati, e non limiterà l'uso delle funzionalità Premium lato server. Puoi gestire questa opzione nelle impostazioni di EeveeSpotify.";
 
-high_audio_quality_popup = "La qualità audio molto alta è gestita lato server e non è disponibile con questo tweak.";
-playlist_downloading_popup = "Il download nativo delle playlist è gestito lato server e non è disponibile con questo tweak. Puoi comunque scaricare episodi di podcast.";
+high_audio_quality_popup = "La qualità audio molto alta viene gestita lato server e non è disponibile con questo tweak.";
+playlist_downloading_popup = "Il download delle playlist native viene gestito lato server e non è disponibile con questo tweak . Gli episodi di podcast e le playlist locali sono comunque scaricabili.";
 download_local_playlist = "Scarica playlist locale";
 
 /* MARK: Lyrics */
@@ -107,7 +107,7 @@ let_the_music_play = "Lascia che la musica suoni...";
 
 liked_songs = "Brani che ti piacciono";
 
-contributors = "Contributori";
+contributors = "Collaboratori";
 
 request_anonymous_token = "Richiedi Token Anonimo";
 request_anonymous_token_description = "Clicca “Richiedi Token Anonimo” per richiedere un token a Musixmatch senza autorizzazione.";
