@@ -22,7 +22,7 @@ restart_is_required_description = "Cần khởi động lại ứng dụng để
 do_not_patch_premium = "Không vá Premium";
 patching_description = "EeveeSpotify chặn các yêu cầu tải dữ liệu người dùng, giải tuần tự hóa dữ liệu đó và chỉnh sửa các tham số theo thời gian thực.
 
-Nếu bạn đang sử dụng Premium, bạn có thể bật Không vá Premium. Tinh chỉnh này sẽ không chỉnh sửa dữ liệu hoặc hạn chế việc sử dụng các tính năng Premium. Bạn cần phải khởi động lại ứng dụng sau khi thay đổi.";
+Nếu bạn đang sử dụng Premium, bạn có thể bật Không vá Premium. Tinh chỉnh này sẽ không chỉnh sửa dữ liệu hoặc hạn chế việc sử dụng các tính năng Premium. Bạn cần phải khởi động lại ứng dụng sau khi thay đổi.
 
 %@";
 
