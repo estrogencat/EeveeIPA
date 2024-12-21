@@ -33,6 +33,10 @@ EeveeSpotify replaces Spotify monthly limited lyrics with one of the following t
 
 If the tweak is unable to find a song or process the lyrics, you'll see a "Couldn't load the lyrics for this song" message. The lyrics might be wrong for some songs when using Genius due to how the tweak searches songs. While I've made it work in most cases, kindly refrain from opening issues about it.
 
+## Repositories
+
+You can add an official EeveeSpotify repository to your signing app to always stay up to date. See [Repositories](/Repositories).
+
 ## How It Works
 
 **Starting with version 4.0, EeveeSpotify intercepts Spotify requests to load user data, deserializes it, and modifies the parameters in real-time. This method is the best so far and works incredibly stable.**

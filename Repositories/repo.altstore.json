@@ -1,183 +1,176 @@
 {
   "name": "EeveeSpotify",
-  "identifier": "com.eevee.source",
+  "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/0c/1f/61/0c1f6144-af80-f395-3204-1d14fd8b2be7/AppIcon-0-0-1x_U007emarketing-0-6-0-0-85-220.png/512x512bb.jpg",
   "subtitle": "EeveeSpotify official source",
+  "description": "EeveeSpotify official source",
   "apps": [
     {
       "name": "EeveeSpotify",
+      "developerName": "Eevee",
       "bundleIdentifier": "com.spotify.client",
-      "developerName": "",
       "localizedDescription": "",
       "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/0c/1f/61/0c1f6144-af80-f395-3204-1d14fd8b2be7/AppIcon-0-0-1x_U007emarketing-0-6-0-0-85-220.png/512x512bb.jpg",
-      "downloadURL": "https://github.com/whoeevee/EeveeSpotify/releases/download/swift5.8.3/EeveeSpotify-5.8.3-9.0.2.ipa",
       "versions": [
         {
           "version": "9.0.2",
-          "date": "2024-12-18",
-          "localizedDescription": "Spotify v9.0.2 injected with EeveeSpotify",
+          "date": "2024-12-18T19:25:26Z",
+          "size": 83798628,
           "downloadURL": "https://github.com/whoeevee/EeveeSpotify/releases/download/swift5.8.3/EeveeSpotify-5.8.3-9.0.2.ipa",
-          "size": 83798628
+          "localizedDescription": "Spotify v9.0.2 injected with EeveeSpotify"
         },
         {
           "version": "9.0.0",
-          "date": "2024-12-12",
-          "localizedDescription": "Spotify v9.0.0 injected with EeveeSpotify",
+          "date": "2024-12-12T00:00:00Z",
+          "size": 83510557,
           "downloadURL": "https://github.com/whoeevee/EeveeSpotify/releases/download/swift5.8.3/EeveeSpotify-5.8.3-9.0.0.ipa",
-          "size": 83510557
-        },
-        {
-          "version": "9.0.0",
-          "date": "2024-12-12",
-          "localizedDescription": "Spotify v9.0.0 injected with EeveeSpotify",
-          "downloadURL": "https://github.com/whoeevee/EeveeSpotify/releases/download/swift5.8.3/EeveeSpotify-5.8.3-9.0.0.ipa",
-          "size": 83510557
+          "localizedDescription": "Spotify v9.0.0 injected with EeveeSpotify"
         },
         {
           "version": "8.9.96",
-          "date": "2024-12-05",
-          "localizedDescription": "Spotify v8.9.96 injected with EeveeSpotify",
+          "date": "2024-12-05T00:00:00Z",
+          "size": 83513957,
           "downloadURL": "https://github.com/whoeevee/EeveeSpotify/releases/download/swift5.8.2/EeveeSpotify-5.8.2-8.9.96.ipa",
-          "size": 83513957
+          "localizedDescription": "Spotify v8.9.96 injected with EeveeSpotify"
         },
         {
           "version": "8.9.94",
-          "date": "2024-11-19",
-          "localizedDescription": "Spotify v8.9.94 injected with EeveeSpotify",
+          "date": "2024-11-19T00:00:00Z",
+          "size": 84039862,
           "downloadURL": "https://github.com/whoeevee/EeveeSpotify/releases/download/swift5.8.1/EeveeSpotify-5.8.1-8.9.94.ipa",
-          "size": 84039862
+          "localizedDescription": "Spotify v8.9.94 injected with EeveeSpotify"
         },
         {
           "version": "8.9.92",
-          "date": "2024-11-18",
-          "localizedDescription": "Spotify v8.9.92 injected with EeveeSpotify",
+          "date": "2024-11-18T00:00:00Z",
+          "size": 84064527,
           "downloadURL": "https://github.com/whoeevee/EeveeSpotify/releases/download/swift5.8.1/EeveeSpotify-5.8.1-8.9.92.ipa",
-          "size": 84064527
+          "localizedDescription": "Spotify v8.9.92 injected with EeveeSpotify"
         },
         {
           "version": "8.9.90",
-          "date": "2024-11-07",
-          "localizedDescription": "Spotify v8.9.90 injected with EeveeSpotify",
+          "date": "2024-11-07T00:00:00Z",
+          "size": 95404220,
           "downloadURL": "https://github.com/whoeevee/EeveeSpotify/releases/download/swift5.8/EeveeSpotify-5.8-8.9.90.ipa",
-          "size": 95404220
+          "localizedDescription": "Spotify v8.9.90 injected with EeveeSpotify"
         },
         {
           "version": "8.9.86",
-          "date": "2024-10-24",
-          "localizedDescription": "Spotify v8.9.86 injected with EeveeSpotify",
+          "date": "2024-10-24T00:00:00Z",
+          "size": 81831115,
           "downloadURL": "https://github.com/whoeevee/EeveeSpotify/releases/download/swift5.7/EeveeSpotify-5.7-8.9.86.ipa",
-          "size": 81831115
+          "localizedDescription": "Spotify v8.9.86 injected with EeveeSpotify"
         },
         {
           "version": "8.9.84",
-          "date": "2024-10-22",
-          "localizedDescription": "Spotify v8.9.84 injected with EeveeSpotify",
+          "date": "2024-10-22T00:00:00Z",
+          "size": 81328308,
           "downloadURL": "https://github.com/whoeevee/EeveeSpotify/releases/download/swift5.6/EeveeSpotify-5.6-8.9.84.ipa",
-          "size": 81328308
+          "localizedDescription": "Spotify v8.9.84 injected with EeveeSpotify"
         },
         {
           "version": "8.9.82",
-          "date": "2024-10-09",
-          "localizedDescription": "Spotify v8.9.82 injected with EeveeSpotify",
+          "date": "2024-10-09T00:00:00Z",
+          "size": 81575336,
           "downloadURL": "https://github.com/whoeevee/EeveeSpotify/releases/download/swift5.5/EeveeSpotify-5.5-8.9.82.ipa",
-          "size": 81575336
+          "localizedDescription": "Spotify v8.9.82 injected with EeveeSpotify"
         },
         {
           "version": "8.9.80",
-          "date": "2024-10-06",
-          "localizedDescription": "Spotify v8.9.80 injected with EeveeSpotify",
+          "date": "2024-10-06T00:00:00Z",
+          "size": 80816437,
           "downloadURL": "https://github.com/whoeevee/EeveeSpotify/releases/download/swift5.4/EeveeSpotify-5.4-8.9.80.ipa",
-          "size": 80816437
+          "localizedDescription": "Spotify v8.9.80 injected with EeveeSpotify"
         },
         {
           "version": "8.9.78",
-          "date": "2024-10-01",
-          "localizedDescription": "Spotify v8.9.78 injected with EeveeSpotify",
+          "date": "2024-10-01T00:00:00Z",
+          "size": 80513996,
           "downloadURL": "https://github.com/whoeevee/EeveeSpotify/releases/download/swift5.3/EeveeSpotify-5.3-8.9.78.ipa",
-          "size": 80513996
+          "localizedDescription": "Spotify v8.9.78 injected with EeveeSpotify"
         },
         {
           "version": "8.9.76",
-          "date": "2024-09-18",
-          "localizedDescription": "Spotify v8.9.76 injected with EeveeSpotify",
+          "date": "2024-09-18T00:00:00Z",
+          "size": 79401385,
           "downloadURL": "https://github.com/whoeevee/EeveeSpotify/releases/download/swift5.2/EeveeSpotify-5.2-8.9.76.ipa",
-          "size": 79401385
+          "localizedDescription": "Spotify v8.9.76 injected with EeveeSpotify"
         },
         {
           "version": "8.9.74",
-          "date": "2024-09-11",
-          "localizedDescription": "Spotify v8.9.74 injected with EeveeSpotify",
+          "date": "2024-09-11T00:00:00Z",
+          "size": 79661600,
           "downloadURL": "https://github.com/whoeevee/EeveeSpotify/releases/download/swift5.1/EeveeSpotify-5.1-8.9.74.ipa",
-          "size": 79661600
+          "localizedDescription": "Spotify v8.9.74 injected with EeveeSpotify"
         },
         {
           "version": "8.9.70",
-          "date": "2024-09-05",
-          "localizedDescription": "Spotify v8.9.70 injected with EeveeSpotify",
+          "date": "2024-09-05T00:00:00Z",
+          "size": 78904895,
           "downloadURL": "https://github.com/whoeevee/EeveeSpotify/releases/download/swift5.0/EeveeSpotify-5.0-8.9.70.ipa",
-          "size": 78904895
+          "localizedDescription": "Spotify v8.9.70 injected with EeveeSpotify"
         },
         {
           "version": "8.9.68",
-          "date": "2024-08-26",
-          "localizedDescription": "Spotify v8.9.68 injected with EeveeSpotify",
+          "date": "2024-08-26T00:00:00Z",
+          "size": 78479774,
           "downloadURL": "https://github.com/whoeevee/EeveeSpotify/releases/download/swift4.9/EeveeSpotify-4.9-8.9.68.ipa",
-          "size": 78479774
+          "localizedDescription": "Spotify v8.9.68 injected with EeveeSpotify"
         },
         {
           "version": "8.9.66",
-          "date": "2024-08-19",
-          "localizedDescription": "Spotify v8.9.66 injected with EeveeSpotify",
+          "date": "2024-08-19T00:00:00Z",
+          "size": 77933103,
           "downloadURL": "https://github.com/whoeevee/EeveeSpotify/releases/download/swift4.8/EeveeSpotify-4.8-8.9.66.ipa",
-          "size": 77933103
+          "localizedDescription": "Spotify v8.9.66 injected with EeveeSpotify"
         },
         {
           "version": "8.9.64",
-          "date": "2024-08-09",
-          "localizedDescription": "Spotify v8.9.64 injected with EeveeSpotify",
+          "date": "2024-08-09T00:00:00Z",
+          "size": 77441278,
           "downloadURL": "https://github.com/whoeevee/EeveeSpotify/releases/download/swift4.7/EeveeSpotify-4.7-8.9.64.ipa",
-          "size": 77441278
+          "localizedDescription": "Spotify v8.9.64 injected with EeveeSpotify"
         },
         {
           "version": "8.9.62",
-          "date": "2024-08-06",
-          "localizedDescription": "Spotify v8.9.62 injected with EeveeSpotify",
+          "date": "2024-08-06T00:00:00Z",
+          "size": 77373895,
           "downloadURL": "https://github.com/whoeevee/EeveeSpotify/releases/download/swift4.6/EeveeSpotify-4.6-8.9.62.ipa",
-          "size": 77373895
+          "localizedDescription": "Spotify v8.9.62 injected with EeveeSpotify"
         },
         {
           "version": "8.9.60",
-          "date": "2024-07-29",
-          "localizedDescription": "Spotify v8.9.60 injected with EeveeSpotify",
+          "date": "2024-07-29T00:00:00Z",
+          "size": 76880363,
           "downloadURL": "https://github.com/whoeevee/EeveeSpotify/releases/download/swift4.6/EeveeSpotify-4.6-8.9.60.ipa",
-          "size": 76880363
+          "localizedDescription": "Spotify v8.9.60 injected with EeveeSpotify"
         },
         {
           "version": "8.9.58",
-          "date": "2024-07-20",
-          "localizedDescription": "Spotify v8.9.58 injected with EeveeSpotify",
+          "date": "2024-07-20T00:00:00Z",
+          "size": 76177478,
           "downloadURL": "https://github.com/whoeevee/EeveeSpotify/releases/download/swift4.5/EeveeSpotify-4.5-8.9.58.ipa",
-          "size": 76177478
+          "localizedDescription": "Spotify v8.9.58 injected with EeveeSpotify"
         },
         {
           "version": "8.9.54",
-          "date": "2024-07-10",
-          "localizedDescription": "Spotify v8.9.54 injected with EeveeSpotify",
+          "date": "2024-07-10T00:00:00Z",
+          "size": 75064559,
           "downloadURL": "https://github.com/whoeevee/EeveeSpotify/releases/download/swift4.4/EeveeSpotify-4.4-8.9.54.ipa",
-          "size": 75064559
+          "localizedDescription": "Spotify v8.9.54 injected with EeveeSpotify"
         },
         {
           "version": "8.9.50",
-          "date": "2024-06-25",
-          "localizedDescription": "Spotify v8.9.50 injected with EeveeSpotify",
+          "date": "2024-06-25T00:00:00Z",
+          "size": 75026367,
           "downloadURL": "https://github.com/whoeevee/EeveeSpotify/releases/download/swift4.3/EeveeSpotify-4.3-8.9.50.ipa",
-          "size": 75026367
+          "localizedDescription": "Spotify v8.9.50 injected with EeveeSpotify"
         },
         {
           "version": "8.9.48",
-          "date": "2024-06-17",
-          "localizedDescription": "Spotify v8.9.48 injected with EeveeSpotify",
+          "date": "2024-06-17T00:00:00Z",
+          "size": 75337996,
           "downloadURL": "https://github.com/whoeevee/EeveeSpotify/releases/download/swift4.2/EeveeSpotify-4.2-8.9.48.ipa",
-          "size": 75337996
+          "localizedDescription": "Spotify v8.9.48 injected with EeveeSpotify"
         }
       ],
       "appPermissions": {
@@ -196,19 +189,19 @@
           "com.apple.security.application-groups"
         ],
         "privacy": {
-          "NSBluetoothAlwaysUsageDescription": "This lets you unlock new ways of interacting with other devices compatible with Spotify via Bluetooth.",
-          "NSCameraUsageDescription": "This lets you scan Spotify Codes.",
-          "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads or content to you.",
-          "NSHealthUpdateUsageDescription": "Spotify will use HealthKit data to provide personalised audio recommendations for your workouts.",
-          "NSMotionUsageDescription": "We will use this to understand which audio motivates you most.",
-          "NSBluetoothPeripheralUsageDescription": "This lets you unlock new ways of interacting with other devices compatible with Spotify via Bluetooth.",
-          "NSPhotoLibraryAddUsageDescription": "This lets you save images to your Photo Library.",
-          "NSLocalNetworkUsageDescription": "This lets you listen on different devices. Spotify will also get access to local audio files.",
-          "NSHealthShareUsageDescription": "Spotify will use HealthKit data to provide personalised audio recommendations for your workouts.",
           "NSAppleMusicUsageDescription": "This will let you play your imported music on Spotify.",
-          "NSMicrophoneUsageDescription": "This lets you control Spotify using your voice.",
+          "NSBluetoothAlwaysUsageDescription": "This lets you unlock new ways of interacting with other devices compatible with Spotify via Bluetooth.",
+          "NSBluetoothPeripheralUsageDescription": "This lets you unlock new ways of interacting with other devices compatible with Spotify via Bluetooth.",
+          "NSCameraUsageDescription": "This lets you scan Spotify Codes.",
           "NSFaceIDUsageDescription": "This lets you set access restrictions using Face ID.",
-          "NSPhotoLibraryUsageDescription": "This lets you select images from your Photo Library."
+          "NSHealthShareUsageDescription": "Spotify will use HealthKit data to provide personalised audio recommendations for your workouts.",
+          "NSHealthUpdateUsageDescription": "Spotify will use HealthKit data to provide personalised audio recommendations for your workouts.",
+          "NSLocalNetworkUsageDescription": "This lets you listen on different devices. Spotify will also get access to local audio files.",
+          "NSMicrophoneUsageDescription": "This lets you control Spotify using your voice.",
+          "NSMotionUsageDescription": "We will use this to understand which audio motivates you most.",
+          "NSPhotoLibraryAddUsageDescription": "This lets you save images to your Photo Library.",
+          "NSPhotoLibraryUsageDescription": "This lets you select images from your Photo Library.",
+          "NSUserTrackingUsageDescription": "Your data will be used to deliver personalized ads or content to you."
         }
       }
     }

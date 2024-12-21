@@ -15,10 +15,10 @@ jobs:
         uses: actions/checkout@v4.1.6
 
       - name: Run Update Script
-        run: ./Tools/updateRepo
+        run: ./Tools/Updater/EeveeRepoUpdate
       
-      - name: Make AltStore Source
-        run: ./Tools/altSourceConverter repo.json
+      - name: Generate Sources
+        run: ./Tools/Formatter/urf -input repo.json -output Repositories
 
       - name: Push Changes
         uses: stefanzweifel/git-auto-commit-action@v5.0.1
