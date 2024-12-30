@@ -21,7 +21,6 @@ struct LrcLibLyricsRepository: LyricsRepository {
 
         if !query.isEmpty {
             let queryString = query.queryString
-
             stringUrl += "?\(queryString)"
         }
         

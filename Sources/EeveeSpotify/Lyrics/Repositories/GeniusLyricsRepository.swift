@@ -27,7 +27,6 @@ struct GeniusLyricsRepository: LyricsRepository {
 
         if !query.isEmpty {
             let queryString = query.queryString
-
             stringUrl += "?\(queryString)"
         }
         

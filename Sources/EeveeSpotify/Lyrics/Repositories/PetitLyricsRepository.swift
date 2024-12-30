@@ -22,9 +22,7 @@ struct PetitLyricsRepository: LyricsRepository {
         var request = URLRequest(url: URL(string: url)!)
         
         request.httpMethod = "POST"
-        request.httpBody = finalData.queryString.addingPercentEncoding(
-            withAllowedCharacters: .urlHostAllowed
-        )!.data(using: .utf8)
+        request.httpBody = finalData.queryString.data(using: .utf8)
 
         let semaphore = DispatchSemaphore(value: 0)
         var data: Data?

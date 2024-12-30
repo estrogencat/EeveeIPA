@@ -24,10 +24,7 @@ class MusixmatchLyricsRepository: LyricsRepository {
         finalQuery["usertoken"] = UserDefaults.musixmatchToken
         finalQuery["app_id"] = UIDevice.current.musixmatchAppId
 
-        let queryString = finalQuery.queryString.addingPercentEncoding(
-            withAllowedCharacters: .urlHostAllowed
-        )!
-
+        let queryString = finalQuery.queryString
         stringUrl += "?\(queryString)"
         
         let request = URLRequest(url: URL(string: stringUrl)!)
