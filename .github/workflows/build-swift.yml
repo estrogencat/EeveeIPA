@@ -5,6 +5,7 @@ on:
     branches: [ "swift" ]
   pull_request:
     branches: [ "swift" ]
+  workflow_dispatch: 
 
 jobs:
   build:

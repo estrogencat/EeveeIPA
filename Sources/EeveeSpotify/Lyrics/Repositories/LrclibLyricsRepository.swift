@@ -20,9 +20,7 @@ struct LrcLibLyricsRepository: LyricsRepository {
         var stringUrl = "\(apiUrl)\(path)"
 
         if !query.isEmpty {
-            let queryString = query.queryString.addingPercentEncoding(
-                withAllowedCharacters: .urlHostAllowed
-            )!
+            let queryString = query.queryString
 
             stringUrl += "?\(queryString)"
         }
@@ -49,23 +47,18 @@ struct LrcLibLyricsRepository: LyricsRepository {
         return data!
     }
     
-    private func searchSong(_ query: String) throws -> [LrclibSong] {
-        let data = try perform("/search", query: ["q": query])
-        return try JSONDecoder().decode([LrclibSong].self, from: data)
-    }
-    
-    //
-    
-    private func mostRelevantSong(songs: [LrclibSong], strippedTitle: String) -> LrclibSong? {
-        return songs.first(
-           where: { $0.name.containsInsensitive(strippedTitle) }
-       ) ?? songs.first
+    private func getSong(trackName: String, artistName: String) throws -> LrclibSong {
+        let data: Data = try perform("/get", query: [
+            "track_name": trackName,
+            "artist_name": artistName
+        ])
+        return try JSONDecoder().decode(LrclibSong.self, from: data)
     }
     
     private func mapSyncedLyricsLines(_ lines: [String]) -> [LyricsLineDto] {
         return lines.compactMap { line in
             guard let match = line.firstMatch(
-                "\\[(?<minute>\\d*):(?<seconds>\\d*\\.?\\d*)\\] ?(?<content>.*)"
+                "\\[(?<minute>\\d*):(?<seconds>\\d+\\.\\d+|\\d+)\\] ?(?<content>.*)"
             ) else {
                 return nil
             }
@@ -93,13 +86,27 @@ struct LrcLibLyricsRepository: LyricsRepository {
     }
 
     func getLyrics(_ query: LyricsSearchQuery, options: LyricsOptions) throws -> LyricsDto {
-        let strippedTitle = query.title.strippedTrackTitle
-        let songs = try searchSong("\(strippedTitle) \(query.primaryArtist)")
-        
-        guard let song = mostRelevantSong(songs: songs, strippedTitle: strippedTitle) else {
-            throw LyricsError.noSuchSong
+        let song: LrclibSong
+
+        do {
+            song = try getSong(trackName: query.title, artistName: query.primaryArtist)
+        } catch {
+            let strippedTitle = query.title.strippedTrackTitle
+            do {
+                song = try getSong(trackName: strippedTitle, artistName: query.primaryArtist)
+            } catch {
+                throw LyricsError.noSuchSong
+            }
         }
-        
+
+        if song.instrumental {
+            return LyricsDto(
+                lines: [],
+                timeSynced: false,
+                romanization: .original
+            )
+        }
+
         if let syncedLyrics = song.syncedLyrics {
             let lines = Array(syncedLyrics.components(separatedBy: "\n").dropLast())
             return LyricsDto(
