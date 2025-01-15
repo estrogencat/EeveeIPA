@@ -6,6 +6,15 @@
   "appRepositories": [
     {
       "appType": "SELF_SIGN",
+      "appUpdateTime": "2025-01-15T18:50:57Z",
+      "appName": "EeveeSpotify",
+      "appVersion": "9.0.10",
+      "appDescription": "Spotify v9.0.10 injected with EeveeSpotify",
+      "appImage": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/0c/1f/61/0c1f6144-af80-f395-3204-1d14fd8b2be7/AppIcon-0-0-1x_U007emarketing-0-6-0-0-85-220.png/512x512bb.jpg",
+      "appPackage": "https://github.com/whoeevee/EeveeSpotify/releases/download/swift5.8.5/EeveeSpotify-5.8.5-9.0.10.ipa"
+    },
+    {
+      "appType": "SELF_SIGN",
       "appUpdateTime": "2025-01-13T17:25:01Z",
       "appName": "EeveeSpotify",
       "appVersion": "9.0.8",
