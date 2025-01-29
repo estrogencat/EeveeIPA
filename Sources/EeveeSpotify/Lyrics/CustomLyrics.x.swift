@@ -87,28 +87,50 @@ class LyricsOnlyViewControllerHook: ClassHook<UIViewController> {
             })
         
         let typeStyle = type(
-            of: Dynamic.SPTEncoreTypeStyle.alloc(interface: SPTEncoreTypeStyle.self)
+            of: Dynamic[
+                dynamicMember: EeveeSpotify.isOldSpotifyVersion
+                    ? "SPTEncoreTypeStyle"
+                    : "SPTEncoreTextStyle"
+            ].alloc(interface: SPTEncoreTypeStyle.self)
         ).bodyMediumBold()
         
         //
         
         if UserDefaults.fallbackReasons, let description = lastLyricsState.fallbackError?.description {
+            var attributedString = Dynamic.SPTEncoreAttributedString.alloc(
+                interface: SPTEncoreAttributedString.self
+            )
+            
             text.append(
-                Dynamic.SPTEncoreAttributedString.alloc(interface: SPTEncoreAttributedString.self)
-                    .initWithString(
+                EeveeSpotify.isOldSpotifyVersion
+                    ? attributedString.initWithString(
                         "\n\("fallback_attribute".localized): \(description)",
                         typeStyle: typeStyle,
+                        attributes: attributes
+                    )
+                    : attributedString.initWithString(
+                        "\n\("fallback_attribute".localized): \(description)",
+                        textStyle: typeStyle,
                         attributes: attributes
                     )
             )
         }
         
         if lastLyricsState.wasRomanized {
+            var attributedString = Dynamic.SPTEncoreAttributedString.alloc(
+                interface: SPTEncoreAttributedString.self
+            )
+            
             text.append(
-                Dynamic.SPTEncoreAttributedString.alloc(interface: SPTEncoreAttributedString.self)
-                    .initWithString(
+                EeveeSpotify.isOldSpotifyVersion
+                    ? attributedString.initWithString(
                         "\n\("romanized_attribute".localized)",
                         typeStyle: typeStyle,
+                        attributes: attributes
+                    )
+                    : attributedString.initWithString(
+                        "\n\("romanized_attribute".localized)",
+                        textStyle: typeStyle,
                         attributes: attributes
                     )
             )
