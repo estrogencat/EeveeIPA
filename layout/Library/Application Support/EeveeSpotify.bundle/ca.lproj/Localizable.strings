@@ -1,13 +1,13 @@
 /* MARK: Settings */
 
-patching = "Parxejant";
+patching = "Modificacions";
 lyrics = "Lletres";
 customization = "Personalització";
 
 common_issues_tip_title = "Tens cap problema?";
 
 common_issues_tip_message = "Si et trobes amb cap problema, com no poder reproduir cap cançó, fes un cop d'ull a";
-common_issues_tip_button = "Problemes Comuns";
+common_issues_tip_button = "Problemes comuns";
 
 reset_data = "Reinicialitza les dades";
 reset_data_description = "Neteja la memòria cau i reinicia l'aplicació.";
@@ -15,23 +15,23 @@ reset_data_description = "Neteja la memòria cau i reinicia l'aplicació.";
 checking_for_update = "Cercant actualitzacions...";
 update_available = "Actualització disponible";
 
-restart_is_required_description = "S'ha de reiniciar l'aplicació per aplicar els canvis";
+restart_is_required_description = "Cal reiniciar l'aplicació per aplicar els canvis";
 
 // Patching
 
-do_not_patch_premium = "No parxegis el Premium";
+do_not_patch_premium = "No modificar el Premium predeterminat";
 patching_description = "L'EeveeSpotify intercepta peticions de càrrega de dades de l'usuari, les deserialitza i en modifica els paràmetres en temps real.
 
-Si tens una subscripció Premium activa, pots activar l'opció «No parxegis el Premium». L'EeveeSpotify ja no parxejarà les dades ni restringirà l'ús de les funcions Premium que depenen del servidor.
+Si tens una subscripció Premium activa, pots activar l'opció «No modificar el Premium predeterminat». L'EeveeSpotify ja no modificarà les dades ni restringirà l'ús de les funcions Premium que depenen del servidor.
 
 %@";
 
-overwrite_configuration = "Sobreescriu la configuració";
+overwrite_configuration = "Sobreescriure la configuració";
 overwrite_configuration_description = "Substitueix la configuració remota amb la configuració Premium bolcada. Aquesta configuració determina la majoria de paràmetres d'experiència d'usuari i interfície i podria ser útil, tot i que pot causar problemes.";
 
 // Lyrics
 
-do_not_replace_lyrics = "No substitueixis les lletres";
+do_not_replace_lyrics = "No substituir les lletres";
 lyrics_source = "Font de les lletres";
 lyrics_source_description = "Pots seleccionar la font de lletres que prefereixis.
 
@@ -49,16 +49,16 @@ user_token_placeholder = "Introdueix el token d'usuari o enganxa la informació 
 enter_user_token = "Introdueix el token d'usuari";
 enter_user_token_message = "Per tal d'utilitzar Musixmatch, hauràs d'obtenir el teu token d'usuari des de l'aplicaió oficial. Descarrega Musixmatch de l'App Store, registra't, i ves a Configuració > Ajuda > Copiar informació de depuració, i enganxa-ho aquí. També pots extreure el token utilitzant MITM.";
 
-genius_fallback = "Servei supletori de Genius";
+genius_fallback = "Fallback amb Genius";
 genius_fallback_description = "Carrega lletres de Genius si hi ha cap problema amb %@.";
 
-show_fallback_reasons = "Mostra les raons de l'ús supletori";
+show_fallback_reasons = "Mostra les raons del fallback";
 
 romanized_lyrics = "Lletres romanitzades";
 romanized_lyrics_description = "Mostra lletres romanitzades pel japonès, coreà i xinès.";
 
 musixmatch_language = "Idioma per les lletres de Musixmatch";
-musixmatch_language_description = "Pots introduir un codi d'idioma de Musixmatch de 2 lletres i veure lletres traduïdes si es troben disponibles.";
+musixmatch_language_description = "Pots indicar un idioma (codi internacional d'idioma de 2 lletres) per tal que el Musixmatch mostri lletres traduïdes si es troben disponibles.";
 
 // UI
 
@@ -77,19 +77,19 @@ dark_popups = "Missatges emergents foscos";
 
 /* MARK: Premium PopUps */
 
-have_premium_popup = "Sembla que tens una subscripció Premium activa, l'EeveeSpotify no parxejarà les dades ni restringirà l'ús de les funcions Premium que depenen del servidor. Això es pot modificar des de la configuració de l'EeveeSpotify.";
+have_premium_popup = "Sembla que tens una subscripció Premium activa, l'EeveeSpotify no modificarà les dades ni restringirà l'ús de les funcions Premium que depenen del servidor. Això es pot modificar des de la configuració de l'EeveeSpotify.";
 
 high_audio_quality_popup = "La qualitat d'àudio molt alta depèn del servidor i no està disponible amb aquest paquet de modificacions.";
 playlist_downloading_popup = "La descàrrega nativa de llistes de reproducció depèn del servidor i no està disponible amb aquest paquet de modificacions. No obstant, pots descarregar episodis de podcasts i llistes de reproducció locals.";
-download_local_playlist = "Descarrega llista de reproducció local";
+download_local_playlist = "Descarrega la llista de reproducció local";
 
 /* MARK: Lyrics */
 
-fallback_attribute = "Supletori";
+fallback_attribute = "Fallback";
 romanized_attribute = "Romanitzat";
 
 musixmatch_unauthorized_popup = "L'EeveeSpotify no pot carregar lletres de Musixmatch a causa d'un error d'autorització. Si us plau comprova el teu token d'usuari de Musixmatch. Si utilitzes un iPad, has d'obtenir el token de l'aplicació de Musixmatch per iPad.";
-musixmatch_restricted_popup = "L'EeveeSpotify no pot carregar lletres de Musixmatch perquè estan restringides. Això es deu probablement a un problema relacionat amb el copyright degut a l'adreça IP dels Estats Units, hauries de canviar de servei de lletres si ets als Estats Units o utilitzar una VPN.";
+musixmatch_restricted_popup = "L'EeveeSpotify no pot carregar lletres de Musixmatch perquè estan restringides. Aquest error pot donar-se per restriccions de copyright als Estats Units; per adreces IP dels Estats Units, cal canviar el servei de lletres o emprar una VPN.";
 
 // Errors Titles
 
@@ -97,7 +97,7 @@ no_such_song = "No s'ha trobat la cançó";
 musixmatch_restricted = "Restringit";
 invalid_musixmatch_token = "No autoritzat";
 decoding_error = "Error de descodificació";
-no_current_track = "No hi ha instància de pista";
+no_current_track = "No s'ha trobat la pista";
 unknown_error = "Error desconegut";
 
 // Instrumental Titles
@@ -110,3 +110,6 @@ let_the_music_play = "Deixa que soni la música...";
 liked_songs = "Cançons que m'agraden";
 
 contributors = "Contribucions";
+
+request_anonymous_token = "Sol·licita un token anònim";
+request_anonymous_token_description = "Pitja a «Sol·licita un token anònim» per sol·licitar un token des de Musixmatch sense autorització.";
