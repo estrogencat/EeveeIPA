@@ -20,12 +20,12 @@ class ContentOffliningUIHelperImplementationHook: ClassHook<NSObject> {
     static let targetName = "Offline_ContentOffliningUIImpl.ContentOffliningUIHelperImplementation"
     
     func downloadToggledWithCurrentAvailability(
-        _ availability: Int,
+        _ availability: NSInteger,
         addAction: NSObject,
         removeAction: NSObject,
-        pageIdentifier: String,
-        pageURI: URL
-    ) -> String? {
+        pageIdentifier: NSString,
+        pageURI: NSURL
+    ) {
         let isPlaylist = [
             "free-tier-playlist",
             "playlist/ondemand"
@@ -39,7 +39,7 @@ class ContentOffliningUIHelperImplementationHook: ClassHook<NSObject> {
                 : nil,
             onSecondaryClick: isPlaylist
                 ? {
-                    _ = self.orig.downloadToggledWithCurrentAvailability(
+                    self.orig.downloadToggledWithCurrentAvailability(
                         availability,
                         addAction: addAction,
                         removeAction: removeAction,
@@ -49,7 +49,5 @@ class ContentOffliningUIHelperImplementationHook: ClassHook<NSObject> {
                 }
                 : nil
         )
-        
-        return nil
     }
 }
