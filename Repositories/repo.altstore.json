@@ -11,8 +11,15 @@
       "bundleIdentifier": "com.spotify.client",
       "localizedDescription": "",
       "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/0c/1f/61/0c1f6144-af80-f395-3204-1d14fd8b2be7/AppIcon-0-0-1x_U007emarketing-0-6-0-0-85-220.png/512x512bb.jpg",
-      "downloadURL": "https://github.com/whoeevee/EeveeSpotify/releases/download/swift5.8.6/EeveeSpotify-5.8.6-9.0.14.ipa",
+      "downloadURL": "https://github.com/whoeevee/EeveeSpotify/releases/download/swift5.8.7/EeveeSpotify-5.8.7-9.0.16.ipa",
       "versions": [
+        {
+          "version": "9.0.16",
+          "date": "2025-02-05T20:03:05Z",
+          "size": 82753611,
+          "downloadURL": "https://github.com/whoeevee/EeveeSpotify/releases/download/swift5.8.7/EeveeSpotify-5.8.7-9.0.16.ipa",
+          "localizedDescription": "Spotify v9.0.16 injected with EeveeSpotify"
+        },
         {
           "version": "9.0.14",
           "date": "2025-01-29T16:28:49Z",
