@@ -323,6 +323,7 @@
   "permissions": {
     "com.spotify.client": {
       "entitlements": [
+        "com.apple.developer.usernotifications.communication",
         "com.apple.developer.group-session",
         "com.apple.developer.networking.multicast",
         "aps-environment",
@@ -334,7 +335,10 @@
         "com.apple.developer.applesignin",
         "keychain-access-groups",
         "com.apple.developer.healthkit.access",
-        "com.apple.security.application-groups"
+        "com.apple.security.application-groups",
+
+        "get-task-allow",
+        "com.apple.developer.game-center"
       ],
       "privacy": {
         "NSAppleMusicUsageDescription": "This will let you play your imported music on Spotify.",
