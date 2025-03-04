@@ -33,16 +33,16 @@ jobs:
     - name: Copy SwiftProtobuf (rootful)
       run: |
         mkdir swiftprotobuf && cd "$_"
-        wget https://github.com/whoeevee/swift-protobuf/releases/download/1.28.2/org.swift.protobuf.swiftprotobuf_1.28.2_iphoneos-arm.deb
-        ar -x org.swift.protobuf.swiftprotobuf_1.28.2_iphoneos-arm.deb
+        wget https://github.com/whoeevee/swift-protobuf/releases/download/1.29.0/org.swift.protobuf.swiftprotobuf_1.29.0_iphoneos-arm.deb
+        ar -x org.swift.protobuf.swiftprotobuf_1.29.0_iphoneos-arm.deb
         tar -xvf data.tar.lzma
         cp -r Library/Frameworks/SwiftProtobuf.framework $THEOS/lib
 
     - name: Copy SwiftProtobuf (rootless)
       run: |
         mkdir swiftprotobuf-rootless && cd "$_"
-        wget https://github.com/whoeevee/swift-protobuf/releases/download/1.28.2/org.swift.protobuf.swiftprotobuf_1.28.2_iphoneos-arm64.deb
-        ar -x org.swift.protobuf.swiftprotobuf_1.28.2_iphoneos-arm64.deb
+        wget https://github.com/whoeevee/swift-protobuf/releases/download/1.29.0/org.swift.protobuf.swiftprotobuf_1.29.0_iphoneos-arm64.deb
+        ar -x org.swift.protobuf.swiftprotobuf_1.29.0_iphoneos-arm64.deb
         tar -xvf data.tar.lzma
         cp -r var/jb/Library/Frameworks/SwiftProtobuf.framework $THEOS/lib/iphone/rootless
 
