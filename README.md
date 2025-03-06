@@ -6,7 +6,11 @@ This tweak makes Spotify think you have a Premium subscription, granting free li
 
 ## The History
 
-Several months ago, Spotilife, the only tweak to get Spotify Premium, stopped working on new Spotify versions. I decompiled Spotilife, reverse-engineered Spotify, intercepted requests, etc., and created this tweak.
+In January 2024, Spotilife, the only tweak to get Spotify Premium, stopped working on new Spotify versions. I decompiled Spotilife, reverse-engineered Spotify, intercepted requests, etc., and created this tweak.
+
+## Repositories
+
+You can add an official EeveeSpotify repository to your signing app to always stay up to date. See [Repositories](/Repositories).
 
 ## Restrictions
 
@@ -21,7 +25,7 @@ It's possible to implement downloading locally, but it will never be included in
 
 ## Lyrics Support
 
-EeveeSpotify replaces Spotify monthly limited lyrics with one of the following three lyrics providers:
+EeveeSpotify replaces Spotify monthly limited lyrics with one of the following four lyrics providers:
 
 - Genius: Offers the best quality lyrics, provides the most songs, and updates lyrics the fastest. Does not and will never be time-synced.
 
@@ -33,10 +37,6 @@ EeveeSpotify replaces Spotify monthly limited lyrics with one of the following t
 
 If the tweak is unable to find a song or process the lyrics, you'll see a "Couldn't load the lyrics for this song" message. The lyrics might be wrong for some songs when using Genius due to how the tweak searches songs. While I've made it work in most cases, kindly refrain from opening issues about it.
 
-## Repositories
-
-You can add an official EeveeSpotify repository to your signing app to always stay up to date. See [Repositories](/Repositories).
-
 ## How It Works
 
 **Starting with version 4.0, EeveeSpotify intercepts Spotify requests to load user data, deserializes it, and modifies the parameters in real-time. This method is the best so far and works incredibly stable.**
@@ -47,6 +47,21 @@ The tweak patches this file while initializing; Spotify loads it and assumes you
 
 ![Hex](Images/hex.png)
 
-Tweak also sets `trackRowsEnabled` in `SPTFreeTierArtistHubRemoteURLResolver` to `true`, so Spotify loads not just track names on the artist page. It can stop working just like Spotilife, but so far, it works on the latest Spotify 8.9.## (Spotilife also patches `offline.bnk`, however, it changes obscure bytes that do nothing on new versions). 
+Tweak also sets `trackRowsEnabled` in `SPTFreeTierArtistHubRemoteURLResolver` to `true`, so Spotify loads not just track names on the artist page, and adds a liked tracks row to the artist view models, allowing you to see the liked tracks row just like with Premium.
 
 To open Spotify links in sideloaded app, use [OpenSpotifySafariExtension](https://github.com/BillyCurtis/OpenSpotifySafariExtension). Remember to activate it and allow access in Settings > Safari > Extensions.
+
+## Support
+
+EeveeSpotify has always been free and open-source project. However, I started accepting crypto donations if you'd like to support me. I really appreciate it:
+
+USDT (TRC-20): `TK4AZZLEWrahYUkKDG8r8Pr5BmkoFjs5zU`
+
+ETH/USDC/USDT: `0x4eFf79BdfCa9d3BC01a1d145eF343871bb0a3CdF`
+
+BTC: `bc1qspsnjenfq6wgj9a7pmm2xe3up4622wqxlem0g5`
+
+TON: `UQCgt8EfLdT3QOmnC11vsndUBHryi2suTcTOVCQqBgMdmg4l`
+
+LTC: `ltc1qup3v46fm05sxd278r63957wh4qf2esehevpy76`
+
