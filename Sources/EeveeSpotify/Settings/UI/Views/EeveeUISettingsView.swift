@@ -6,7 +6,7 @@ struct EeveeUISettingsView: View {
 
     var body: some View {
         List {
-            if UserDefaults.lyricsSource.isReplacing {
+            if UserDefaults.lyricsSource.isReplacingLyrics {
                 Section(
                     header: Text("lyrics_background_color_section".localized),
                     footer: Text("lyrics_background_color_section_description".localized)
@@ -58,12 +58,7 @@ struct EeveeUISettingsView: View {
                 )
             }
             
-            if !UIDevice.current.isIpad {
-                Spacer()
-                    .frame(height: 40)
-                    .listRowBackground(Color.clear)
-                    .modifier(ListRowSeparatorHidden())
-            }
+            NonIPadSpacerView()
         }
         
         .listStyle(GroupedListStyle())

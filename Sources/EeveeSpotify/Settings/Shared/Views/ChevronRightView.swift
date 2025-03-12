@@ -3,7 +3,7 @@ import SwiftUI
 struct ChevronRightView: View {
     var body: some View {
         Image(systemName: "chevron.right")
-            .font(.subheadline.weight(.semibold))
-            .foregroundColor(Color(UIColor.systemGray2))
+            .font(.system(size: 14, weight: .bold))
+            .foregroundColor(Color(UIColor.tertiaryLabel))
     }
 }

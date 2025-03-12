@@ -26,11 +26,9 @@ class ContentOffliningUIHelperImplementationHook: ClassHook<NSObject> {
         pageIdentifier: NSString,
         pageURI: NSURL
     ) {
-        let isPlaylist = [
-            "free-tier-playlist",
-            "playlist/ondemand"
-        ].contains(pageIdentifier)
-        
+        let isPlaylist = Dynamic.convert(pageURI, to: SPTURL.self)
+            .isPlaylistURL()
+            
         PopUpHelper.showPopUp(
             message: "playlist_downloading_popup".localized,
             buttonText: "OK".uiKitLocalized,

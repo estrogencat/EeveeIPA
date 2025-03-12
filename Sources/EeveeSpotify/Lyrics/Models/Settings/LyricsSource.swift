@@ -21,7 +21,7 @@ enum LyricsSource: Int, CaseIterable, CustomStringConvertible {
         }
     }
     
-    var isReplacing: Bool { self != .notReplaced }
+    var isReplacingLyrics: Bool { self != .notReplaced }
     
     static var defaultSource: LyricsSource {
         Locale.isInRegion("JP", orHasLanguage: "ja")

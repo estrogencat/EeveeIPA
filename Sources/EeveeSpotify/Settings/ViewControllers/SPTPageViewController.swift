@@ -1,9 +1,7 @@
 import UIKit
 
 class SPTPageViewController: UIViewController {
-
     override func conforms(to aProtocol: Protocol) -> Bool {
-        
         if NSStringFromProtocol(aProtocol) ~= "SPTPageController" {
             return true
         }

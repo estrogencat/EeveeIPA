@@ -5,8 +5,6 @@ extension UserDefaults {
     
     private static let lyricsSourceKey = "lyricsSource"
     private static let musixmatchTokenKey = "musixmatchToken"
-    private static let geniusFallbackKey = "geniusFallback"
-    private static let fallbackReasonsKey = "fallbackReasons"
     private static let darkPopUpsKey = "darkPopUps"
     private static let patchTypeKey = "patchType"
     private static let overwriteConfigurationKey = "overwriteConfiguration"
@@ -36,15 +34,6 @@ extension UserDefaults {
         }
     }
 
-    static var geniusFallback: Bool {
-        get {
-            defaults.object(forKey: geniusFallbackKey) as? Bool ?? true
-        }
-        set (fallback) {
-            defaults.set(fallback, forKey: geniusFallbackKey)
-        }
-    }
-
     static var lyricsOptions: LyricsOptions {
         get {
             if let data = defaults.object(forKey: lyricsOptionsKey) as? Data, 
@@ -54,20 +43,14 @@ extension UserDefaults {
             
             return LyricsOptions(
                 romanization: false,
-                musixmatchLanguage: Locale.current.languageCode ?? ""
+                musixmatchLanguage: Locale.current.languageCode ?? "",
+                lrclibUrl: LrclibLyricsRepository.originalApiUrl,
+                geniusFallback: true,
+                showFallbackReasons: true
             )
         }
         set (lyricsOptions) {
             defaults.set(try! JSONEncoder().encode(lyricsOptions), forKey: lyricsOptionsKey)
-        }
-    }
-    
-    static var fallbackReasons: Bool {
-        get {
-            defaults.object(forKey: fallbackReasonsKey) as? Bool ?? true
-        }
-        set (reasons) {
-            defaults.set(reasons, forKey: fallbackReasonsKey)
         }
     }
 

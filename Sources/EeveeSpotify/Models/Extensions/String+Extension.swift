@@ -16,7 +16,7 @@ extension String {
         return bundle.localizedString(forKey: self, value: nil, table: nil)
     }
     
-    func localizeWithFormat(_ arguments: CVarArg...) -> String{
+    func localizeWithFormat(_ arguments: CVarArg...) -> String {
         String(format: self.localized, arguments: arguments)
     }
 

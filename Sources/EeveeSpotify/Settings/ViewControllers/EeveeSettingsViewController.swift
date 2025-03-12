@@ -2,7 +2,6 @@ import SwiftUI
 import UIKit 
 
 class EeveeSettingsViewController: SPTPageViewController {
-    
     let frame: CGRect
     let settingsView: AnyView
     

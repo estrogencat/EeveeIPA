@@ -96,8 +96,10 @@ class LyricsOnlyViewControllerHook: ClassHook<UIViewController> {
         
         //
         
-        if UserDefaults.fallbackReasons, let description = lastLyricsState.fallbackError?.description {
-            var attributedString = Dynamic.SPTEncoreAttributedString.alloc(
+        if UserDefaults.lyricsOptions.showFallbackReasons,
+            let description = lastLyricsState.fallbackError?.description
+        {
+            let attributedString = Dynamic.SPTEncoreAttributedString.alloc(
                 interface: SPTEncoreAttributedString.self
             )
             
@@ -117,7 +119,7 @@ class LyricsOnlyViewControllerHook: ClassHook<UIViewController> {
         }
         
         if lastLyricsState.wasRomanized {
-            var attributedString = Dynamic.SPTEncoreAttributedString.alloc(
+            let attributedString = Dynamic.SPTEncoreAttributedString.alloc(
                 interface: SPTEncoreAttributedString.self
             )
             
@@ -146,6 +148,11 @@ class LyricsOnlyViewControllerHook: ClassHook<UIViewController> {
 
 //
 
+private let geniusLyricsRepository = GeniusLyricsRepository()
+private let petitLyricsRepository = PetitLyricsRepository()
+
+//
+
 private func loadLyricsForCurrentTrack() throws {
     guard let track = HookedInstances.currentTrack else {
         throw LyricsError.noCurrentTrack
@@ -163,10 +170,10 @@ private func loadLyricsForCurrentTrack() throws {
     var source = UserDefaults.lyricsSource
     
     var repository: LyricsRepository = switch source {
-        case .genius: GeniusLyricsRepository()
-        case .lrclib: LrcLibLyricsRepository()
+        case .genius: geniusLyricsRepository
+        case .lrclib: LrclibLyricsRepository.shared
         case .musixmatch: MusixmatchLyricsRepository.shared
-        case .petit: PetitLyricsRepository()
+        case .petit: petitLyricsRepository
         case .notReplaced: throw LyricsError.invalidSource
     }
     
@@ -215,7 +222,7 @@ private func loadLyricsForCurrentTrack() throws {
             lastLyricsState.fallbackError = .unknownError
         }
         
-        if source == .genius || !UserDefaults.geniusFallback {
+        if source == .genius || !UserDefaults.lyricsOptions.geniusFallback {
             throw error
         }
         

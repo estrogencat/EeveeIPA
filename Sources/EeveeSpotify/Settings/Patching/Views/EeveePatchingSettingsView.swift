@@ -45,12 +45,7 @@ struct EeveePatchingSettingsView: View {
                 }
             }
             
-            if !UIDevice.current.isIpad {
-                Spacer()
-                    .frame(height: 40)
-                    .listRowBackground(Color.clear)
-                    .modifier(ListRowSeparatorHidden())
-            }
+            NonIPadSpacerView()
         }
         .listStyle(GroupedListStyle())
         .animation(.default, value: patchType)

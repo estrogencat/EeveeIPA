@@ -1,6 +1,6 @@
 import Foundation
 
-struct PetitLyricsRepository: LyricsRepository {
+class PetitLyricsRepository: LyricsRepository {
     private let url = "https://p1.petitlyrics.com/api/GetPetitLyricsData.php"
     private let session: URLSession
 

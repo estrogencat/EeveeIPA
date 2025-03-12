@@ -24,7 +24,7 @@ struct EeveeSpotify: Tweak {
             PremiumPatchingGroup().activate()
         }
         
-        if UserDefaults.lyricsSource.isReplacing {
+        if UserDefaults.lyricsSource.isReplacingLyrics {
             LyricsGroup().activate()
         }
     }

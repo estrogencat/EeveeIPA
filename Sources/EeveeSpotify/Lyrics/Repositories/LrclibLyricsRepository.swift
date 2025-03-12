@@ -1,10 +1,12 @@
 import Foundation
 
-struct LrcLibLyricsRepository: LyricsRepository {
-    private let apiUrl = "https://lrclib.net/api"
+class LrclibLyricsRepository: LyricsRepository {
+    var apiUrl: String
     private let session: URLSession
 
-    init() {
+    private init(apiUrl: String) {
+        self.apiUrl = apiUrl
+        
         let configuration = URLSessionConfiguration.default
         configuration.httpAdditionalHeaders = [
             "User-Agent": "EeveeSpotify v\(EeveeSpotify.version) https://github.com/whoeevee/EeveeSpotify"
@@ -12,6 +14,12 @@ struct LrcLibLyricsRepository: LyricsRepository {
         
         session = URLSession(configuration: configuration)
     }
+    
+    static let originalApiUrl = "https://lrclib.net/api"
+    
+    static let shared = LrclibLyricsRepository(
+        apiUrl: UserDefaults.lyricsOptions.lrclibUrl
+    )
     
     private func perform(
         _ path: String, 
@@ -65,7 +73,6 @@ struct LrcLibLyricsRepository: LyricsRepository {
             var captures: [String: String] = [:]
             
             for name in ["minute", "seconds", "content"] {
-                
                 let matchRange = match.range(withName: name)
                 
                 if let substringRange = Range(matchRange, in: line) {
