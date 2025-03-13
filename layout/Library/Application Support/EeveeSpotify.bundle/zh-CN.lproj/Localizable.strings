@@ -69,6 +69,7 @@ have_premium_popup = "看来您有一个真实有效的 Premium 订阅，因此�
 
 high_audio_quality_popup = "非常高的音频质量是服务器端的，并且无法通过此插件获得。";
 playlist_downloading_popup = "原生播放列表下载是服务器端的，无法通过此插件下载。不过可以下载播客节目。";
+download_local_playlist = "下载本地播放列表";
 
 /* MARK: Lyrics */
 
@@ -101,3 +102,5 @@ Localization = "本地化翻译";
 
 request_anonymous_token = "请求匿名令牌";
 request_anonymous_token_description = "点击“请求匿名令牌”即可在无需授权的情况下向 Musixmatch 请求令牌。";
+
+lrclib_api = "服务器地址";
