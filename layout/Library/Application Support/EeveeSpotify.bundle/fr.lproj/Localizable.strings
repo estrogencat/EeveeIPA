@@ -15,18 +15,23 @@ reset_data_description = "Effacez les données en cache et redémarrez l'applica
 checking_for_update = "Vérification des mises à jour...";
 update_available = "Mise à jour disponible";
 
+restart_is_required_description = "Un redémarrage de l'application est nécéssaire après cette modification.";
+
 // Patching
 
 do_not_patch_premium = "Ne pas patcher Premium";
 patching_description = "Le tweak intercepte les requêtes pour charger les données de l'utilisateur, les désérialise, et modifie les paramètres en temps réel.
 
-Si vous avez un abonnement Premium actif, vous pouvez activer Ne pas patcher Premium. Le tweak ne modifiera pas les données ou n'empêchera pas l'utilisation des fonctionnalités Premium côté serveur. Un redémarrage de l'application est nécessaire après modification.";
+Si vous avez un abonnement Premium actif, vous pouvez activer Ne pas patcher Premium. Le tweak ne modifiera pas les données ou n'empêchera pas l'utilisation des fonctionnalités Premium côté serveur. Un redémarrage de l'application est nécessaire après modification.
+
+%@";
 
 overwrite_configuration = "Remplacer la configuration";
 overwrite_configuration_description = "Remplacez la configuration à distance par celle Premium enregistrée. Cela pourrait résoudre certains problèmes, comme l'apparition de publicités, mais ce n'est pas garanti.";
 
 // Lyrics
 
+do_not_replace_lyrics = "Ne pas remplacer les paroles";
 lyrics_source = "Source des paroles";
 lyrics_source_description = "Vous pouvez choisir la source des paroles que vous préférez.
 
@@ -76,6 +81,7 @@ have_premium_popup = "Il semble que vous avez un abonnement Premium actif, donc 
 
 high_audio_quality_popup = "La qualité audio très élevée est gérée côté serveur et n'est pas disponible avec ce tweak.";
 playlist_downloading_popup = "Le téléchargement natif de playlists est géré côté serveur et n'est pas disponible avec ce tweak. Vous pouvez cependant télécharger des épisodes de podcast.";
+download_local_playlist = "Télécharger une playlist locale";
 
 /* MARK: Lyrics */
 
@@ -98,3 +104,14 @@ unknown_error = "Erreur inconnue";
 
 song_is_instrumental = "Ce titre est instrumental.";
 let_the_music_play = "Laissez la musique jouer...";
+
+// liked songs title, should match official spotify loc
+
+liked_songs = "Sons likés";
+
+contributors = "Contributeurs";
+
+request_anonymous_token = "Demander un Jeton Anynome";
+request_anonymous_token_description = "Appuyez sur “Demander un Jeton Anynome” pour demander un jeton depuis Musixmatch sans autorisation.";
+
+lrclib_api = "Adresse du Serveur";
