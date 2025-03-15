@@ -113,3 +113,5 @@ contributors = "Учасники";
 
 request_anonymous_token = "Запросити анонімний токен";
 request_anonymous_token_description = "Натисніть “Запросити анонімний токен”, щоб запросити токен від Musixmatch без авторизації.";
+
+lrclib_api = "Адреса сервера";
