@@ -4,13 +4,13 @@ patching = "Modyfikacje";
 lyrics = "Teksty utworów";
 customization = "Personalizacja";
 
-common_issues_tip_title = "Masz problemy?";
+common_issues_tip_title = "Napotkałeś problem?";
 
 common_issues_tip_message = "Jeśli napotykasz problem, taki jak brak możliwości odtwarzania utworów, sprawdź";
 common_issues_tip_button = "znane problemy";
 
 reset_data = "Resetuj dane";
-reset_data_description = "Wyczyść dane cache i restartuje aplikacje.";
+reset_data_description = "Czyści dane cache i restartuje aplikacje.";
 
 checking_for_update = "Sprawdzanie aktualizacji...";
 update_available = "Dostępna aktualizacja";
@@ -22,12 +22,12 @@ restart_is_required_description = "Aby zmiany zostały zastosowane wymagany jest
 do_not_patch_premium = "Nie używaj łatki premium";
 patching_description = "Łatka przechwytuje żądania danych użytkownika, deserializuje je i modyfikuje parametry w czasie rzeczywistym.
 
-Jeśli masz aktywną subskrypcję premium, możesz włączyć łatkę premium. Łatka nie będzie modyfikowała żadnych danych ani ograniczać korzystania z funkcji po stronie serwera premium. Po zmianie wymagane jest ponowne uruchomienie aplikacji
+Jeśli masz aktywną subskrypcję premium, możesz włączyć tę opcję. Modyfikacja nie będzie zmieniać żadnych danych ani ograniczać korzystania z funkcji po stronie serwera premium. Po zmianie wymagane jest ponowne uruchomienie aplikacji
 
 %@";
 
 overwrite_configuration = "Nadpisz konfigurację";
-overwrite_configuration_description = "Zastąp zdalną konfigurację zrzuconą konfiguracją premium. Może to naprawić niektóre problemy, takie jak pojawiające się reklamy, ale nie jest to gwarantowane.";
+overwrite_configuration_description = "Zastępuje zdalną konfigurację zrzuconą konfiguracją premium. Może to naprawić niektóre problemy, takie jak pojawiające się reklamy, ale nie jest to gwarantowane.";
 
 // Lyrics
 
@@ -50,12 +50,12 @@ enter_user_token = "Podaj token użytkownika";
 enter_user_token_message = "Aby korzystać z Musixmatch, musisz uzyskać swój token użytkownika z oficjalnej aplikacji. Pobierz Musixmatch z App Store, zarejestruj się, a następnie przejdź do Ustawienia > Uzyskaj pomoc > Kopiuj informacje debugowania i wklej je tutaj. Możesz również wyodrębnić token za pomocą MITM.";
 
 genius_fallback = "Fallback do Genius";
-genius_fallback_description = "Wczytaj tekst z usługi Genius, jeśli wystąpi problem z %@.";
+genius_fallback_description = "Wczytuje tekst z usługi Genius, jeśli wystąpi problem z %@.";
 
 show_fallback_reasons = "Pokaż powody fallback'u";
 
 romanized_lyrics = "Zromanizowane teksty";
-romanized_lyrics_description = "Wyświetl zromanizowane teksty dla japońskiego, koreańskiego i chińskiego.";
+romanized_lyrics_description = "Wyświetla zromanizowane teksty dla japońskiego, koreańskiego i chińskiego.";
 
 musixmatch_language = "Język tekstów Musixmatch";
 musixmatch_language_description = "Możesz wprowadzić 2-literowy kod języka Musixmatch i zobaczyć przetłumaczone teksty Musixmatch, jeśli są dostępne.";
@@ -83,8 +83,6 @@ high_audio_quality_popup = "Bardzo wysoka jakość dźwięku jest kontrolowana p
 playlist_downloading_popup = "Natywne pobieranie playlist jest kontrolowane po stronie serwera i nie jest dostępne w tej modyfikacji. Możesz jednak pobierać odcinki podcastów i lokalne listy odtwarzania";
 download_local_playlist = "Pobierz lokalną playlistę";
 
-
-
 /* MARK: Lyrics */
 
 fallback_attribute = "Fallback";
@@ -105,7 +103,7 @@ unknown_error = "Nieznany błąd";
 // Instrumental Titles
 
 song_is_instrumental = "Ten utwór jest instrumentalny.";
-let_the_music_play = "Pozwól muzyce grać";
+let_the_music_play = "Daj muzyce grać";
 
 // liked songs title, should match official spotify loc
 
@@ -115,3 +113,5 @@ contributors = "Współtwórcy";
 
 request_anonymous_token = "Poproś o anonimowy token";
 request_anonymous_token_description = "Wybierz „Poproś o anonimowy token”, aby zażądać token Musixmatch bez autoryzacji";													   
+
+lrclib_api = "Adres serwera";
