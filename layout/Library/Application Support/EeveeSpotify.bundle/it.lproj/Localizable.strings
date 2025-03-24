@@ -111,3 +111,5 @@ contributors = "Collaboratori";
 
 request_anonymous_token = "Richiedi Token Anonimo";
 request_anonymous_token_description = "Clicca “Richiedi Token Anonimo” per richiedere un token a Musixmatch senza autorizzazione.";
+
+lrclib_api = "Indirizzo del Server";
