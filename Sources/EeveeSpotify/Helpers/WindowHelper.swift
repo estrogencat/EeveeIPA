@@ -14,6 +14,19 @@ struct WindowHelper {
     func present(_ viewController: UIViewController) {
         rootViewController.present(viewController, animated: true)
     }
+    
+    func findFirstSubview(_ regex: String, in view: UIView) -> UIView? {
+        for subview in view.subviews {
+            if NSStringFromClass(type(of: subview)) ~= regex {
+                return subview
+            }
+            if let found = findFirstSubview(regex, in: subview) {
+                return found
+            }
+        }
+        
+        return nil
+    }
 
     func findFirstViewController(_ regex: String) -> UIViewController? {
         let rootView = self.rootViewController.view!

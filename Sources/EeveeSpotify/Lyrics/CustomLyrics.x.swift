@@ -63,12 +63,11 @@ class LyricsOnlyViewControllerHook: ClassHook<UIViewController> {
         }
         
         //
-        
-        let lyricsLabel = EeveeSpotify.isOldSpotifyVersion 
-            ? lyricsHeaderViewController.view.subviews.first?.subviews.first
-            : lyricsHeaderViewController.view.subviews.first
 
-        guard let lyricsLabel = lyricsLabel else {
+        guard let lyricsLabel = WindowHelper.shared.findFirstSubview(
+            "SPTEncoreLabel",
+            in: lyricsHeaderViewController.view
+        ) else {
             return
         }
         
