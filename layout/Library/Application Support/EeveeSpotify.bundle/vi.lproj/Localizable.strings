@@ -113,3 +113,5 @@ contributors = "Những người đóng góp";
 
 request_anonymous_token = "Yêu cầu lấy Token ẩn danh";
 request_anonymous_token_description = "Bấm “Yêu cầu lấy Token ẩn danh” để lấy token từ Musixmatch mà không cần ủy quyền.";
+
+lrclib_api = "Địa chỉ máy chủ";
