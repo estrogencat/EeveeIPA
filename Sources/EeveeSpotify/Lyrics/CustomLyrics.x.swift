@@ -161,7 +161,9 @@ private func loadLyricsForCurrentTrack() throws {
     
     let searchQuery = LyricsSearchQuery(
         title: track.trackTitle(),
-        primaryArtist: track.artistTitle(),
+        primaryArtist: EeveeSpotify.isOldSpotifyVersion
+            ? track.artistTitle()
+            : track.artistName(),
         spotifyTrackId: track.URI().spt_trackIdentifier()
     )
     
