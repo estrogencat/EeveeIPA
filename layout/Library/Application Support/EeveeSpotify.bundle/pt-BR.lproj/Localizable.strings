@@ -13,14 +13,14 @@ reset_data = "Redefinir dados";
 reset_data_description = "Esta função limpará os Dados em cache e reiniciará o aplicativo.";
 
 checking_for_update = "Procurando atualizações...";
-update_available = "Atualização disponivel";
+update_available = "Atualização disponível";
 
 // Patching
 
 do_not_patch_premium = "Não aplicar correção ao premium";
-patching_description = "O ajuste intercepta solicitações para carregar dados do usuário, desrealiza-os e modifica os parâmetros em tempo real.
+patching_description = "O ajuste intercepta solicitações para carregar dados do usuário, decodifica-os e modifica os parâmetros em tempo real.
 
-Caso você tenha uma assinatura Premium ativa, poderá ativar o Não Patchear Premium. O ajuste não corrigirá os dados nem restringirá o uso de recursos Premium do lado do servidor. A reinicialização do aplicativo é necessária após a alteração.";
+Caso você tenha uma assinatura Premium ativa, poderá ativar o Não modificar Premium. O ajuste não corrigirá os dados nem restringirá o uso de recursos Premium do lado do servidor. A reinicialização do aplicativo é necessária após a alteração.";
 
 overwrite_configuration = "Substituir configuração";
 overwrite_configuration_description = "Substitui a configuração remota pela Premium descartada. Isso pode corrigir alguns problemas, como a exibição de anúncios, mas não é garantido.";
@@ -30,7 +30,7 @@ overwrite_configuration_description = "Substitui a configuração remota pela Pr
 lyrics_source = "Fonte de letras";
 lyrics_source_description = "Você pode selecionar a letra de sua preferência.
 
-Genius: Oferece letras de melhor qualidade, maior número de músicas e atualizaçaõ das letras com mais rapidez. Não é e nunca será sincronizado com o tempo.
+Genius: Oferece letras de melhor qualidade, maior número de músicas e atualização das letras com mais rapidez. Não é e nunca será sincronizado com o tempo.
 
 LRCLIB: Serviço com maior abertura, oferecendo letras sincronizadas com o tempo. No entanto, faltam letras para muitas músicas.
 
@@ -44,10 +44,10 @@ user_token_placeholder = "Insira o token de usuário ou cole as informações de
 enter_user_token = "Insira o token do usuário";
 enter_user_token_message = "Para usar o Musixmatch, você precisa recuperar seu token de usuário do aplicativo oficial. Baixe o Musixmatch na App Store, cadastre-se e vá para Configurações > Obter ajuda > Copiar informações de depuração e cole-as aqui. Você também pode extrair o token usando MITM.";
 
-genius_fallback = "Contigência genial";
+genius_fallback = "Contingência genial";
 genius_fallback_description = "Carregue as letras do Genius se houver algum problema com %@.";
 
-show_fallback_reasons = "Mostrar motivos de contigência";
+show_fallback_reasons = "Mostrar motivos de contingência";
 
 romanized_lyrics = "Letras romanizadas";
 romanized_lyrics_description = "Exibe Letras romanizadas para japonês, coreano e chinês.";
@@ -57,7 +57,7 @@ musixmatch_language_description = "Você pode inserir um código de idioma Musix
 
 // UI
 
-lyrics_background_color_section = "Cor de fundo da letras";
+lyrics_background_color_section = "Cor de fundo das letras";
 lyrics_background_color_section_description = "Se você ativar Exibir cores originais, as letras aparecerão nas cores originais do Spotify para as faixas que as possuem.
 
 Você pode definir uma cor estática ou um fator de normalização com base na cor da capa da trilha escolhida. Este fator determina o quanto as cores escuras são iluminadas e as cores claras são escurecidas. Geralmente, você verá cores mais claras com um fator de normalização mais alto.";
@@ -79,7 +79,7 @@ playlist_downloading_popup = "O download da lista de reprodução nativa é do l
 
 /* MARK: Lyrics */
 
-fallback_attribute = "Recurso de contigência";
+fallback_attribute = "Recurso de contingência";
 romanized_attribute = "Romanizado";
 
 musixmatch_unauthorized_popup = "O ajuste não consegue carregar as letras do Musixmatch devido a um erro não autorizado. Verifique ou atualize seu token Musixmatch. Se você usa um iPad, você deve obter o token no aplicativo Musixmatch para iPad.";
@@ -91,7 +91,7 @@ no_such_song = "Nenhuma música foi encontrada";
 musixmatch_restricted = "Restrito";
 invalid_musixmatch_token = "Não autorizado";
 decoding_error = "Erro de decodificação";
-no_current_track = "Sem instância de rastreamento";
+no_current_track = "Nenhuma faixa em reprodução";
 unknown_error = "Erro desconhecido";
 
 // Instrumental Titles
