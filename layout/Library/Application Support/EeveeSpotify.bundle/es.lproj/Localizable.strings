@@ -55,17 +55,17 @@ genius_fallback_description = "Cargar letras desde Genius si hay un problema con
 show_fallback_reasons = "Mostrar razones de la alternativa";
 
 romanized_lyrics = "Letras romanizadas";
-romanized_lyrics_description = "Muestra las letras romanizadas en japonés, coreano y chino.";
+romanized_lyrics_description = "Muestra letras romanizadas para japonés, coreano y chino.";
 
 musixmatch_language = "Idioma de las Letras de Musixmatch";
 musixmatch_language_description = "Puedes introducir un código de idioma de Musixmatch de 2 letras y ver las letras traducidas en Musixmatch si están disponibles.";
 
 // UI
 
-lyrics_background_color_section = "Color de Fondo de las Letras";
+lyrics_background_color_section = "Color de fondo de las Letras";
 lyrics_background_color_section_description = "Si activas \'Mostrar colores originales\', las letras aparecerán con los colores originales de Spotify para las canciones que los tengan.
 
-Puede establecer un color estático o un factor de normalización basado en el color de la pista extraída. Este factor determina cuánto se aclaran los colores oscuros y cuánto se oscurecen los claros. Generalmente, verás colores más claros con un factor de normalización más alto";
+Puedes establecer un color estático o un factor de normalización basado en el color de la pista extraída. Este factor determina cuánto se aclaran los colores oscuros y cuánto se oscurecen los claros. Generalmente, verás colores más claros con un factor de normalización más alto";
 
 display_original_colors = "Mostrar colores originales";
 
@@ -81,7 +81,7 @@ have_premium_popup = "Parece que tienes una suscripción Premium activa, por lo 
 
 high_audio_quality_popup = "La calidad de audio muy alta depende del servidor y no está disponible con este paquete de modificaciones.";
 playlist_downloading_popup = "La descarga nativa de listas de reproducción se realiza desde el servidor y no está disponible con este paquete de modificaciones. Sin embargo, puede descargar episodios de podcasts y listas de reproducción locales.";
-download_local_playlist = 'Descargar lista de reproducción local';
+download_local_playlist = 'Descargar una lista de reproducción local;
 
 /* MARK: Lyrics */
 
@@ -97,13 +97,13 @@ no_such_song = "Canción no encontrada";
 musixmatch_restricted = "Restringido";
 invalid_musixmatch_token = "No autorizado";
 decoding_error = "Error de decodificación";
-no_current_track = "No hay instancia de pista";
+no_current_track = "No hay pista en reproducción";
 unknown_error = "Error desconocido";
 
 // Instrumental Titles
 
 song_is_instrumental = "Esta canción es instrumental.";
-let_the_music_play = "Deja la música sonar...";
+let_the_music_play = "Deja que la música suene...";
 
 // liked songs title, should match official spotify loc
 
