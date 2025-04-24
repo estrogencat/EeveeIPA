@@ -9,7 +9,7 @@ common_issues_tip_title = "Está com problemas?";
 common_issues_tip_message = "Se estiver a enfrentar problemas, como não conseguir reproduzir nenhuma música, confira";
 common_issues_tip_button = "Problemas comuns";
 
-reset_data = "Predifinir Dados";
+reset_data = "Predefinir Dados";
 reset_data_description = "Limpa os dados em cache e reinicia a aplicação.";
 
 checking_for_update = "A procurar atualizações...";
@@ -33,7 +33,7 @@ overwrite_configuration_description = "Substitui a configuração remota pela ve
 
 do_not_replace_lyrics = "Não substituir letras da música";
 lyrics_source = "Fonte de Letras da música";
-lyrics_source_description = "Podes selecionar a fonte de letras fr música que preferir.
+lyrics_source_description = "Podes selecionar a fonte de letras da música que preferires.
 
 Genius: Oferece letras de melhor qualidade, um maior número de músicas e atualiza as letras mais rapidamente. Não está, nem estará, sincronizado.
 
@@ -47,7 +47,7 @@ musixmatch_user_token = "Token de Utilizador Musixmatch";
 user_token_placeholder = "Insere o token de utilizador ou cola as informações de depuração";
 
 enter_user_token = "Inserir Token de Utilizador";
-enter_user_token_message = "Para utilizar o Musixmatch, precisa de obter o token de utilizador da aplicação oficial. Descarrega o Musixmatch da App Store, registe-se, depois va a Definições > Ajuda > Copiar informações de depuração, e cole-as aqui. Também pode extrair o token usando MITM.";
+enter_user_token_message = "Para utilizar o Musixmatch, precisa de obter o token de utilizador da aplicação oficial. Descarrega o Musixmatch da App Store, registe-se, depois vá a Definições > Ajuda > Copiar informações de depuração, e cole-as aqui. Também pode extrair o token usando MITM.";
 
 genius_fallback = "Genius opção de contingência";
 genius_fallback_description = "Carrega as letras do Genius se houver um problema com %@.";
@@ -58,14 +58,14 @@ romanized_lyrics = "Letras Romanizadas";
 romanized_lyrics_description = "Exibe letras romanizadas para japonês, coreano e chinês.";
 
 musixmatch_language = "Idioma das Letras do Musixmatch";
-musixmatch_language_description = "Pode inserir um código de idioma de 2 letras no Musixmatch e ver as letras traduzidas, se disponíveis.";
+musixmatch_language_description = "Podes inserir um código de idioma de 2 letras no Musixmatch e ver as letras traduzidas, se disponíveis.";
 
 // UI
 
 lyrics_background_color_section = "Cor de Fundo das Letras";
 lyrics_background_color_section_description = "Se ativar a opção Mostrar Cores Originais, as letras aparecerão nas cores originais do Spotify para as faixas que as possuírem.
 
-Pode definir uma cor estática ou um fator de normalização com base na cor da capa da faixa. Este fator determina o quanto as cores escuras são aclaradas e as cores claras são escurecidas. Geralmente, verá cores mais claras com um fator de normalização mais alto.";
+Podes definir uma cor estática ou um fator de normalização com base na cor da capa da faixa. Este fator determina o quanto as cores escuras são aclaradas e as cores claras são escurecidas. Geralmente, verá cores mais claras com um fator de normalização mais alto.";
 
 display_original_colors = "Mostrar Cores Originais";
 
