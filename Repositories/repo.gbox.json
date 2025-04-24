@@ -6,7 +6,7 @@
   "appRepositories": [
     {
       "appType": "SELF_SIGN",
-      "appUpdateTime": "2025-04-24T18:23:34Z",
+      "versionDate": "2025-04-24T18:23:34Z",
       "appName": "EeveeSpotify",
       "appVersion": "9.0.36",
       "appDescription": "Spotify v9.0.36 injected with EeveeSpotify",
@@ -15,7 +15,7 @@
     },
     {
       "appType": "SELF_SIGN",
-      "appUpdateTime": "2025-04-15T22:44:43Z",
+      "versionDate": "2025-04-15T22:44:43Z",
       "appName": "EeveeSpotify",
       "appVersion": "9.0.32",
       "appDescription": "Spotify v9.0.32 injected with EeveeSpotify",
@@ -24,7 +24,7 @@
     },
     {
       "appType": "SELF_SIGN",
-      "appUpdateTime": "2025-03-27T19:27:18Z",
+      "versionDate": "2025-03-27T19:27:18Z",
       "appName": "EeveeSpotify",
       "appVersion": "9.0.30",
       "appDescription": "Spotify v9.0.30 injected with EeveeSpotify",
@@ -33,7 +33,7 @@
     },
     {
       "appType": "SELF_SIGN",
-      "appUpdateTime": "2025-03-19T23:19:36Z",
+      "versionDate": "2025-03-19T23:19:36Z",
       "appName": "EeveeSpotify",
       "appVersion": "9.0.28",
       "appDescription": "Spotify v9.0.28 injected with EeveeSpotify",
@@ -42,7 +42,7 @@
     },
     {
       "appType": "SELF_SIGN",
-      "appUpdateTime": "2025-03-12T15:12:38Z",
+      "versionDate": "2025-03-12T15:12:38Z",
       "appName": "EeveeSpotify",
       "appVersion": "9.0.26",
       "appDescription": "Spotify v9.0.26 injected with EeveeSpotify",
@@ -51,7 +51,7 @@
     },
     {
       "appType": "SELF_SIGN",
-      "appUpdateTime": "2025-03-10T17:26:29Z",
+      "versionDate": "2025-03-10T17:26:29Z",
       "appName": "EeveeSpotify",
       "appVersion": "9.0.24",
       "appDescription": "Spotify v9.0.24 injected with EeveeSpotify",
@@ -60,7 +60,7 @@
     },
     {
       "appType": "SELF_SIGN",
-      "appUpdateTime": "2025-03-04T18:34:50Z",
+      "versionDate": "2025-03-04T18:34:50Z",
       "appName": "EeveeSpotify",
       "appVersion": "9.0.22",
       "appDescription": "Spotify v9.0.22 injected with EeveeSpotify",
@@ -69,7 +69,7 @@
     },
     {
       "appType": "SELF_SIGN",
-      "appUpdateTime": "2025-02-26T17:37:41Z",
+      "versionDate": "2025-02-26T17:37:41Z",
       "appName": "EeveeSpotify",
       "appVersion": "9.0.20",
       "appDescription": "Spotify v9.0.20 injected with EeveeSpotify",
@@ -78,7 +78,7 @@
     },
     {
       "appType": "SELF_SIGN",
-      "appUpdateTime": "2025-02-11T19:57:17Z",
+      "versionDate": "2025-02-11T19:57:17Z",
       "appName": "EeveeSpotify",
       "appVersion": "9.0.18",
       "appDescription": "Spotify v9.0.18 injected with EeveeSpotify",
@@ -87,7 +87,7 @@
     },
     {
       "appType": "SELF_SIGN",
-      "appUpdateTime": "2025-02-05T20:03:05Z",
+      "versionDate": "2025-02-05T20:03:05Z",
       "appName": "EeveeSpotify",
       "appVersion": "9.0.16",
       "appDescription": "Spotify v9.0.16 injected with EeveeSpotify",
@@ -96,7 +96,7 @@
     },
     {
       "appType": "SELF_SIGN",
-      "appUpdateTime": "2025-01-29T16:28:49Z",
+      "versionDate": "2025-01-29T16:28:49Z",
       "appName": "EeveeSpotify",
       "appVersion": "9.0.14",
       "appDescription": "Spotify v9.0.14 injected with EeveeSpotify",
@@ -105,7 +105,7 @@
     },
     {
       "appType": "SELF_SIGN",
-      "appUpdateTime": "2025-01-15T18:50:57Z",
+      "versionDate": "2025-01-15T18:50:57Z",
       "appName": "EeveeSpotify",
       "appVersion": "9.0.10",
       "appDescription": "Spotify v9.0.10 injected with EeveeSpotify",
@@ -114,7 +114,7 @@
     },
     {
       "appType": "SELF_SIGN",
-      "appUpdateTime": "2025-01-13T17:25:01Z",
+      "versionDate": "2025-01-13T17:25:01Z",
       "appName": "EeveeSpotify",
       "appVersion": "9.0.8",
       "appDescription": "Spotify v9.0.8 injected with EeveeSpotify",
@@ -123,7 +123,7 @@
     },
     {
       "appType": "SELF_SIGN",
-      "appUpdateTime": "2024-12-18T19:25:26Z",
+      "versionDate": "2024-12-18T19:25:26Z",
       "appName": "EeveeSpotify",
       "appVersion": "9.0.2",
       "appDescription": "Spotify v9.0.2 injected with EeveeSpotify",
@@ -132,7 +132,7 @@
     },
     {
       "appType": "SELF_SIGN",
-      "appUpdateTime": "2024-12-12T00:00:00Z",
+      "versionDate": "2024-12-12T00:00:00Z",
       "appName": "EeveeSpotify",
       "appVersion": "9.0.0",
       "appDescription": "Spotify v9.0.0 injected with EeveeSpotify",
@@ -141,7 +141,7 @@
     },
     {
       "appType": "SELF_SIGN",
-      "appUpdateTime": "2024-12-05T00:00:00Z",
+      "versionDate": "2024-12-05T00:00:00Z",
       "appName": "EeveeSpotify",
       "appVersion": "8.9.96",
       "appDescription": "Spotify v8.9.96 injected with EeveeSpotify",
@@ -150,7 +150,7 @@
     },
     {
       "appType": "SELF_SIGN",
-      "appUpdateTime": "2024-11-19T00:00:00Z",
+      "versionDate": "2024-11-19T00:00:00Z",
       "appName": "EeveeSpotify",
       "appVersion": "8.9.94",
       "appDescription": "Spotify v8.9.94 injected with EeveeSpotify",
@@ -159,7 +159,7 @@
     },
     {
       "appType": "SELF_SIGN",
-      "appUpdateTime": "2024-11-18T00:00:00Z",
+      "versionDate": "2024-11-18T00:00:00Z",
       "appName": "EeveeSpotify",
       "appVersion": "8.9.92",
       "appDescription": "Spotify v8.9.92 injected with EeveeSpotify",
@@ -168,7 +168,7 @@
     },
     {
       "appType": "SELF_SIGN",
-      "appUpdateTime": "2024-11-07T00:00:00Z",
+      "versionDate": "2024-11-07T00:00:00Z",
       "appName": "EeveeSpotify",
       "appVersion": "8.9.90",
       "appDescription": "Spotify v8.9.90 injected with EeveeSpotify",
@@ -177,7 +177,7 @@
     },
     {
       "appType": "SELF_SIGN",
-      "appUpdateTime": "2024-10-24T00:00:00Z",
+      "versionDate": "2024-10-24T00:00:00Z",
       "appName": "EeveeSpotify",
       "appVersion": "8.9.86",
       "appDescription": "Spotify v8.9.86 injected with EeveeSpotify",
@@ -186,7 +186,7 @@
     },
     {
       "appType": "SELF_SIGN",
-      "appUpdateTime": "2024-10-22T00:00:00Z",
+      "versionDate": "2024-10-22T00:00:00Z",
       "appName": "EeveeSpotify",
       "appVersion": "8.9.84",
       "appDescription": "Spotify v8.9.84 injected with EeveeSpotify",
@@ -195,7 +195,7 @@
     },
     {
       "appType": "SELF_SIGN",
-      "appUpdateTime": "2024-10-09T00:00:00Z",
+      "versionDate": "2024-10-09T00:00:00Z",
       "appName": "EeveeSpotify",
       "appVersion": "8.9.82",
       "appDescription": "Spotify v8.9.82 injected with EeveeSpotify",
@@ -204,7 +204,7 @@
     },
     {
       "appType": "SELF_SIGN",
-      "appUpdateTime": "2024-10-06T00:00:00Z",
+      "versionDate": "2024-10-06T00:00:00Z",
       "appName": "EeveeSpotify",
       "appVersion": "8.9.80",
       "appDescription": "Spotify v8.9.80 injected with EeveeSpotify",
@@ -213,7 +213,7 @@
     },
     {
       "appType": "SELF_SIGN",
-      "appUpdateTime": "2024-10-01T00:00:00Z",
+      "versionDate": "2024-10-01T00:00:00Z",
       "appName": "EeveeSpotify",
       "appVersion": "8.9.78",
       "appDescription": "Spotify v8.9.78 injected with EeveeSpotify",
@@ -222,7 +222,7 @@
     },
     {
       "appType": "SELF_SIGN",
-      "appUpdateTime": "2024-09-18T00:00:00Z",
+      "versionDate": "2024-09-18T00:00:00Z",
       "appName": "EeveeSpotify",
       "appVersion": "8.9.76",
       "appDescription": "Spotify v8.9.76 injected with EeveeSpotify",
@@ -231,7 +231,7 @@
     },
     {
       "appType": "SELF_SIGN",
-      "appUpdateTime": "2024-09-11T00:00:00Z",
+      "versionDate": "2024-09-11T00:00:00Z",
       "appName": "EeveeSpotify",
       "appVersion": "8.9.74",
       "appDescription": "Spotify v8.9.74 injected with EeveeSpotify",
@@ -240,7 +240,7 @@
     },
     {
       "appType": "SELF_SIGN",
-      "appUpdateTime": "2024-09-05T00:00:00Z",
+      "versionDate": "2024-09-05T00:00:00Z",
       "appName": "EeveeSpotify",
       "appVersion": "8.9.70",
       "appDescription": "Spotify v8.9.70 injected with EeveeSpotify",
@@ -249,7 +249,7 @@
     },
     {
       "appType": "SELF_SIGN",
-      "appUpdateTime": "2024-08-26T00:00:00Z",
+      "versionDate": "2024-08-26T00:00:00Z",
       "appName": "EeveeSpotify",
       "appVersion": "8.9.68",
       "appDescription": "Spotify v8.9.68 injected with EeveeSpotify",
@@ -258,7 +258,7 @@
     },
     {
       "appType": "SELF_SIGN",
-      "appUpdateTime": "2024-08-19T00:00:00Z",
+      "versionDate": "2024-08-19T00:00:00Z",
       "appName": "EeveeSpotify",
       "appVersion": "8.9.66",
       "appDescription": "Spotify v8.9.66 injected with EeveeSpotify",
@@ -267,7 +267,7 @@
     },
     {
       "appType": "SELF_SIGN",
-      "appUpdateTime": "2024-08-09T00:00:00Z",
+      "versionDate": "2024-08-09T00:00:00Z",
       "appName": "EeveeSpotify",
       "appVersion": "8.9.64",
       "appDescription": "Spotify v8.9.64 injected with EeveeSpotify",
@@ -276,7 +276,7 @@
     },
     {
       "appType": "SELF_SIGN",
-      "appUpdateTime": "2024-08-06T00:00:00Z",
+      "versionDate": "2024-08-06T00:00:00Z",
       "appName": "EeveeSpotify",
       "appVersion": "8.9.62",
       "appDescription": "Spotify v8.9.62 injected with EeveeSpotify",
@@ -285,7 +285,7 @@
     },
     {
       "appType": "SELF_SIGN",
-      "appUpdateTime": "2024-07-29T00:00:00Z",
+      "versionDate": "2024-07-29T00:00:00Z",
       "appName": "EeveeSpotify",
       "appVersion": "8.9.60",
       "appDescription": "Spotify v8.9.60 injected with EeveeSpotify",
@@ -294,7 +294,7 @@
     },
     {
       "appType": "SELF_SIGN",
-      "appUpdateTime": "2024-07-20T00:00:00Z",
+      "versionDate": "2024-07-20T00:00:00Z",
       "appName": "EeveeSpotify",
       "appVersion": "8.9.58",
       "appDescription": "Spotify v8.9.58 injected with EeveeSpotify",
@@ -303,7 +303,7 @@
     },
     {
       "appType": "SELF_SIGN",
-      "appUpdateTime": "2024-07-10T00:00:00Z",
+      "versionDate": "2024-07-10T00:00:00Z",
       "appName": "EeveeSpotify",
       "appVersion": "8.9.54",
       "appDescription": "Spotify v8.9.54 injected with EeveeSpotify",
@@ -312,7 +312,7 @@
     },
     {
       "appType": "SELF_SIGN",
-      "appUpdateTime": "2024-06-25T00:00:00Z",
+      "versionDate": "2024-06-25T00:00:00Z",
       "appName": "EeveeSpotify",
       "appVersion": "8.9.50",
       "appDescription": "Spotify v8.9.50 injected with EeveeSpotify",
@@ -321,7 +321,7 @@
     },
     {
       "appType": "SELF_SIGN",
-      "appUpdateTime": "2024-06-17T00:00:00Z",
+      "versionDate": "2024-06-17T00:00:00Z",
       "appName": "EeveeSpotify",
       "appVersion": "8.9.48",
       "appDescription": "Spotify v8.9.48 injected with EeveeSpotify",
