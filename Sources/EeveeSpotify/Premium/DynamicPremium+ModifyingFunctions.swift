@@ -60,9 +60,9 @@ func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
     attributes["high-bitrate"] = AccountAttribute.with {
         $0.boolValue = true
     }
-//    attributes["offline"] = AccountAttribute.with {
-//        $0.boolValue = true
-//    }
+    attributes["offline"] = AccountAttribute.with {
+        $0.boolValue = true // allow downloading
+    }
     attributes["nft-disabled"] = AccountAttribute.with {
         $0.stringValue = "1"
     }
