@@ -1,7 +1,7 @@
 /* MARK: Settings */
 
 patching = "Parcheando";
-lyrics = "Letra";
+lyrics = "Letras";
 customization = "Personalización";
 
 common_issues_tip_title = "¿Tienes problemas?";
@@ -15,14 +15,14 @@ reset_data_description = "Borra los datos almacenados en caché y reinicia la ap
 checking_for_update = "Comprobando actualizaciones...";
 update_available = "Actualización disponible";
 
-restart_is_required_description = "Es necesario reiniciar la aplicación para aplicar los cambios";
+restart_is_required_description = "Es necesario reiniciar la aplicación para aplicar los cambios.";
 
 // Patching
 
 do_not_patch_premium = "No parchear las funciones Premium";
 patching_description = "EeveeSpotify intercepta las solicitudes de carga de datos de usuario, las deserializa y modifica los parámetros en tiempo real.
 
-Si tienes una suscripción Premium activa, puedes activar No parchear Premium. EeveeSpotify no parcheará los datos ni restringirá el uso de las funciones Premium del servidor.
+Si tienes una suscripción Premium activa, puedes activar \"No parchear Premium\". EeveeSpotify no parcheará los datos ni restringirá el uso de las funciones Premium del servidor.
 
 %@";
 
@@ -31,9 +31,9 @@ overwrite_configuration_description = "Sustituye la configuración remota por la
 
 // Lyrics
 
-do_not_replace_lyrics = "No reemplazar las Letras";
-lyrics_source = "Fuente de Letras";
-lyrics_source_description = "Puedes seleccionar la fuente de letra que prefieras.
+do_not_replace_lyrics = "No reemplazar las letras";
+lyrics_source = "Fuente de letras";
+lyrics_source_description = "Puedes seleccionar la fuente de letras que prefieras.
 
 Genius: Ofrece la mejor calidad de letras, proporciona el mayor número de canciones y actualiza las letras más rápidamente. No ofrece ni ofrecerá sincronización temporal.
 
@@ -57,13 +57,13 @@ show_fallback_reasons = "Mostrar razones de la alternativa";
 romanized_lyrics = "Letras romanizadas";
 romanized_lyrics_description = "Muestra letras romanizadas para japonés, coreano y chino.";
 
-musixmatch_language = "Idioma de las Letras de Musixmatch";
+musixmatch_language = "Idioma de las letras de Musixmatch";
 musixmatch_language_description = "Puedes introducir un código de idioma de Musixmatch de 2 letras y ver las letras traducidas en Musixmatch si están disponibles.";
 
 // UI
 
-lyrics_background_color_section = "Color de fondo de las Letras";
-lyrics_background_color_section_description = "Si activas \'Mostrar colores originales\', las letras aparecerán con los colores originales de Spotify para las canciones que los tengan.
+lyrics_background_color_section = "Color de fondo de las letras";
+lyrics_background_color_section_description = "Si activas \"Mostrar colores originales\", las letras aparecerán con los colores originales de Spotify para las canciones que los tengan.
 
 Puedes establecer un color estático o un factor de normalización basado en el color de la pista extraída. Este factor determina cuánto se aclaran los colores oscuros y cuánto se oscurecen los claros. Generalmente, verás colores más claros con un factor de normalización más alto";
 
@@ -112,4 +112,6 @@ liked_songs = "Canciones que te gustan";
 contributors = "Colaboradores";
 
 request_anonymous_token = "Solicitar Token Anónimo";
-request_anonymous_token_description = "Pulse “Solicitar Token Anónimo” para solicitar un token a Musixmatch sin autorización.";
+request_anonymous_token_description = "Pulse \"Solicitar Token Anónimo\" para solicitar un token a Musixmatch sin autorización.";
+
+lrclib_api = "Dirección del servidor";
