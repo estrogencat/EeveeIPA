@@ -273,8 +273,12 @@ func getLyricsForCurrentTrack(originalLyrics: Lyrics? = nil) throws -> Data {
     else {
         var color: Color?
         
-        if let extractedColorHex = track.extractedColorHex() {
-            color = Color(hex: extractedColorHex)
+        let extractedColor = EeveeSpotify.isOldSpotifyVersion
+            ? track.extractedColorHex()
+            : track.metadata()["extracted_color"]
+        
+        if let extractedColor = extractedColor {
+            color = Color(hex: extractedColor)
         }
         else if let uiColor = HookedInstances.nowPlayingMetaBackgroundModel?.color() {
             color = Color(uiColor)
