@@ -111,3 +111,5 @@ contributors = "مشارکت کنندگان";
 
 request_anonymous_token = "درخواست توکن ناشناس";
 request_anonymous_token_description = "برای درخواست توکن از Musixmatch بدون مجوز روی «درخواست توکن ناشناس» ضربه بزنید.";
+
+lrclib_api = "آدرس سرور";
