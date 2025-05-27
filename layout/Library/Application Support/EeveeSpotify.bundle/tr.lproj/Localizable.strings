@@ -113,3 +113,5 @@ contributors = "Katkıda bulunanlar";
 
 request_anonymous_token = "Anonim Token Talep Et";
 request_anonymous_token_description = "Yetkilendirme olmadan Musixmatch'ten bir token talep etmek için \"Anonim Token Talep Et\"e dokun.";
+
+lrclib_api = "Sunucu Adresi";
