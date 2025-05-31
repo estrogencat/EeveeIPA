@@ -1,8 +1,6 @@
 name: Build Swift
 
 on:
-  push:
-    branches: [ "swift" ]
   pull_request:
     branches: [ "swift" ]
   workflow_dispatch: 
