@@ -9,13 +9,13 @@ common_issues_tip_title = "Napotkałeś problem?";
 common_issues_tip_message = "Jeśli napotykasz problem, taki jak brak możliwości odtwarzania utworów, sprawdź";
 common_issues_tip_button = "znane problemy";
 
-reset_data = "Resetuj dane";
-reset_data_description = "Czyści dane cache i restartuje aplikacje.";
+reset_data = "Wyzeruj dane";
+reset_data_description = "Czyści dane cache i ponownie uruchamia aplikację.";
 
 checking_for_update = "Sprawdzanie aktualizacji...";
-update_available = "Dostępna aktualizacja";
+update_available = "Dostępna jest aktualizacja";
 
-restart_is_required_description = "Aby zmiany zostały zastosowane wymagany jest restart aplikacji.";
+restart_is_required_description = "Aby zmiany zostały zastosowane, wymagane będzie ponowne uruchomienie aplikacji.";
 
 // Patching
 
@@ -33,7 +33,7 @@ overwrite_configuration_description = "Zastępuje zdalną konfigurację zrzucon�
 
 do_not_replace_lyrics = "Nie zastępuj tekstów";												
 lyrics_source = "Źródło tekstów";
-lyrics_source_description = "Możesz wybrać źródło które najbardziej ci odpowiada.
+lyrics_source_description = "Możesz wybrać źródło które najbardziej Tobie odpowiada.
 
 Genius: Najlepsza jakość, najczęściej aktualizowane źródło. Nie jest i nigdy nie będzie zsynchronizowane z utworem.
 
@@ -41,7 +41,7 @@ LRCLIB: Najbardziej otwarte źródło, oferuje zsynchronizowane teksty. Brakuje 
 
 Musixmatch: Używane przez Spotify, oferuje zsynchronizowane teksty dla wielu utworów. Wymaga tokenu użytkownika.";
 lyrics_additional_info = "Jeśli EeveeSpotify nie znajdzie utworu lub tekstu, pojawi się komunikat \"Nie udało się załadować tekstu\". Teksty z Genius mogą być błędne z powodu sposobu wyszukiwania utworów. W większości przypadków działa to poprawnie.";
-petitlyrics_description = "PetitLyrics: Oferuje wiele zsynchronizowanych japońskich tekstów, ale niewiele międzynarodowych.";
+petitlyrics_description = "PetitLyrics: Oferuje wiele zsynchronizowanych tekstów japońskich, ale niewiele międzynarodowych.";
 
 musixmatch_user_token = "Token użytkownika Musixmatch";
 user_token_placeholder = "Podaj token lub dane debugowania";
@@ -57,8 +57,8 @@ show_fallback_reasons = "Pokaż powody fallback'u";
 romanized_lyrics = "Zromanizowane teksty";
 romanized_lyrics_description = "Wyświetla zromanizowane teksty dla japońskiego, koreańskiego i chińskiego.";
 
-musixmatch_language = "Język tekstów Musixmatch";
-musixmatch_language_description = "Możesz wprowadzić 2-literowy kod języka Musixmatch i zobaczyć przetłumaczone teksty Musixmatch, jeśli są dostępne.";
+musixmatch_language = "Język tekstów z Musixmatch";
+musixmatch_language_description = "Możesz wprowadzić 2-literowy kod języka Musixmatch. Zobaczysz przetłumaczone teksty Musixmatch, gdy będą dostępne.";
 
 // UI
 
@@ -88,7 +88,7 @@ download_local_playlist = "Pobierz lokalną playlistę";
 fallback_attribute = "Fallback";
 romanized_attribute = "Zromanizowany tekst";
 
-musixmatch_unauthorized_popup = "Modyfukacja nie może załadować tekstów z Musixmatch z powodu błędu autoryzacji. Sprawdź lub zaktualizuj swój token Musixmatch. Jeśli używasz iPada, uzyskaj token z aplikacji Musixmatch na iPady.";
+musixmatch_unauthorized_popup = "Modyfikacja nie może załadować tekstów z Musixmatch z powodu błędu autoryzacji. Sprawdź lub zaktualizuj swój token Musixmatch. Jeśli używasz iPada, uzyskaj token z aplikacji Musixmatch na iPady.";
 musixmatch_restricted_popup = "Modyfikacja nie jest w stanie załadować tekstów z Musixmatch, ponieważ są one ograniczone. Jest to prawdopodobnie kwestia praw autorskich ze względu na amerykański adres IP, spróbuj go zmienić, jeśli znajdujesz się w USA lub korzystasz z VPN.";
 
 // Errors Titles
