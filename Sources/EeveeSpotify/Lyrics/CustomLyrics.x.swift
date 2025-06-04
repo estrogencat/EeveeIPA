@@ -170,13 +170,22 @@ private func loadLyricsForCurrentTrack() throws {
     let options = UserDefaults.lyricsOptions
     var source = UserDefaults.lyricsSource
     
-    var repository: LyricsRepository = switch source {
-        case .genius: geniusLyricsRepository
-        case .lrclib: LrclibLyricsRepository.shared
-        case .musixmatch: MusixmatchLyricsRepository.shared
-        case .petit: petitLyricsRepository
-        case .notReplaced: throw LyricsError.invalidSource
+    // switched to swift 5.8 syntax to compile with Theos on Linux.
+    var repository: LyricsRepository
+
+    switch source {
+    case .genius:
+        repository = geniusLyricsRepository
+    case .lrclib:
+        repository = LrclibLyricsRepository.shared
+    case .musixmatch:
+        repository = MusixmatchLyricsRepository.shared
+    case .petit:
+        repository = petitLyricsRepository
+    case .notReplaced:
+        throw LyricsError.invalidSource
     }
+
     
     let lyricsDto: LyricsDto
     

@@ -11,15 +11,22 @@ enum LyricsSource: Int, CaseIterable, CustomStringConvertible {
         return [.genius, .lrclib, .musixmatch, .petit]
     }
 
+    // swift 5.8 compatible
     var description: String {
-        switch self {
-        case .genius: "Genius"
-        case .lrclib: "LRCLIB"
-        case .musixmatch: "Musixmatch"
-        case .petit: "PetitLyrics"
-        case .notReplaced: "Spotify"
-        }
+    switch self {
+    case .genius:
+        return "Genius"
+    case .lrclib:
+        return "LRCLIB"
+    case .musixmatch:
+        return "Musixmatch"
+    case .petit:
+        return "PetitLyrics"
+    case .notReplaced:
+        return "Spotify"
     }
+    }
+
     
     var isReplacingLyrics: Bool { self != .notReplaced }
     

@@ -9,15 +9,23 @@ enum LyricsError: Error, CustomStringConvertible {
     case unknownError
     case invalidSource
     
+    // swift 5.8 compatible
     var description: String {
         switch self {
-        case .noSuchSong: "no_such_song".localized
-        case .musixmatchRestricted: "musixmatch_restricted".localized
-        case .invalidMusixmatchToken: "invalid_musixmatch_token".localized
-        case .decodingError: "decoding_error".localized
-        case .noCurrentTrack: "no_current_track".localized
-        case .unknownError: "unknown_error".localized
-        case .invalidSource: ""
+        case .noSuchSong:
+            return "no_such_song".localized
+        case .musixmatchRestricted:
+            return "musixmatch_restricted".localized
+        case .invalidMusixmatchToken:
+            return "invalid_musixmatch_token".localized
+        case .decodingError:
+            return "decoding_error".localized
+        case .noCurrentTrack:
+            return "no_current_track".localized
+        case .unknownError:
+            return "unknown_error".localized
+        case .invalidSource:
+            return ""
         }
     }
 }
