@@ -76,6 +76,19 @@ struct EeveeSettingsView: View {
                 )
             }
             
+            Button {
+                pushSettingsController(
+                    with: EeveeExperimentsSettingsView(),
+                    title: "experiments".localized
+                )
+            } label: {
+                NavigationSectionView(
+                    color: .purple,
+                    title: "experiments".localized,
+                    imageSystemName: "sparkle"
+                )
+            }
+            
             //
             
             Section(footer: Text("reset_data_description".localized)) {

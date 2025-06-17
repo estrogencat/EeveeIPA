@@ -27,6 +27,10 @@ struct EeveeSpotify: Tweak {
     }
     
     init() {
+        if UserDefaults.experimentsOptions.showInstagramDestination {
+            InstgramDestinationGroup().activate()
+        }
+        
         if UserDefaults.darkPopUps {
             DarkPopUps().activate()
         }

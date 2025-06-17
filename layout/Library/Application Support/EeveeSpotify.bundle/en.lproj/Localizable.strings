@@ -3,6 +3,7 @@
 patching = "Patching";
 lyrics = "Lyrics";
 customization = "Customization";
+experiments = "Experiments";
 
 common_issues_tip_title = "Having Trouble?";
 
@@ -75,6 +76,14 @@ static_color = "Static Color";
 color_normalization_factor = "Color Normalization Factor";
 dark_popups = "Dark PopUps";
 
+// Experiments
+
+show_instagram_destination = "Show Instagram Destination";
+show_instagram_destination_description = "Always show the Instagram share destination. %@";
+
+livecontainer_sharing = "Share to LiveContainer";
+livecontainer_sharing_description = "Share to LiveContainer and copy the URL if the selected destination is not supported.";
+
 /* MARK: Premium PopUps */
 
 have_premium_popup = "It looks like you have an active Premium subscription, so the tweak won't patch the data or restrict the use of Premium server-sided features. You can manage this in the EeveeSpotify settings.";
@@ -82,6 +91,10 @@ have_premium_popup = "It looks like you have an active Premium subscription, so 
 high_audio_quality_popup = "Very high audio quality is server-sided and is not available with this tweak.";
 playlist_downloading_popup = "Native playlist downloading is server-sided and is not available with this tweak. You can download podcast episodes and local playlists though.";
 download_local_playlist = "Download local playlist";
+
+//
+
+could_not_share_popup = "Couldn’t share to the selected destination or LiveContainer. The URL has been copied.";
 
 /* MARK: Lyrics */
 

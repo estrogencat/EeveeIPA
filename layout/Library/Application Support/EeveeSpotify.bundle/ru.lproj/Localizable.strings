@@ -3,6 +3,7 @@
 patching = "Патчинг";
 lyrics = "Тексты";
 customization = "Кастомизация";
+experiments = "Экспериментальные функции";
 
 common_issues_tip_title = "Что-то не так?";
 
@@ -74,12 +75,24 @@ static_color = "Статический цвет";
 color_normalization_factor = "Уровень нормализации цвета";
 dark_popups = "Темные сообщения";
 
+// Experiments
+
+show_instagram_destination = "Поделиться в Instagram";
+show_instagram_destination_description = "Всегда показывать опцию для отправки в Instagram. %@";
+
+livecontainer_sharing = "Отправлять в LiveContainer";
+livecontainer_sharing_description = "Отправлять в LiveContainer и копировать URL, если выбранная опция для отправки не поддерживается.";
+
 /* MARK: Premium PopUps */
 
 have_premium_popup = "Похоже, у Вас есть активная подписка Premium. Твик не будет изменять данные и ограничивать использование серверных функций. Вы можете управлять этим в настройках EeveeSpotify.";
 high_audio_quality_popup = "Очень высокое качество недоступно с твиком, так как предоставляется на стороне сервера.";
 playlist_downloading_popup = "Встроенная загрузка плейлистов осуществляется из сервера и недоступна с твиком. Однако вы можете загружать эпизоды подкастов и локальные плейлисты.";
 download_local_playlist = "Загрузить локальный плейлист";
+
+//
+
+could_not_share_popup = "Не удалось поделиться контентом в выбранный сервис или LiveContainer. URL скопирован.";
 
 /* MARK: Lyrics */
 
