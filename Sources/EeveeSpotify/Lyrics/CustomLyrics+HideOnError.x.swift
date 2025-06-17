@@ -1,7 +1,7 @@
 import Orion
 import UIKit
 
-class fefewfwfwefewefw: ClassHook<UIViewController> {
+class ErrorViewControllerHook: ClassHook<UIViewController> {
     typealias Group = LyricsGroup
     
     static var targetName: String {
