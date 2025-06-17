@@ -10,9 +10,9 @@ common_issues_tip_message = "Se stai riscontrando un problema, come l'impossibil
 common_issues_tip_button = "Problemi comuni";
 
 reset_data = "Cancella Cache";
-reset_data_description = "Cancella i dati salvati nella cache e riavvia l'app.";
+reset_data_description = "Cancella i dati cache e riavvia l'app.";
 
-checking_for_update = "Verifico la presenza di aggiornamenti...";
+checking_for_update = "Verifico aggiornamenti...";
 update_available = "Aggiornamento disponibile";
 
 restart_is_required_description = "È necessario riavviare l'app per applicare le modifiche";
@@ -25,7 +25,7 @@ patching_description = "EeveeSpotify intercetta le richieste per caricare i dati
 Se invece hai già un abbonamento Premium attivo, puoi attivare questa opzione, cosi da non modificare i dati o limitare le funzionalità Premium lato server (è necessario riavviare l'app per applicare le modifiche).";
 
 overwrite_configuration = "Sovrascrivi Configurazione";
-overwrite_configuration_description = "Sostituisci la configurazione remota con quella Premium precedentemente estratta. Verrebbero cosi definiti la maggior parte dei parametri per l'interfaccia e l'esperienza dell'utente, tornando utile (potrebbe causare problemi)";
+overwrite_configuration_description = "Sostituisci la configurazione remota con quella Premium precedente. Verrebbero cosi definiti la maggior parte dei parametri per l'interfaccia e l'esperienza dell'utente, tornando utile ma potrebbe causare problemi";
 
 // Lyrics
 
@@ -38,7 +38,7 @@ Genius: Qualitativamente la migliore per il maggior numero di canzoni (e i testi
 LRCLIB: Il servizio più aperto (purtroppo per un numero minore di canzoni). Permette di visualizzare i testi sincronizzati con il brano.
 
 Musixmatch: Lo stesso servizio utilizzato da Spotify. Fornisce testi sincronizzati per molte canzoni, ma sarà necessario un token utente per utilizzare questa fonte.";
-lyrics_additional_info = "Se EeveeSpotify non riesce a trovare una canzone o a processare i testi, vedrai il messaggio \"Impossibile caricare il testo per questa canzone\". I testi potrebbero comunque essere errati per alcune canzoni quando viene utilizzato Genius, a causa del modo in cui il tweak cerca le canzoni. Ho fatto in modo che funzioni nella maggior parte dei casi.";
+lyrics_additional_info = "Se EeveeSpotify non riesce a trovare una canzone oppure a elaborare i testi, vedrai il messaggio \"Impossibile caricare il testo per questa canzone\". I testi potrebbero comunque essere errati per alcune canzoni quando si usa Genius, a causa del modo in cui il tweak cerca le canzoni. Ho fatto in modo che funzioni nella maggior parte dei casi.";
 petitlyrics_description = "PetitLyrics: Offre numerosi testi sincronizzati in giapponese e altri internazionali (non sincronizzati).";
 
 musixmatch_user_token = "Token Utente Musixmatch";
@@ -87,7 +87,7 @@ fallback_attribute = "Fallback";
 romanized_attribute = "Romanizzato";
 
 musixmatch_unauthorized_popup = "Il tweak non riesce a caricare i testi da Musixmatch a causa di un errore di Autorizzazione. Controlla o aggiorna il tuo token Musixmatch. Se utilizzi un iPad, dovresti ottenere il token dall'app Musixmatch per iPad.";
-musixmatch_restricted_popup = "Il tweak non riesce a caricare i testi da Musixmatch perché sono limitati. Probabilmente si tratta di un problema di copyright a causa dell'indirizzo IP statunitense, dovresti cambiarlo se ti trovi negli Stati Uniti o usare una VPN.";
+musixmatch_restricted_popup = "Il tweak non riesce a caricare i testi da Musixmatch poichè sono limitati. Probabilmente si tratta di un problema di copyright per via dell'indirizzo IP statunitense, dovresti cambiarlo se ti trovi negli Stati Uniti o usare una VPN.";
 
 // Errors Titles
 
@@ -95,7 +95,7 @@ no_such_song = "Nessuna canzone trovata";
 musixmatch_restricted = "Limitato";
 invalid_musixmatch_token = "Non autorizzato";
 decoding_error = "Errore di decodifica";
-no_current_track = "Nessuna traccia corrente";
+no_current_track = "Nessuna traccia trovata";
 unknown_error = "Errore sconosciuto";
 
 // Instrumental Titles
