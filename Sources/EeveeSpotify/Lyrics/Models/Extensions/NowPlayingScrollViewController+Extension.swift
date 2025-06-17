@@ -24,6 +24,23 @@ extension NowPlayingScrollViewController {
     
     //
     
+    private var dataSource: NSObject {
+        get {
+            Ivars<NSObject>(nowPlayingScrollViewModel).dataSource
+        }
+    }
+    
+    var activeProviders: Array<NSObject> {
+        get {
+            Ivars<Array<NSObject>>(dataSource).activeProviders
+        }
+        set {
+            Ivars<Array<NSObject>>(dataSource).activeProviders = newValue
+        }
+    }
+    
+    //
+    
     var backgroundViewController: SPTNowPlayingBackgroundViewController {
         get {
             Ivars<SPTNowPlayingBackgroundViewController>(self).backgroundViewController

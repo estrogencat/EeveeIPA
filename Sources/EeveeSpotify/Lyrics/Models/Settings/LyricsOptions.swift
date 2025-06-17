@@ -6,4 +6,5 @@ struct LyricsOptions: Codable, Hashable {
     var lrclibUrl: String
     var geniusFallback: Bool
     var showFallbackReasons: Bool
+    var hideOnError: Bool
 }

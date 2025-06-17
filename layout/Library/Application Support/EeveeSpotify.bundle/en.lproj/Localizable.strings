@@ -55,6 +55,9 @@ genius_fallback_description = "Load lyrics from Genius if there is a problem wit
 
 show_fallback_reasons = "Show Fallback Reasons";
 
+hide_lyrics_on_error = "Hide on Error";
+hide_lyrics_on_error_description = "Remove the lyrics component if lyrics fail to load.";
+
 romanized_lyrics = "Romanized Lyrics";
 romanized_lyrics_description = "Display romanized lyrics for Japanese, Korean, and Chinese.";
 

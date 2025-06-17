@@ -8,7 +8,8 @@ extension UserDefaults {
             musixmatchLanguage: Locale.current.languageCode ?? "",
             lrclibUrl: LrclibLyricsRepository.originalApiUrl,
             geniusFallback: true,
-            showFallbackReasons: true
+            showFallbackReasons: true,
+            hideOnError: false
         )
     )
     static var lyricsOptions
