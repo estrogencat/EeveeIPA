@@ -5,163 +5,24 @@ import SwiftUI
 
 struct LyricsGroup: HookGroup { }
 
-//
+var lyricsState = LyricsLoadingState()
 
-class LyricsFullscreenViewControllerHook: ClassHook<UIViewController> {
-    typealias Group = LyricsGroup
-    
-    static var targetName: String {
-        return EeveeSpotify.isOldSpotifyVersion
-            ? "Lyrics_CoreImpl.FullscreenViewController"
-            : "Lyrics_FullscreenPageImpl.FullscreenViewController"
-    }
-
-    func viewDidLoad() {
-        orig.viewDidLoad()
-        
-        if UserDefaults.lyricsSource == .musixmatch 
-            && lastLyricsState.fallbackError == nil
-            && !lastLyricsState.wasRomanized
-            && !lastLyricsState.areEmpty {
-            return
-        }
-        
-        let headerView = Ivars<UIView>(target.view).headerView
-        
-        if let reportButton = headerView.subviews(matching: "EncoreButton")[1] as? UIButton {
-            reportButton.isEnabled = false
-        }
-    }
-}
-
-//
-
-private var preloadedLyrics: Lyrics? = nil
-private var lastLyricsState = LyricsLoadingState()
-
-private var hasShownRestrictedPopUp = false
-private var hasShownUnauthorizedPopUp = false
-
-//
-
-class LyricsOnlyViewControllerHook: ClassHook<UIViewController> {
-    typealias Group = LyricsGroup
-    
-    static var targetName: String {
-        return EeveeSpotify.isOldSpotifyVersion
-            ? "Lyrics_CoreImpl.LyricsOnlyViewController"
-            : "Lyrics_NPVCommunicatorImpl.LyricsOnlyViewController"
-    }
-
-    func viewDidLoad() {
-        orig.viewDidLoad()
-        
-        guard
-            let lyricsHeaderViewController = target.parent?.children.first
-        else {
-            return
-        }
-        
-        //
-
-        guard let lyricsLabel = WindowHelper.shared.findFirstSubview(
-            "SPTEncoreLabel",
-            in: lyricsHeaderViewController.view
-        ) else {
-            return
-        }
-        
-        //
-
-        let encoreLabel = Dynamic.convert(lyricsLabel, to: SPTEncoreLabel.self)
-        
-        var text = [
-            encoreLabel.text().firstObject
-        ]
-        
-        let attributes = Dynamic.SPTEncoreAttributes
-            .alloc(interface: SPTEncoreAttributes.self)
-            .`init`({ attributes in
-                attributes.setForegroundColor(.white.withAlphaComponent(0.5))
-            })
-        
-        let typeStyle = type(
-            of: Dynamic[
-                dynamicMember: EeveeSpotify.isOldSpotifyVersion
-                    ? "SPTEncoreTypeStyle"
-                    : "SPTEncoreTextStyle"
-            ].alloc(interface: SPTEncoreTypeStyle.self)
-        ).bodyMediumBold()
-        
-        //
-        
-        if UserDefaults.lyricsOptions.showFallbackReasons,
-            let description = lastLyricsState.fallbackError?.description
-        {
-            let attributedString = Dynamic.SPTEncoreAttributedString.alloc(
-                interface: SPTEncoreAttributedString.self
-            )
-            
-            text.append(
-                EeveeSpotify.isOldSpotifyVersion
-                    ? attributedString.initWithString(
-                        "\n\("fallback_attribute".localized): \(description)",
-                        typeStyle: typeStyle,
-                        attributes: attributes
-                    )
-                    : attributedString.initWithString(
-                        "\n\("fallback_attribute".localized): \(description)",
-                        textStyle: typeStyle,
-                        attributes: attributes
-                    )
-            )
-        }
-        
-        if lastLyricsState.wasRomanized {
-            let attributedString = Dynamic.SPTEncoreAttributedString.alloc(
-                interface: SPTEncoreAttributedString.self
-            )
-            
-            text.append(
-                EeveeSpotify.isOldSpotifyVersion
-                    ? attributedString.initWithString(
-                        "\n\("romanized_attribute".localized)",
-                        typeStyle: typeStyle,
-                        attributes: attributes
-                    )
-                    : attributedString.initWithString(
-                        "\n\("romanized_attribute".localized)",
-                        textStyle: typeStyle,
-                        attributes: attributes
-                    )
-            )
-        }
-        
-        if EeveeSpotify.isOldSpotifyVersion {
-            encoreLabel.setNumberOfLines(text.count)
-        }
-
-        encoreLabel.setText(text as NSArray)
-    }
-}
-
-//
+var hasShownRestrictedPopUp = false
+var hasShownUnauthorizedPopUp = false
 
 private let geniusLyricsRepository = GeniusLyricsRepository()
 private let petitLyricsRepository = PetitLyricsRepository()
 
 //
 
-private func loadLyricsForCurrentTrack() throws {
-    guard let track = HookedInstances.currentTrack else {
+private func loadCustomLyricsForCurrentTrack() throws -> Lyrics {
+    guard let track = nowPlayingScrollViewController?.loadedTrack else {
         throw LyricsError.noCurrentTrack
     }
     
-    //
-    
     let searchQuery = LyricsSearchQuery(
         title: track.trackTitle(),
-        primaryArtist: EeveeSpotify.isOldSpotifyVersion
+        primaryArtist: EeveeSpotify.hookTarget == .lastAvailableiOS14
             ? track.artistTitle()
             : track.artistName(),
         spotifyTrackId: track.URI().spt_trackIdentifier()
@@ -185,20 +46,17 @@ private func loadLyricsForCurrentTrack() throws {
     case .notReplaced:
         throw LyricsError.invalidSource
     }
-
     
     let lyricsDto: LyricsDto
     
-    //
-    
-    lastLyricsState = LyricsLoadingState()
+    lyricsState = LyricsLoadingState()
     
     do {
         lyricsDto = try repository.getLyrics(searchQuery, options: options)
     }
     catch let error {
         if let error = error as? LyricsError {
-            lastLyricsState.fallbackError = error
+            lyricsState.fallbackError = error
             
             switch error {
                 
@@ -229,14 +87,12 @@ private func loadLyricsForCurrentTrack() throws {
             }
         }
         else {
-            lastLyricsState.fallbackError = .unknownError
+            lyricsState.fallbackError = .unknownError
         }
         
         if source == .genius || !UserDefaults.lyricsOptions.geniusFallback {
             throw error
         }
-        
-        NSLog("[EeveeSpotify] Unable to load lyrics from \(source): \(error), trying Genius as fallback")
         
         source = .genius
         repository = GeniusLyricsRepository()
@@ -244,35 +100,26 @@ private func loadLyricsForCurrentTrack() throws {
         lyricsDto = try repository.getLyrics(searchQuery, options: options)
     }
     
-    lastLyricsState.areEmpty = lyricsDto.lines.isEmpty
+    lyricsState.isEmpty = lyricsDto.lines.isEmpty
     
-    lastLyricsState.wasRomanized = lyricsDto.romanization == .romanized
+    lyricsState.wasRomanized = lyricsDto.romanization == .romanized
         || (lyricsDto.romanization == .canBeRomanized && UserDefaults.lyricsOptions.romanization)
     
-    lastLyricsState.loadedSuccessfully = true
+    lyricsState.loadedSuccessfully = true
 
     let lyrics = Lyrics.with {
-        $0.data = lyricsDto.toLyricsData(source: source.description)
+        $0.data = lyricsDto.toSpotifyLyricsData(source: source.description)
     }
     
-    preloadedLyrics = lyrics
+    return lyrics
 }
 
-func getLyricsForCurrentTrack(originalLyrics: Lyrics? = nil) throws -> Data {
-    guard let track = HookedInstances.currentTrack else {
+func getLyricsDataForCurrentTrack(originalLyrics: Lyrics? = nil) throws -> Data {
+    guard let track = nowPlayingScrollViewController?.loadedTrack else {
         throw LyricsError.noCurrentTrack
     }
     
-    var lyrics = preloadedLyrics
-    
-    if lyrics == nil {
-        try loadLyricsForCurrentTrack()
-        lyrics = preloadedLyrics
-    }
-    
-    guard var lyrics = lyrics else {
-        throw LyricsError.unknownError
-    }
+    var lyrics = try loadCustomLyricsForCurrentTrack()
     
     let lyricsColorsSettings = UserDefaults.lyricsColors
     
@@ -280,30 +127,36 @@ func getLyricsForCurrentTrack(originalLyrics: Lyrics? = nil) throws -> Data {
         lyrics.colors = originalLyrics.colors
     }
     else {
-        var color: Color?
+        let extractedColor = switch EeveeSpotify.hookTarget {
+        case .lastAvailableiOS14:
+            track.extractedColorHex()
+        default:
+            track.metadata()["extracted_color"]
+        }
         
-        let extractedColor = EeveeSpotify.isOldSpotifyVersion
-            ? track.extractedColorHex()
-            : track.metadata()["extracted_color"]
+        var color: Color
         
-        if let extractedColor = extractedColor {
+        if lyricsColorsSettings.useStaticColor {
+            color = Color(hex: lyricsColorsSettings.staticColor)
+        }
+        else if let extractedColor = extractedColor {
             color = Color(hex: extractedColor)
+                .normalized(lyricsColorsSettings.normalizationFactor)
         }
-        else if let uiColor = HookedInstances.nowPlayingMetaBackgroundModel?.color() {
+        else if let uiColor = nowPlayingScrollViewController?.backgroundViewController.color() {
             color = Color(uiColor)
+                .normalized(lyricsColorsSettings.normalizationFactor)
         }
-        
-        color = color?.normalized(lyricsColorsSettings.normalizationFactor)
+        else {
+            color = Color.gray
+        }
         
         lyrics.colors = LyricsColors.with {
-            $0.backgroundColor = lyricsColorsSettings.useStaticColor
-                ? Color(hex: lyricsColorsSettings.staticColor).uInt32
-            : color?.uInt32 ?? Color.gray.uInt32
+            $0.backgroundColor = color.uInt32
             $0.lineColor = Color.black.uInt32
             $0.activeLineColor = Color.white.uInt32
         }
     }
     
-    preloadedLyrics = nil
     return try lyrics.serializedBytes()
 }

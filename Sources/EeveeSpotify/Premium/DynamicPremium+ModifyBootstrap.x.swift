@@ -10,9 +10,10 @@ private func showHavePremiumPopUp() {
 
 class SpotifySessionDelegateBootstrapHook: ClassHook<NSObject>, SpotifySessionDelegate {
     static var targetName: String {
-        EeveeSpotify.isOldSpotifyVersion
-            ? "SPTCoreURLSessionDataDelegate"
-            : "SPTDataLoaderService"
+        switch EeveeSpotify.hookTarget {
+        case .lastAvailableiOS14: return "SPTCoreURLSessionDataDelegate"
+        default: return "SPTDataLoaderService"
+        }
     }
     
     func URLSession(

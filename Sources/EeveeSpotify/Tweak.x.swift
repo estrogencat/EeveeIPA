@@ -12,8 +12,19 @@ struct PremiumPatchingGroup: HookGroup { }
 
 struct EeveeSpotify: Tweak {
     static let version = "5.9.9"
-    static let isOldSpotifyVersion =
-        NSClassFromString("Lyrics_NPVCommunicatorImpl.LyricsOnlyViewController") == nil
+    
+    static var hookTarget: VersionHookTarget {
+        let version = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
+        
+        switch version {
+        case "9.0.48":
+            return .lastAvailableiOS15
+        case "8.9.8":
+            return .lastAvailableiOS14
+        default:
+            return .latest
+        }
+    }
     
     init() {
         if UserDefaults.darkPopUps {

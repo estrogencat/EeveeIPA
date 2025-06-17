@@ -9,7 +9,7 @@ class SPTFreeTierArtistHubRemoteURLResolverHook: ClassHook<NSObject> {
         onDemandSet: Any,
         onDemandTrialService: Any,
         trackRowsEnabled: Bool,
-        productState: SPTCoreProductState
+        productState: NSObject
     ) -> Target {
         return orig.initWithViewURI(
             uri,

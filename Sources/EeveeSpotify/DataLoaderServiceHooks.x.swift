@@ -34,7 +34,7 @@ class SPTDataLoaderServiceHook: ClassHook<NSObject>, SpotifySessionDelegate {
                     orig.URLSession(
                         session,
                         dataTask: task,
-                        didReceiveData: try getLyricsForCurrentTrack(
+                        didReceiveData: try getLyricsDataForCurrentTrack(
                             originalLyrics: try? Lyrics(serializedBytes: buffer)
                         )
                     )
@@ -94,7 +94,7 @@ class SPTDataLoaderServiceHook: ClassHook<NSObject>, SpotifySessionDelegate {
             )!
             
             do {
-                let lyricsData = try getLyricsForCurrentTrack()
+                let lyricsData = try getLyricsDataForCurrentTrack()
                 
                 orig.URLSession(
                     session,
@@ -109,9 +109,7 @@ class SPTDataLoaderServiceHook: ClassHook<NSObject>, SpotifySessionDelegate {
                 return
             }
             catch {
-                NSLog("[EeveeSpotify] Unable to load lyrics: \(error)")
                 orig.URLSession(session, task: task, didCompleteWithError: error)
-                
                 return
             }
         }

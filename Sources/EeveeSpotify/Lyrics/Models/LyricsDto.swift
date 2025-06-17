@@ -6,7 +6,7 @@ struct LyricsDto {
     var romanization: LyricsRomanizationStatus
     var translation: LyricsTranslationDto?
     
-    func toLyricsData(source: String) -> LyricsData {
+    func toSpotifyLyricsData(source: String) -> LyricsData {
         var lyricsData = LyricsData.with {
             $0.timeSynchronized = timeSynced
             $0.restriction = .unrestricted

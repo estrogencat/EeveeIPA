@@ -4,9 +4,12 @@ import SwiftUI
 
 struct DarkPopUps: HookGroup { }
 
-private let popUpContainerViewController = EeveeSpotify.isOldSpotifyVersion
-    ? "SPTEncorePopUpContainer"
-    : "EncoreConsumerMobile_Wrappers.PopUpPresentableContainer"
+private var popUpContainerViewController: String {
+    switch EeveeSpotify.hookTarget {
+    case .lastAvailableiOS14: return "SPTEncorePopUpContainer"
+    default: return "EncoreConsumerMobile_Wrappers.PopUpPresentableContainer"
+    }
+}
 
 class EncoreLabelHook: ClassHook<UIView> {
     typealias Group = DarkPopUps
