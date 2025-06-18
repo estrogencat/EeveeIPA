@@ -12,7 +12,7 @@ class UIApplicationLiveContainerSharingHook: ClassHook<UIApplication> {
             UIPasteboard.general.addItems([[UTType.url.identifier: url]])
             
             let data = url.dataRepresentation
-            let liveContainerUrl = URL(string: "livecontainer://open-web-page?url=\(data.base64EncodedString())")!
+            let liveContainerUrl = URL(string: "livecontainer://open-url?url=\(data.base64EncodedString())")!
             
             orig.openURL(
                 liveContainerUrl,
