@@ -24,6 +24,12 @@
         "shuffled": true,
         "contributors": [
             {
+                "username": "wuku0",
+                "roles": [
+                    "Croatian"
+                ]
+            },
+            {
                 "username": "by3lish",
                 "roles": [
                     "Azerbaijani"
@@ -117,12 +123,6 @@
                 "username": "3xynos7",
                 "roles": [
                     "Nepalese"
-                ]
-            },
-            {
-                "username": "by3lish",
-                "roles": [
-                    "Azerbaijani"
                 ]
             },
             {
