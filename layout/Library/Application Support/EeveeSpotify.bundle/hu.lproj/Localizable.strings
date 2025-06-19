@@ -1,12 +1,12 @@
 /* MARK: Settings */
 
-patching = "Foltozás";
-lyrics = "Szövegek";
+patching = "Patchelés";
+lyrics = "Dalszöveg";
 customization = "Testreszabás";
 
-common_issues_tip_title = "Problémák?";
+common_issues_tip_title = "Hibát találtál?";
 
-common_issues_tip_message = "Ha olyan problémával szembesül, mint például, hogy nem tudja lejátszani a dalokat, tekintse meg a";
+common_issues_tip_message = "Ha olyan problémával szembesülsz, mint például nem tudsz zenét lejátszani, tekintsd meg a";
 common_issues_tip_button = "Gyakori problémák";
 
 reset_data = "Adatok visszaállítása";
@@ -19,10 +19,10 @@ restart_is_required_description = "A módosítás után az alkalmazás újraind�
 
 // Patching
 
-do_not_patch_premium = "Ne rögzítse a prémiumot";
-patching_description = "Az EeveeSpotify elfogja a felhasználói adatok betöltésére irányuló kéréseket, deserializálja azokat, és valós időben módosítja a paramétereket.
+do_not_patch_premium = "Ne javítsd a Prémiumot";
+patching_description = "Az EeveeSpotify fogadja a felhasználói adatok betöltésére irányuló kéréseket, deserializálja azokat, és valós időben módosítja a paramétereket.
 
-Ha aktív Prémium előfizetéssel rendelkezik, bekapcsolhatja a Ne javítsd a Prémiumot funkciót. A tweak nem foltozza az adatokat, és nem korlátozza a Premium szerveroldali funkciók használatát.
+Ha aktív Prémium előfizetéssel rendelkezik, bekapcsolhatja a Ne javítsd a Prémiumot funkciót. A tweak nem állítja át az adatokat, és nem korlátozza a Premium szerveroldali funkciók használatát.
 
 %@";
 
@@ -49,10 +49,10 @@ user_token_placeholder = "Felhasználói azonosító megadása vagy hibakeresés
 enter_user_token = "Felhasználói azonosító megadása";
 enter_user_token_message = "A Musixmatch használatához le kell kérnie a felhasználói tokenjét a hivatalos alkalmazásból. Töltse le a Musixmatch-et az App Store-ból, regisztráljon, majd menjen a Beállítások > Segítség lekérése > Hibakereső információ másolása menüpontra, és illessze be ide. A tokent a MITM segítségével is kinyerheted.";
 
-genius_fallback = "Zseniális visszaesés";
+genius_fallback = "Genius probléma";
 genius_fallback_description = "Szövegek betöltése a Geniusból, ha probléma van a %@-val.";
 
-show_fallback_reasons = "Show Fallback Reasons (Visszalépési okok)";
+show_fallback_reasons = "Hibakódok mutatása (Fallback hiba)";
 
 romanized_lyrics = "Romanizált dalszövegek";
 romanized_lyrics_description = "Japán, koreai és kínai nyelvű dalszövegek megjelenítése.";
@@ -65,7 +65,7 @@ musixmatch_language_description = "Megadhat egy 2 betűs Musixmatch nyelvi kódo
 lyrics_background_color_section = "Lyrics háttér színe";
 lyrics_background_color_section_description = "Ha bekapcsolja az Eredeti színek megjelenítése funkciót, a dalszövegek az eredeti Spotify színekben jelennek meg azoknál a zeneszámoknál, amelyek rendelkeznek ilyenekkel.
 
-Beállíthat egy statikus színt vagy egy normalizációs tényezőt a kivont zeneszám borítójának színe alapján. Ez a tényező határozza meg, hogy a sötét színek mennyire világosodnak, a világos színek pedig mennyire sötétednek. Általában világosabb színeket fog látni magasabb normalizációs faktorral.";
+Beállíthat egy statikus színt vagy egy normalizációs tényezőt a zeneszám borítójának színe alapján. Ez a tényező határozza meg, hogy a sötét színek mennyire világosodnak, a világos színek pedig mennyire sötétednek. Általában világosabb színeket fog látni magasabb normalizációs faktorral.";
 
 display_original_colors = "Eredeti színek megjelenítése";
 
@@ -79,8 +79,8 @@ dark_popups = "Sötét PopUps";
 
 have_premium_popup = "Úgy tűnik, hogy aktív Prémium előfizetésed van, így a tweak nem javítja az adatokat, és nem korlátozza a Prémium szerveroldali funkciók használatát. Ezt az EeveeSpotify beállításaiban tudod kezelni.";
 
-high_audio_quality_popup = "A nagyon magas hangminőség szerveroldali, és ezzel a tweakkel nem érhető el.";
-playlist_downloading_popup = "A natív lejátszási lista letöltése szerveroldali, és ezzel a csípéssel nem érhető el. Podcast epizódok és helyi lejátszási listák azonban letölthetők.";
+high_audio_quality_popup = "A nagyon magas hangminőség szerveroldali funkció, és ezzel a tweakkel nem érhető el.";
+playlist_downloading_popup = "A natív lejátszási lista letöltése szerveroldali funkció, és ezzel a tweakkel nem érhető el. Podcast epizódok és helyi lejátszási listák azonban letölthetők.";
 download_local_playlist = "Helyi lejátszási lista letöltése";
 
 /* MARK: Lyrics */
@@ -93,11 +93,11 @@ musixmatch_restricted_popup = "A tweak nem tudja betölteni a dalszövegeket a M
 
 // Errors Titles
 
-no_such_song = "Nem találtam dalt";
+no_such_song = "Ismeretlen dal";
 musixmatch_restricted = "Korlátozott";
 invalid_musixmatch_token = "Jogosulatlan";
 decoding_error = "Dekódolási hiba";
-no_current_track = "No Track Instance";
+no_current_track = "Nincs zeneszám példa";
 unknown_error = "Ismeretlen hiba";
 
 // Instrumental Titles
