@@ -3,6 +3,7 @@
 patching = "Патчинг";
 lyrics = "Тексти";
 customization = "Кастомізація";
+experiments = "Експериментальні функції";
 
 common_issues_tip_title = "Є проблеми?";
 
@@ -26,8 +27,6 @@ patching_description = "Твік перехоплює запити на отри
 
 %@";
 
-// Patching
-
 overwrite_configuration = "Перезаписати конфігурацію";
 overwrite_configuration_description = "Замінювати видалену конфігурацію на сдамплену конфігурацію Premium. Може виправити деякі проблеми, наприклад, появу реклами, але це не є гарантованим.";
 
@@ -50,10 +49,14 @@ user_token_placeholder = "Введіть токен або вставте від
 
 enter_user_token = "Введіть токен";
 enter_user_token_message = "Щоб використовувати Musixmatch, потрібно отримати токен з офіційного додатку. Завантажте Musixmatch в App Store, зареєструйтесь, перейдіть в Налаштування > Отримати допомогу > Скопіювати відладочну інформацію і вставте її тут. Ви також можете отримати токен, використовуючи MITM.";
+
 genius_fallback = "Переключатися на Genius";
 genius_fallback_description = "Завантажувати тексти з Genius у разі проблеми з %@.";
 
 show_fallback_reasons = "Показувати проблеми";
+
+hide_lyrics_on_error = "Приховати при помилці";
+hide_lyrics_on_error_description = "Видалити компонент тексту пісні, якщо не вдалося завантажити текст.";
 
 romanized_lyrics = "Латинізація текстів";
 romanized_lyrics_description = "Відображати латинізований текст для японської, корейської та китайської мов.";
@@ -76,12 +79,24 @@ static_color = "Статичний колір";
 color_normalization_factor = "Рівень нормалізації кольору";
 dark_popups = "Темні спливаючі вікна";
 
+// Experiments
+
+show_instagram_destination = "Поширити в Instagram";
+show_instagram_destination_description = "Завжди показувати можливість поширення в Instagram %@";
+
+livecontainer_sharing = "Надіслати у LiveContainer";
+livecontainer_sharing_description = "Надіслати у LiveContainer і скопіювати URL, якщо вибране місце призначення не підтримується.";
+
 /* MARK: Premium PopUps */
 
 have_premium_popup = "Здається, у вас є активна підписка Premium. Твік не буде змінювати дані та обмежувати використання серверних функцій. Ви можете керувати цим в налаштуваннях EeveeSpotify.";
 high_audio_quality_popup = "Дуже висока якість недоступна з твіком, оскільки надається на стороні сервера.";
 playlist_downloading_popup = "Вбудоване завантаження плейлистів здійснюється з сервера і недоступне з твіком. Однак ви можете завантажувати епізоди подкастів.";
 download_local_playlist = "Завантажити локальний плейлист";
+
+//
+
+could_not_share_popup = "Не вдалося надіслати до вибраного місця призначення або LiveContainer. URL було скопійовано.";
 
 /* MARK: Lyrics */
 
