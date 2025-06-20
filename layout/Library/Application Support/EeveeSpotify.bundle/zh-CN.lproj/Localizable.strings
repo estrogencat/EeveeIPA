@@ -3,6 +3,7 @@
 patching = "补丁";
 lyrics = "歌词";
 customization = "定制";
+experiments = "实验";
 
 common_issues_tip_title = "发现问题？";
 
@@ -44,6 +45,9 @@ genius_fallback_description = "如果 %@ 有问题，将使用 Genius 加载歌�
 
 show_fallback_reasons = "显示回退原因";
 
+hide_lyrics_on_error = "错误时隐藏";
+hide_lyrics_on_error_description = "如果歌词加载失败，则删除歌词组件。";
+
 romanized_lyrics = "罗马化歌词";
 romanized_lyrics_description = "显示中文、韩语和日语的罗马化歌词。";
 
@@ -63,6 +67,15 @@ static_color = "静态颜色";
 color_normalization_factor = "颜色标准参数";
 dark_popups = "深色弹窗";
 
+
+// Experiments
+
+show_instagram_destination = "显示 Instagram 分享目标";
+show_instagram_destination_description = "始终将 Instagram 作为分享目标，更改需要重启程序。";
+
+livecontainer_sharing = "分享到 LiveContainer";
+livecontainer_sharing_description = "如果不支持所选分享目标，则分享到 LiveContainer 并复制 URL。";
+
 /* MARK: Premium PopUps */
 
 have_premium_popup = "看来您有一个真实有效的 Premium 订阅，因此此插件不会修补数据或限制 Premium 服务器端功能的使用。可以在 EeveeSpotify 设置中管理此操作。";
@@ -70,6 +83,7 @@ have_premium_popup = "看来您有一个真实有效的 Premium 订阅，因此�
 high_audio_quality_popup = "非常高的音频质量是服务器端的，并且无法通过此插件获得。";
 playlist_downloading_popup = "原生播放列表下载是服务器端的，无法通过此插件下载。不过可以下载播客节目。";
 download_local_playlist = "下载本地播放列表";
+
 
 /* MARK: Lyrics */
 
