@@ -3,6 +3,7 @@
 patching = "Yamalama";
 lyrics = "Şarkı Sözleri";
 customization = "Özelleştirme";
+experiments = "Deneysel Özellikler";
 
 common_issues_tip_title = "Sorun mu Yaşıyorsunuz?";
 
@@ -54,6 +55,9 @@ genius_fallback_description = "Bir sorun olduğunda %@ üzerinden şarkı sözle
 
 show_fallback_reasons = "Geri çekilme Nedenlerini Göster";
 
+hide_lyrics_on_error = "Hata durumunda gizle";
+hide_lyrics_on_error_description = "Şarkı sözleri yüklenmezse şarkı sözleri bileşenini kaldır.";
+
 romanized_lyrics = "Romanize(Latin Alfabesine çevirme) Edilmiş Şarkı Sözleri";
 romanized_lyrics_description = "Japonca, Korece ve Çince şarkılar için romanize edilmiş şarkı sözlerini göster.";
 
@@ -75,6 +79,14 @@ static_color = "Sabit Renk";
 color_normalization_factor = "Renk Normalleştirme Faktörü";
 dark_popups = "Koyu Açılır Pencereler";
 
+// Experiments
+
+show_instagram_destination = "Instagram'da paylaşı göster";
+show_instagram_destination_description = "Instagram'da paylaşı her zaman göster. %@";
+
+livecontainer_sharing = "LiveContainer ile paylaş";
+livecontainer_sharing_description = "LiveContainer ile paylaşın ve seçilen hedef desteklenmiyorsa URL'yi kopyalayın.";
+
 /* MARK: Premium PopUps */
 
 have_premium_popup = "Aktif bir Premium aboneliğiniz var gibi görünüyor, bu yüzden yama, verileri yamalamayacak veya Premium sunucu tarafı özelliklerinin kullanımını kısıtlamayacaktır. Bunu EeveeSpotify ayarlarında yönetebilirsiniz.";
@@ -82,6 +94,10 @@ have_premium_popup = "Aktif bir Premium aboneliğiniz var gibi görünüyor, bu 
 high_audio_quality_popup = "Çok yüksek ses kalitesi sunucu taraflıdır ve bu yamayla mevcut değildir.";
 playlist_downloading_popup = "Uygulama içi çalma listesi indirme sunucu taraflıdır ve bu yamayla mevcut değildir. Ancak podcast bölümlerini indirebilirsiniz.";
 download_local_playlist = "Yerel çalma listesini indir";
+
+//
+
+could_not_share_popup = "Seçilen hedefe veya LiveContainer'a paylaşılamadı. URL kopyalandı.";
 
 /* MARK: Lyrics */
 
