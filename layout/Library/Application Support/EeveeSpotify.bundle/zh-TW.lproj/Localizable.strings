@@ -3,10 +3,11 @@
 patching = "修補方案";
 lyrics = "歌詞";
 customization = "客製化";
+experiments = "實驗性選項";
 
-common_issues_tip_title = "遇到問題？";
+common_issues_tip_title = "遇到問題?";
 
-common_issues_tip_message = "如果遇到了一些問題，例如無法播放音樂，請看";
+common_issues_tip_message = "如果遇到了像是無法播放樂曲或其他問題, 請參閱";
 common_issues_tip_button = "常見問題";
 
 reset_data = "重設";
@@ -19,50 +20,53 @@ restart_is_required_description = "選項變更後必須重新啟動Spotify";
 
 // 修補方案
 
-do_not_patch_premium = "不修補Premium";
-patching_description = "EeveeSpotify會即時攔截使用者資料請求，反序列化並修改資料。
+do_not_patch_premium = "停用Premium修補";
+patching_description = "EeveeSpotify會即時攔截使用者資料請求, 反序列化並修改資料.
 
-若您擁有有效的Premium方案, 則可以啟用「不修補Premium」。啟用後EeveeSpotify將不會對任何Premium功能做出限制。
+若您擁有有效的Premium方案, 則可以啟用「停用Premium修補」. 啟用後EeveeSpotify將不會限制任何Premium功能.
 
 %@";
 
 overwrite_configuration = "覆寫配置";
-overwrite_configuration_description = "使用轉存的Premium配置替換遠端配置。該檔案定義了大部分的UI/UX參數，雖然可能會導致一些問題，但仍然很有幫助。";
+overwrite_configuration_description = "使用轉存的Premium配置替換遠端配置. 該檔案定義了大部分的UI/UX參數, 雖然可能會導致一些問題, 但仍然很有用.";
 
 // 歌詞
 
-do_not_replace_lyrics = "禁用歌詞替換(使用Spotify原版歌詞)";
-lyrics_source = "歌詞提供者";
-lyrics_source_description = "你可以在此選擇喜歡的歌詞提供者。
+do_not_replace_lyrics = "使用Spotify原版歌詞";
+lyrics_source = "歌詞來源";
+lyrics_source_description = "你可以在此選擇喜歡的歌詞來源.
 
-Genius：為絕大多數歌曲提供最高品質的歌詞且為更新最快的提供者，但永遠不會提供同步的歌詞。
+Genius: 為絕大多數歌曲提供最新且高品質的歌詞, 但無法使用同步歌詞.
 
-LRCLIB：最為開放的歌詞提供者，提供即時同步的歌詞。然而其缺少大量歌曲的歌詞。
+LRCLIB: 最開放的歌詞來源, 可以使用同步歌詞. 然而歌詞庫不齊全.
 
-Musixmatch：Spotify使用的提供者。為許多歌曲提供同步歌詞以及翻譯，但是你需要一個使用者權杖才可以使用該歌詞提供者。";
-lyrics_additional_info = "若EeveeSpotify無法找到或無法處理歌詞, 您將會看到「無法載入歌詞」。由於EeveeSpotify搜尋歌詞的方式所以使用Genius時可能會出現錯誤的歌詞。在大多數情況下，它都能正常運作。";
-petitlyrics_description = "PetitLyrics：提供大量已同步的日語歌詞和一些國際（非日語）歌詞。";
+Musixmatch: Spotify使用的歌詞來源. 為大量歌曲提供同步歌詞以及翻譯, 但是你需要一個使用者權杖才可以使用該歌詞提供者. ";
+lyrics_additional_info = "若EeveeSpotify找不到或無法處理歌詞, 您將會看到「無法載入歌詞」. 雖然EeveeSpotify搜索歌詞的邏輯可能導致在使用Genius作為歌詞來源時顯示錯誤的歌詞, 但在大多數情況下, 它都能正常運作.";
+petitlyrics_description = "PetitLyrics: 提供大量日文已同步歌詞與一些非日文歌詞.";
 
 musixmatch_user_token = "Musixmatch使用者權杖";
 user_token_placeholder = "請在此輸入 Musixmatch 使用者權杖或貼上除錯資訊";
 
 enter_user_token = "輸入使用者權杖";
-enter_user_token_message = "若要使用 Musixmatch作為歌詞提供者，則需要從官方應用程式中找到你的使用者權杖。 從App Store下載Musixmatch，註冊或登錄，接著來到 設定（右上角的齒輪圖示） > Get help > 複製除錯資訊， 並在此處貼上。亦可使用中間人攻擊提取使用者權杖。";
+enter_user_token_message = "若要使用 Musixmatch 作為歌詞提供者, 你現在可以通過 EeveeSpotify 直接取得或是從官方應用程式中找到你的使用者權杖. 從App Store下載Musixmatch, 註冊或登錄, 接著來到 設定(右上角的齒輪圖示) > Get help > 複製除錯資訊, 並在此處貼上. 亦可使用中間人攻擊提取使用者權杖.";
 
-genius_fallback = "Genius替代歌詞";
-genius_fallback_description = "如果無法從 %@ 載入歌詞，將使用 Genius 載入歌詞。";
+genius_fallback = "Genius回退";
+genius_fallback_description = "如果無法從 %@ 載入歌詞, 將使用 Genius 作為歌詞來源.";
 
-show_fallback_reasons = "顯示替代原因";
+show_fallback_reasons = "顯示回退原因";
 
-romanized_lyrics = "羅馬拼音歌詞";
-romanized_lyrics_description = "為中文，日文以及韓文顯示羅馬拼音歌詞";
+hide_lyrics_on_error = "發生錯誤時隱藏";
+hide_lyrics_on_error_description = "無法正確載入歌詞時隱藏歌詞框.";
 
-musixmatch_language = "Musixmatch 歌詞翻譯語言";
-musixmatch_language_description = "可以輸入兩個字母的 Musixmatch 語言碼，並在翻譯可用時查看翻譯。*繁體中文語言碼為z1";
+romanized_lyrics = "羅馬化歌詞";
+romanized_lyrics_description = "為中文, 日文以及韓文顯示羅馬化歌詞";
+
+musixmatch_language = "Musixmatch 歌詞翻譯";
+musixmatch_language_description = "可以輸入兩個字母的 Musixmatch 語言碼, 並在翻譯可用時顯示. *繁體中文語言碼為z1";
 
 // 圖型化介面
 
-lyrics_background_color_section = "歌詞背景色";
+lyrics_background_color_section = "歌詞框背景色";
 lyrics_background_color_section_description = "若您啟用「顯示原彩」則會顯示Spotify原本的歌詞背景顏色（根據歌曲專輯封面動態調整）。
 
 您亦可設定一個固定背景顏色或者設定顏色標準化程度。該選項決定了多少淺色被調深以及多少深色被調淺。通常來講，標準化程度越高則背景顏色越淺。";
@@ -75,6 +79,14 @@ static_color = "固定背景顏色";
 color_normalization_factor = "顏色標準化程度";
 dark_popups = "深色提示";
 
+// Experiments
+
+show_instagram_destination = "分享至 Instagram";
+show_instagram_destination_description = "永遠顯示分享至 Instagram. %@";
+
+livecontainer_sharing = "分享至 LiveContainer";
+livecontainer_sharing_description = "當選擇的目標APP不支援時, 分享至 LiveContainer 並複製 URL.";
+
 /* 標記: Premium 彈出視窗 */
 
 have_premium_popup = "您似乎沒有訂閱Premium，所以EeveeSpotify不會對使用者資料做出修補或限制Premium功能。您可以在EeveeSpotify設定中管理。";
@@ -82,6 +94,10 @@ have_premium_popup = "您似乎沒有訂閱Premium，所以EeveeSpotify不會對
 high_audio_quality_popup = "由於極高音質由伺服器處理因此EeveeSpotify無法啟用該功能。";
 playlist_downloading_popup = "由於原生的下載功能由伺服器處理因此EeveeSpotify無法啟用該功能。不過您仍可下載Podcast與本機檔案。";
 download_local_playlist = "下載本機檔案";
+
+//
+
+could_not_share_popup = "無法分享至目標APP或者 LiveContainer. URL 已被複製.";
 
 /* 標記: 歌詞 */
 
