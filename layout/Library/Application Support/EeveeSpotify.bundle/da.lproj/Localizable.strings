@@ -3,6 +3,7 @@
 patching = "Patches";
 lyrics = "Sangtekster";
 customization = "Tilpasning";
+experiments = "Eksperimenter";
 
 common_issues_tip_title = "Problemer?";
 
@@ -54,6 +55,9 @@ genius_fallback_description = "Indlæs tekster fra Genius hvis der er et problem
 
 show_fallback_reasons = "Vis fallback-grunde";
 
+hide_lyrics_on_error = "Skjul ved fejl";
+hide_lyrics_on_error_description = "Fjern sangtekstskomponenten hvis sangtekster ikke kunne indlæses.";
+
 romanized_lyrics = "Translittererede sangtekster";
 romanized_lyrics_description = "Vis translittererede sangtekster for sange på Japansk, Koreansk og Kinesisk.";
 
@@ -75,6 +79,14 @@ static_color = "Statisk farve";
 color_normalization_factor = "Farvenormaliseringsfaktor";
 dark_popups = "Mørke pop op-beskeder";
 
+// Experiments
+
+show_instagram_destination = "Vis Instagram destination";
+show_instagram_destination_description = "Vis altid Instagram som delingsdestination. %@";
+
+livecontainer_sharing = "Del til LiveContainer";
+livecontainer_sharing_description = "Del til LiveContainer eller kopier URL'en hvis den valgte destination ikke er understøttet.";
+
 /* MARK: Premium PopUps */
 
 have_premium_popup = "Det ser ud til at du har et aktivt Premium-abonnement, derfor patcher eller begrænser dette tweak ikke brugen af Premium-funktioner der er server-side. Dette kan ændres i EeveeSpotifys indstillinger.";
@@ -82,6 +94,10 @@ have_premium_popup = "Det ser ud til at du har et aktivt Premium-abonnement, der
 high_audio_quality_popup = "Lydkvaliteten \"Meget høj\" er server-side og er derfor ikke tilgænglig med dette tweak.";
 playlist_downloading_popup = "Den indbyggede download af playlister er server-side og er ikke derfor tilgænglig med dette tweak. Download af podcastepisoder og lokale spillelister er dog muligt.";
 download_local_playlist = "Download lokal spilleliste";
+
+//
+
+could_not_share_popup = "Kunne ikke dele til den valgte destination eller LiveContainer. URL'en er blevet kopieret.";
 
 /* MARK: Lyrics */
 
