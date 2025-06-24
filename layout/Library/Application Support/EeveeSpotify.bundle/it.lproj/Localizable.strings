@@ -3,6 +3,7 @@
 patching = "Impostazioni di Patch";
 lyrics = "Testi";
 customization = "Personalizzazione";
+experiments = "Sperimentali";
 
 common_issues_tip_title = "Riscontri problemi?";
 
@@ -72,6 +73,14 @@ static_color = "Colore Statico";
 
 color_normalization_factor = "Fattore normalizzazione colore";
 dark_popups = "Pop-up scuri";
+
+// Experiments
+
+show_instagram_destination = "Mostra Instagram come destinazione";
+show_instagram_destination_description = "Mostra sempre Instagram tra le opzioni di condivisione. %@";
+
+livecontainer_sharing = "Condividi a LiveContainer";
+livecontainer_sharing_description = "Condividi a LiveContainer e copia l'URL se la destinazione selezionata non è supportata.";
 
 /* MARK: Premium PopUps */
 
