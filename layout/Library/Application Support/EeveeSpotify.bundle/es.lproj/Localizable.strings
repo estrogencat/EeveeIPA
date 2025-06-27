@@ -3,6 +3,7 @@
 patching = "Parcheando";
 lyrics = "Letras";
 customization = "Personalización";
+experiments = "Experimentos";
 
 common_issues_tip_title = "¿Tienes problemas?";
 
@@ -54,6 +55,9 @@ genius_fallback_description = "Cargar letras desde Genius si hay un problema con
 
 show_fallback_reasons = "Mostrar razones de la alternativa";
 
+hide_lyrics_on_error = "Ocultar en caso de error";
+hide_lyrics_on_error_description = "Elimina el componente de Letras si las letras fallan al cargar.";
+
 romanized_lyrics = "Letras romanizadas";
 romanized_lyrics_description = "Muestra letras romanizadas para japonés, coreano y chino.";
 
@@ -75,6 +79,14 @@ static_color = "Color estático";
 color_normalization_factor = "Factor de normalización del color";
 dark_popups = "Ventanas emergentes oscuras";
 
+// Experiments
+
+show_instagram_destination = "Compartir en Instagram";
+show_instagram_destination_description = "Mostrar siempre el destino para compartir en Instagram. %@";
+
+livecontainer_sharing = "Compartir en LiveContainer";
+livecontainer_sharing_description = "Compartir en LiveContainer y copiar la URL si el destino seleccionado no es compatible.";
+
 /* MARK: Premium PopUps */
 
 have_premium_popup = "Parece que tienes una suscripción Premium activa, por lo que EeveeSpotify no parcheará los datos ni restringirá el uso de las funciones Premium del servidor. Puedes gestionar esto en los ajustes de EeveeSpotify.";
@@ -82,6 +94,10 @@ have_premium_popup = "Parece que tienes una suscripción Premium activa, por lo 
 high_audio_quality_popup = "La calidad de audio muy alta depende del servidor y no está disponible con este paquete de modificaciones.";
 playlist_downloading_popup = "La descarga nativa de listas de reproducción se realiza desde el servidor y no está disponible con este paquete de modificaciones. Sin embargo, puede descargar episodios de podcasts y listas de reproducción locales.";
 download_local_playlist = "Descargar una lista de reproducción local";
+
+//
+
+could_not_share_popup = "No se ha podido compartir al destino o LiveContainer seleccionado. La URL ha sido copiada.";
 
 /* MARK: Lyrics */
 
