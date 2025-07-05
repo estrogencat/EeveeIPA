@@ -3,14 +3,15 @@
 patching = "Modyfikacje";
 lyrics = "Teksty utworów";
 customization = "Personalizacja";
+experiments = "Eksperymenty";
 
 common_issues_tip_title = "Napotkałeś problem?";
 
-common_issues_tip_message = "Jeśli napotykasz problem, taki jak brak możliwości odtwarzania utworów, sprawdź";
+common_issues_tip_message = "Jeśli napotykasz problemy, takie jak brak możliwości odtwarzania utworów, sprawdź";
 common_issues_tip_button = "znane problemy";
 
-reset_data = "Wyzeruj dane";
-reset_data_description = "Czyści dane cache i ponownie uruchamia aplikację.";
+reset_data = "Wyczyść pamięć podręczną";
+reset_data_description = "Czyści pamięć cache i ponownie uruchamia aplikację.";
 
 checking_for_update = "Sprawdzanie aktualizacji...";
 update_available = "Dostępna jest aktualizacja";
@@ -54,11 +55,14 @@ genius_fallback_description = "Wczytuje tekst z usługi Genius, jeśli wystąpi 
 
 show_fallback_reasons = "Pokaż powody fallback'u";
 
+hide_lyrics_on_error = "Ukryj w przypadku błędu";
+hide_lyrics_on_error_description = "Usuń kartę tekstu piosenki, jeśli nie uda się jej załadować";
+
 romanized_lyrics = "Zromanizowane teksty";
 romanized_lyrics_description = "Wyświetla zromanizowane teksty dla japońskiego, koreańskiego i chińskiego.";
 
 musixmatch_language = "Język tekstów z Musixmatch";
-musixmatch_language_description = "Możesz wprowadzić 2-literowy kod języka Musixmatch. Zobaczysz przetłumaczone teksty Musixmatch, gdy będą dostępne.";
+musixmatch_language_description = "Możesz wprowadzić 2-literowy kod języka Musixmatch. Zobaczysz przetłumaczone teksty Musixmatch, jeśli będą one dostępne.";
 
 // UI
 
@@ -75,6 +79,14 @@ static_color = "Kolor";
 color_normalization_factor = "Współczynnik normalizacji kolorów";
 dark_popups = "Ciemne popup'y";
 
+// Experiments
+
+show_instagram_destination = "Pokaż opcję udostępnienia na Instagramie";
+show_instagram_destination_description = "Zawsze pokazuje opcję wstawienia piosenki na relację na Instagramie %@";
+
+livecontainer_sharing = "Udostępnij do LiveContainer";
+livecontainer_sharing_description = "Umożliwia udostępniane do LiveContainer i skopiuje URL, jeśli wybrane miejsce nie jest obsługiwane.";
+
 /* MARK: Premium PopUps */
 
 have_premium_popup = "Wygląda na to, że masz aktywną subskrypcję Premium, więc modyfikacja nie będzie zmieniać danych ani ograniczać korzystania z funkcji Premium po stronie serwera. Możesz to zmienić w ustawieniach EeveeSpotify";
@@ -82,6 +94,10 @@ have_premium_popup = "Wygląda na to, że masz aktywną subskrypcję Premium, wi
 high_audio_quality_popup = "Bardzo wysoka jakość dźwięku jest kontrolowana po stronie serwera i nie jest dostępna w tej modyfikacji.";
 playlist_downloading_popup = "Natywne pobieranie playlist jest kontrolowane po stronie serwera i nie jest dostępne w tej modyfikacji. Możesz jednak pobierać odcinki podcastów i lokalne listy odtwarzania";
 download_local_playlist = "Pobierz lokalną playlistę";
+
+//
+
+could_not_share_popup = "Nie udało się udostępnić do wybranego miejsca lub LiveContainer. URL zostało skopiowane";
 
 /* MARK: Lyrics */
 
@@ -103,7 +119,7 @@ unknown_error = "Nieznany błąd";
 // Instrumental Titles
 
 song_is_instrumental = "Ten utwór jest instrumentalny.";
-let_the_music_play = "Daj muzyce grać";
+let_the_music_play = "Niech muzyka trwa";
 
 // liked songs title, should match official spotify loc
 
