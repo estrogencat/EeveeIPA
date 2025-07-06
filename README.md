@@ -71,3 +71,4 @@ LTC: `ltc1qup3v46fm05sxd278r63957wh4qf2esehevpy76`
 Thanks to the following donors for supporting the project and funding the automatic release workflow:
 
 - [Randy](https://github.com/randy-420)
+- [HAMO](https://github.com/hamzaharoon1314)
