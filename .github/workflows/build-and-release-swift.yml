@@ -67,6 +67,8 @@ jobs:
 
   release:
     needs: build
+    permissions:
+        contents: write
     runs-on: macos-latest
     defaults:
       run:
