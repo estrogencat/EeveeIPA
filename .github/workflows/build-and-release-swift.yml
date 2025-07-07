@@ -204,7 +204,7 @@ jobs:
         GH_TOKEN: ${{ github.token }}
       run: |
         gh release upload "swift$EEVEESPOTIFY_VERSION" \
-          "$EEVEESPOTIFY_PACKAGE" \
+          "$EEVEESPOTIFY_PACKAGE" "$EEVEESPOTIFY_PATCHED_PACKAGE" \
           "$EEVEESPOTIFY_ROOTFUL" "$EEVEESPOTIFY_ROOTLESS" \
           "$SWIFTPROTOBUF_ROOTFUL" "$SWIFTPROTOBUF_ROOTLESS" \
           --clobber
