@@ -129,7 +129,7 @@ jobs:
 
     - name: Setup ipapatch
       run: |
-        wget https://github.com/asdfzxcvbn/ipapatch/releases/download/v2.0.0/ipapatch.macos-arm64
+        wget https://github.com/asdfzxcvbn/ipapatch/releases/download/v2.1.0/ipapatch.macos-arm64
         sudo mv ipapatch.macos-arm64 /usr/local/bin/ipapatch
         sudo chmod +x /usr/local/bin/ipapatch
 
