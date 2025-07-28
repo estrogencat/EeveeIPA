@@ -9,9 +9,16 @@
       "name": "EeveeSpotify",
       "developerName": "Eevee",
       "bundleIdentifier": "com.spotify.client",
-      "localizedDescription": "Spotify v9.0.62 injected with EeveeSpotify",
+      "localizedDescription": "Spotify v9.0.64 injected with EeveeSpotify",
       "iconURL": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/0c/1f/61/0c1f6144-af80-f395-3204-1d14fd8b2be7/AppIcon-0-0-1x_U007emarketing-0-6-0-0-85-220.png/512x512bb.jpg",
       "versions": [
+        {
+          "version": "9.0.64",
+          "date": "2025-07-28T10:40:07Z",
+          "size": 86087861,
+          "downloadURL": "https://github.com/whoeevee/EeveeSpotify/releases/download/swift6.0.2/EeveeSpotify-6.0.2-9.0.64.ipa",
+          "localizedDescription": "Spotify v9.0.64 injected with EeveeSpotify"
+        },
         {
           "version": "9.0.62",
           "date": "2025-07-21T10:03:28Z",
