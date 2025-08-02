@@ -51,6 +51,9 @@ enter_user_token_message = "Per utilizzare Musixmatch, devi recuperare il tuo to
 genius_fallback = "Genius Fallback";
 genius_fallback_description = "Carica i testi da Genius se c'è un problema con %@.";
 
+hide_lyrics_on_error = "Nascondi in caso di Errore";
+hide_lyrics_on_error_description = "Rimuovi il testo se il caricamento di essi fallisce.";
+
 show_fallback_reasons = "Mostra Motivi di Fallback";
 
 romanized_lyrics = "Testi Romanizzati";
