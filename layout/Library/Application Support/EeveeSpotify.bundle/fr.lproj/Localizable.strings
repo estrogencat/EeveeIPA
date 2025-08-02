@@ -3,6 +3,7 @@
 patching = "Patchage";
 lyrics = "Paroles";
 customization = "Personnalisation";
+experiments = "Expériences";
 
 common_issues_tip_title = "Des problèmes ?";
 
@@ -54,6 +55,9 @@ genius_fallback_description = "Charger les paroles depuis Genius en cas de probl
 
 show_fallback_reasons = "Afficher les raisons du basculement";
 
+hide_lyrics_on_error = "Cacher en cas d'erreur";
+hide_lyrics_on_error_description = "Retirer le composant des paroles si celles-ci échouent à se charger.";
+
 romanized_lyrics = "Paroles romanisées";
 romanized_lyrics_description = "Afficher les paroles romanisées pour le japonais, le coréen et le chinois.";
 
@@ -75,6 +79,14 @@ static_color = "Couleur statique";
 color_normalization_factor = "Facteur de normalisation des couleurs";
 dark_popups = "Popups sombres";
 
+// Experiments
+
+show_instagram_destination = "Afficher la destination Instagram";
+show_instagram_destination_description = "Toujours afficher la destination de partage Instagram. %@";
+
+livecontainer_sharing = "Partager à LiveContainer";
+livecontainer_sharing_description = "Partagez à LiveContainer et copiez l'URL si la destination sélectionnée n'est pas supportée.";
+
 /* MARK: Premium PopUps */
 
 have_premium_popup = "Il semble que vous avez un abonnement Premium actif, donc le tweak ne modifiera pas les données ni ne restreindra l'utilisation des fonctionnalités Premium côté serveur. Vous pouvez gérer cela dans les paramètres de EeveeSpotify.";
@@ -82,6 +94,10 @@ have_premium_popup = "Il semble que vous avez un abonnement Premium actif, donc 
 high_audio_quality_popup = "La qualité audio très élevée est gérée côté serveur et n'est pas disponible avec ce tweak.";
 playlist_downloading_popup = "Le téléchargement natif de playlists est géré côté serveur et n'est pas disponible avec ce tweak. Vous pouvez cependant télécharger des épisodes de podcast.";
 download_local_playlist = "Télécharger une playlist locale";
+
+//
+
+could_not_share_popup = "Impossible de partager vers la destination sélectionnée ou vers LiveContainer. L’URL a été copiée.";
 
 /* MARK: Lyrics */
 
