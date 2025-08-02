@@ -143,7 +143,7 @@ func getLyricsDataForCurrentTrack(originalLyrics: Lyrics? = nil) throws -> Data 
             color = Color(hex: extractedColor)
                 .normalized(lyricsColorsSettings.normalizationFactor)
         }
-        else if let uiColor = nowPlayingScrollViewController?.backgroundViewController.color() {
+        else if let uiColor = nowPlayingScrollViewController?.backgroundViewModel.color() {
             color = Color(uiColor)
                 .normalized(lyricsColorsSettings.normalizationFactor)
         }

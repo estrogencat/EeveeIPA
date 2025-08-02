@@ -41,9 +41,15 @@ extension NowPlayingScrollViewController {
     
     //
     
-    var backgroundViewController: SPTNowPlayingBackgroundViewController {
+    private var backgroundViewController: NSObject {
         get {
-            Ivars<SPTNowPlayingBackgroundViewController>(self).backgroundViewController
+            Ivars<NSObject>(self).backgroundViewController
+        }
+    }
+    
+    var backgroundViewModel: SPTNowPlayingBackgroundViewModel {
+        get {
+            Ivars<SPTNowPlayingBackgroundViewModel>(self.backgroundViewController).viewModel
         }
     }
 }

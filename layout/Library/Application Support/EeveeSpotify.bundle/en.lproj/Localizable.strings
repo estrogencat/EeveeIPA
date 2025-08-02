@@ -131,3 +131,11 @@ request_anonymous_token = "Request Anonymous Token";
 request_anonymous_token_description = "Tap “Request Anonymous Token” to request a token from Musixmatch without authorization.";
 
 lrclib_api = "Server Address";
+
+// Snapshot of your benefits, should match official spotify loc
+
+ad_free_music_listening = "Ad-free music listening";
+play_songs_in_any_order = "Play songs in any order";
+organize_listening_queue = "Organize listening queue";
+
+payment_notice = "EeveeSpotify applies patches to unlock certain Premium features. It's free.";

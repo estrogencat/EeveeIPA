@@ -6,11 +6,17 @@ class SPTDataLoaderServiceHook: ClassHook<NSObject>, SpotifySessionDelegate {
     
     // orion:new
     func shouldModify(_ url: URL) -> Bool {
-        let isModifyingCustomizeResponse = PremiumPatchingGroup.isActive
-        let isModifyingLyrics = LyricsGroup.isActive
+        let shouldPatchPremium = PremiumPatchingGroup.isActive
+        let shouldReplaceLyrics = LyricsGroup.isActive
         
-        return (url.isLyrics && isModifyingLyrics)
-            || (url.isCustomize && isModifyingCustomizeResponse)
+        return (shouldReplaceLyrics && url.isLyrics)
+            || (shouldPatchPremium && (url.isCustomize || url.isPremiumPlanRow || url.isPlanOverview))
+    }
+    
+    // orion:new
+    func respondWithCustomData(_ data: Data, task: URLSessionDataTask, session: URLSession) {
+        orig.URLSession(session, dataTask: task, didReceiveData: data)
+        orig.URLSession(session, task: task, didCompleteWithError: nil)
     }
     
     func URLSession(
@@ -18,58 +24,65 @@ class SPTDataLoaderServiceHook: ClassHook<NSObject>, SpotifySessionDelegate {
         task: URLSessionDataTask,
         didCompleteWithError error: Error?
     ) {
-        guard
-            let request = task.currentRequest,
-            let url = request.url
-        else {
+        guard let url = task.currentRequest?.url else {
             return
         }
         
-        if error == nil, 
-            shouldModify(url),
-            let buffer = URLSessionHelper.shared.obtainData(for: url) 
-        {
-            if url.isLyrics {
-                do {
-                    orig.URLSession(
-                        session,
-                        dataTask: task,
-                        didReceiveData: try getLyricsDataForCurrentTrack(
+        guard error == nil, shouldModify(url) else {
+            orig.URLSession(session, task: task, didCompleteWithError: error)
+            return
+        }
+        
+        do {
+            if let buffer = URLSessionHelper.shared.obtainData(for: url) {
+                if url.isLyrics {
+                    respondWithCustomData(
+                        try getLyricsDataForCurrentTrack(
                             originalLyrics: try? Lyrics(serializedBytes: buffer)
-                        )
+                        ),
+                        task: task,
+                        session: session
                     )
                     
+                    return
+                }
+                
+                if url.isPremiumPlanRow {
+                    respondWithCustomData(
+                        try getPremiumPlanRowData(
+                            originalPremiumPlanRow: try PremiumPlanRow(serializedBytes: buffer)
+                        ),
+                        task: task,
+                        session: session
+                    )
+                    
+                    return
+                }
+                
+                var customizeMessage = try CustomizeMessage(serializedBytes: buffer)
+                modifyRemoteConfiguration(&customizeMessage.response)
+                
+                respondWithCustomData(try customizeMessage.serializedData(), task: task, session: session)
+                return
+            }
+            
+            if url.isPlanOverview {
+                do {
+                    orig.URLSession(session, dataTask: task, didReceiveData: try getPlanOverviewData())
                     orig.URLSession(session, task: task, didCompleteWithError: nil)
                 }
                 catch {
                     orig.URLSession(session, task: task, didCompleteWithError: error)
                 }
-                
-                return
-            }
-            
-            do {
-                var customizeMessage = try CustomizeMessage(serializedBytes: buffer)
-                modifyRemoteConfiguration(&customizeMessage.response)
-                
-                orig.URLSession(
-                    session,
-                    dataTask: task,
-                    didReceiveData: try customizeMessage.serializedBytes()
-                )
-                
-                orig.URLSession(session, task: task, didCompleteWithError: nil)
 
-                NSLog("[EeveeSpotify] Modified customize data")
                 return
             }
-            catch {
-                NSLog("[EeveeSpotify] Unable to modify customize data: \(error)")
-            }
+        }
+        catch {
+            orig.URLSession(session, task: task, didCompleteWithError: error)
         }
         
         orig.URLSession(session, task: task, didCompleteWithError: error)
-        
     }
 
     func URLSession(
@@ -79,47 +92,23 @@ class SPTDataLoaderServiceHook: ClassHook<NSObject>, SpotifySessionDelegate {
         completionHandler handler: @escaping (URLSession.ResponseDisposition) -> Void
     ) {
         guard
-            let request = task.currentRequest,
-            let url = request.url
+            let url = task.currentRequest?.url,
+            url.isLyrics,
+            response.statusCode != 200
         else {
+            orig.URLSession(session, dataTask: task, didReceiveResponse: response, completionHandler: handler)
             return
         }
-        
-        if shouldModify(url), url.isLyrics, response.statusCode != 200 {
-            let okResponse = HTTPURLResponse(
-                url: url,
-                statusCode: 200,
-                httpVersion: "2.0",
-                headerFields: [:]
-            )!
+
+        do {
+            let data = try getLyricsDataForCurrentTrack()
+            let okResponse = HTTPURLResponse(url: url, statusCode: 200, httpVersion: "2.0", headerFields: [:])!
             
-            do {
-                let lyricsData = try getLyricsDataForCurrentTrack()
-                
-                orig.URLSession(
-                    session,
-                    dataTask: task,
-                    didReceiveResponse: okResponse,
-                    completionHandler: handler
-                )
-                
-                orig.URLSession(session, dataTask: task, didReceiveData: lyricsData)
-                orig.URLSession(session, task: task, didCompleteWithError: nil)
-
-                return
-            }
-            catch {
-                orig.URLSession(session, task: task, didCompleteWithError: error)
-                return
-            }
+            orig.URLSession(session, dataTask: task, didReceiveResponse: okResponse, completionHandler: handler)
+            respondWithCustomData(data, task: task, session: session)
+        } catch {
+            orig.URLSession(session, task: task, didCompleteWithError: error)
         }
-
-        orig.URLSession(
-            session,
-            dataTask: task,
-            didReceiveResponse: response,
-            completionHandler: handler
-        )
     }
 
     func URLSession(
@@ -127,10 +116,7 @@ class SPTDataLoaderServiceHook: ClassHook<NSObject>, SpotifySessionDelegate {
         dataTask task: URLSessionDataTask,
         didReceiveData data: Data
     ) {
-        guard
-            let request = task.currentRequest,
-            let url = request.url
-        else {
+        guard let url = task.currentRequest?.url else {
             return
         }
 

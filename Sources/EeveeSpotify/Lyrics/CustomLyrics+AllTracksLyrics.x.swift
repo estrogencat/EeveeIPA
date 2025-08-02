@@ -3,7 +3,9 @@ import UIKit
 
 class SPTPlayerTrackHook: ClassHook<NSObject> {
     typealias Group = LyricsGroup
-    static let targetName = "SPTPlayerTrack"
+    static let targetName = EeveeSpotify.hookTarget == .latest
+        ? "SPTPlayerTrackImplementation"
+        : "SPTPlayerTrack"
 
     func metadata() -> [String: String] {
         var meta = orig.metadata()
@@ -31,7 +33,7 @@ class NowPlayingScrollViewControllerHook: ClassHook<NSObject> {
         withDifferentProviders: Bool,
         scrollEnabledValueChanged: Bool
     ) -> NowPlayingScrollViewController {
-        var controller = orig.nowPlayingScrollViewModelWithDidLoadComponentsFor(
+        let controller = orig.nowPlayingScrollViewModelWithDidLoadComponentsFor(
             track,
             withDifferentProviders: withDifferentProviders,
             scrollEnabledValueChanged: scrollEnabledValueChanged

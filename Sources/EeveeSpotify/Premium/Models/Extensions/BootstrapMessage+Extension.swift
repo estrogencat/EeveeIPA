@@ -1,7 +1,6 @@
 import Foundation
 
 extension BootstrapMessage {
-    
     var ucsResponse: UcsResponse {
         get {
             self.wrapper.oneMoreWrapper.message.response
