@@ -29,7 +29,10 @@ struct LyricsDto {
             ]
         }
         else {
-            lyricsData.lines = lines.map { line in
+            let sortedLines = lines.sorted { 
+                ($0.offsetMs ?? 0) < ($1.offsetMs ?? 0)
+            }
+            lyricsData.lines = sortedLines.map { line in
                 LyricsLine.with {
                     $0.content = (shouldRomanize && romanization == .canBeRomanized)
                         ? line.content.applyingTransform(.toLatin, reverse: false)!
