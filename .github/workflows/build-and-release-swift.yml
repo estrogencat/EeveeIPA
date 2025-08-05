@@ -108,7 +108,7 @@ jobs:
       run: |
         response=$(curl -ks 'https://decrypt.whoeevee.com/decrypted?appId=324684580&apiKey=${{ secrets.EEVEEDECRYPTER_API_KEY }}')
         link=$(echo "$response" | jq -r '.link')
-        wget -q $link
+        wget --no-check-certificate -q $link
         echo "SPOTIFY_VERSION=${${(s/-/)link}[2]%.ipa}" >> $GITHUB_ENV
         echo "SPOTIFY_PACKAGE=$(echo *.ipa)" >> $GITHUB_ENV
 
