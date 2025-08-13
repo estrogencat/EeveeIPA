@@ -49,7 +49,10 @@ extension NowPlayingScrollViewController {
     
     var backgroundViewModel: SPTNowPlayingBackgroundViewModel {
         get {
-            Ivars<SPTNowPlayingBackgroundViewModel>(self.backgroundViewController).viewModel
+            let ivars = Ivars<SPTNowPlayingBackgroundViewModel>(self.backgroundViewController)
+            return EeveeSpotify.hookTarget == .latest
+                ? ivars.artworkColorObservable
+                : ivars.viewModel
         }
     }
 }
