@@ -1,6 +1,6 @@
 /* MARK: Settings */
 
-patching = "Parcheando";
+patching = "Modificaciones";
 lyrics = "Letras";
 customization = "Personalización";
 experiments = "Experimentos";
@@ -20,10 +20,10 @@ restart_is_required_description = "Es necesario reiniciar la aplicación para ap
 
 // Patching
 
-do_not_patch_premium = "No parchear las funciones Premium";
+do_not_patch_premium = "No modificar las funciones Premium predeterminadas";
 patching_description = "EeveeSpotify intercepta las solicitudes de carga de datos de usuario, las deserializa y modifica los parámetros en tiempo real.
 
-Si tienes una suscripción Premium activa, puedes activar \"No parchear Premium\". EeveeSpotify no parcheará los datos ni restringirá el uso de las funciones Premium del servidor.
+Si tienes una suscripción Premium activa, puedes activar \"No modificar las funciones Premium predeterminadas\". EeveeSpotify no modificará los datos ni restringirá el uso de las funciones Premium del servidor.
 
 %@";
 
@@ -89,7 +89,7 @@ livecontainer_sharing_description = "Compartir en LiveContainer y copiar la URL 
 
 /* MARK: Premium PopUps */
 
-have_premium_popup = "Parece que tienes una suscripción Premium activa, por lo que EeveeSpotify no parcheará los datos ni restringirá el uso de las funciones Premium del servidor. Puedes gestionar esto en los ajustes de EeveeSpotify.";
+have_premium_popup = "Parece que tienes una suscripción Premium activa, por lo que EeveeSpotify no modificará los datos ni restringirá el uso de las funciones Premium del servidor. Puedes gestionar esto en los ajustes de EeveeSpotify.";
 
 high_audio_quality_popup = "La calidad de audio muy alta depende del servidor y no está disponible con este paquete de modificaciones.";
 playlist_downloading_popup = "La descarga nativa de listas de reproducción se realiza desde el servidor y no está disponible con este paquete de modificaciones. Sin embargo, puede descargar episodios de podcasts y listas de reproducción locales.";
@@ -131,3 +131,11 @@ request_anonymous_token = "Solicitar Token Anónimo";
 request_anonymous_token_description = "Pulse \"Solicitar Token Anónimo\" para solicitar un token a Musixmatch sin autorización.";
 
 lrclib_api = "Dirección del servidor";
+
+// Snapshot of your benefits, should match official spotify loc
+
+ad_free_music_listening = "Escuchar música sin anuncios";
+play_songs_in_any_order = "Reproducir canciones en cualquier orden";
+organize_listening_queue = "Organizar la cola de reproducción";
+
+payment_notice = "EeveeSpotify aplica modificaciones para desbloquear ciertas funciones Premium. Es gratis.";
