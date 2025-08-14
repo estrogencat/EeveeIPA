@@ -1,5 +1,7 @@
 ![Banner](Images/banner.png?)
 
+# The original EeveeSpotify repository was disabled due to a [DMCA takedown](https://github.com/github/dmca/blob/master/2025/08/2025-08-14-spotify.md). This repository will not contain the IPA packages, as they are most likely the reason for the takedown.
+
 # EeveeSpotify
 
 This tweak makes Spotify think you have a Premium subscription, granting free listening, just like Spotilife, and provides some additional features like custom lyrics.
@@ -7,10 +9,6 @@ This tweak makes Spotify think you have a Premium subscription, granting free li
 ## The History
 
 In January 2024, Spotilife, the only tweak to get Spotify Premium, stopped working on new Spotify versions. I decompiled Spotilife, reverse-engineered Spotify, intercepted requests, etc., and created this tweak.
-
-## Repositories
-
-You can add an official EeveeSpotify repository to your signing app to always stay up to date. See [Repositories](/Repositories).
 
 ## Restrictions
 

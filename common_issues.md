@@ -8,7 +8,7 @@ EeveeSpotify officially supports both Spotify versions 8.9.8 and 9.0.48 (the las
 
 EeveeSpotify only supports iOS and iPadOS and is not planned to be supported on other platforms. You can sideload the iPadOS version on an Apple Silicon Mac, though.
 
-EeveeSpotify versions are released automatically alongside Spotify versions on the App Store and are uploaded to [GitHub Releases](https://github.com/whoeevee/EeveeSpotify/releases) and the [EeveeSpotify IPAs](https://t.me/SpotilifeIPAs) Telegram channel. For repository links you can add to your signing app, see [Repositories](https://github.com/whoeevee/EeveeSpotify/tree/swift/Repositories). If you would like to make your own IPA, make sure you inject the SwiftProtobuf, Orion, and CydiaSubstrate frameworks.
+EeveeSpotify versions are released automatically alongside Spotify versions on the App Store and are uploaded to the [EeveeSpotify IPAs](https://t.me/SpotilifeIPAs) Telegram channel. If you would like to make your own IPA, make sure you inject the SwiftProtobuf, Orion, and CydiaSubstrate frameworks.
 
 ## CarPlay, Siri and Dynamic Island/Lockscreen
 
@@ -63,5 +63,3 @@ You may see ads on the home screen. This is a known issue and will not be fixed,
 ## Ads in Podcasts
 
 You may see ads in podcasts. It’s surprising, but this is Spotify’s default behavior, even on Premium accounts. This won't be fixed, just skip the ads.
-
-# 
