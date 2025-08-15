@@ -130,3 +130,11 @@ request_anonymous_token = "Запросити анонімний токен";
 request_anonymous_token_description = "Натисніть “Запросити анонімний токен”, щоб запросити токен від Musixmatch без авторизації.";
 
 lrclib_api = "Адреса сервера";
+
+// Snapshot of your benefits, should match official spotify loc
+
+ad_free_music_listening = "Музика без реклами";
+play_songs_in_any_order = "Слухайте треки в будь-якому порядку";
+organize_listening_queue = "Керування чергою прослуховування";
+
+payment_notice = "EeveeSpotify застосовує патчі, щоб розблокувати деякі функції Premium. Це безкоштовно.";
