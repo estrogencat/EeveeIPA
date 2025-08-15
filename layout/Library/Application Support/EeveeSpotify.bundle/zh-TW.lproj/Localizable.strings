@@ -131,3 +131,11 @@ request_anonymous_token = "請求匿名使用者權杖";
 request_anonymous_token_description = "點擊 「請求匿名使用者權杖」 後 EeveeSpotify 會嘗試在未授權的情況下從 Musixmatch 取得使用者權杖.";
 
 lrclib_api = "伺服器地址";
+
+// Snapshot of your benefits, should match official spotify loc
+
+ad_free_music_listening = "無廣告暢聽音樂";
+play_songs_in_any_order = "由你決定歌曲播放順序";
+organize_listening_queue = "整理聆聽佇列";
+
+payment_notice = "EeveeSpotify 通過應用修補以啟用 Premium 功能且完全免費.";
