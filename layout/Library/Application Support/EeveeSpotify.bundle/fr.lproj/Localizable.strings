@@ -28,7 +28,7 @@ Si vous avez un abonnement Premium actif, vous pouvez activer Ne pas patcher Pre
 %@";
 
 overwrite_configuration = "Remplacer la configuration";
-overwrite_configuration_description = "Remplacez la configuration à distance par celle Premium enregistrée. Cela pourrait résoudre certains problèmes, comme l'apparition de publicités, mais ce n'est pas garanti.";
+overwrite_configuration_description = "Remplacez la configuration à distance par celle Premium enregistrée. Cette configuration définit la plupart de l'interface utilisateur et peut aider, mais elle peut aussi causer d'autres problèmes.";
 
 // Lyrics
 
@@ -138,4 +138,4 @@ ad_free_music_listening = "Musique sans pub";
 play_songs_in_any_order = "Choisissez l'ordre de vos titres";
 organize_listening_queue = "Organisez la file d'attente de lecture";
 
-payment_notice = "EeveeSpotify applique des patches pour débloquer certaines fonctionnalités Premium. C'est gratuit";
+payment_notice = "EeveeSpotify applique des patches pour débloquer certaines fonctionnalités Premium. C'est gratuit.";
