@@ -105,7 +105,7 @@ fallback_attribute = "Fallback";
 romanized_attribute = "Translittereret";
 
 musixmatch_unauthorized_popup = "Tweaket kan ikke indlæse sangtekster fra Musixmatch grundet fejlen \"Uautoriseret\". Tjek- eller opdater dit Musixmatch User Token. Hvis du bruger en iPad, skal du bruge Musixmatch-appen til iPad til at finde dit User Token.";
-musixmatch_restricted_popup = "Tweaket kan ikke indlæse sangtekster fra Musixmatch fordi de er begrænset. Dette er højst sandsynligt et copyright-problem grundet en IP-adresse fra USA, du bør ændre denne hvis du er i USA eller bruge en VPN-forbindelse.";
+musixmatch_restricted_popup = "Tweaket kan ikke indlæse sangtekster fra Musixmatch fordi de er begrænset. Dette er højst sandsynligt et copyright-problem grundet en IP-adresse fra USA, du bør ændre denne hvis du er i USA, eller bruge en VPN-forbindelse.";
 
 // Errors Titles
 
@@ -131,3 +131,11 @@ request_anonymous_token = "Anmod om anonymt token";
 request_anonymous_token_description = "Tryk på \"Anmod om anonymt token\" for at anmode om et token fra Musixmatch uden autorisation.";
 
 lrclib_api = "Serveradresse";
+
+// Snapshot of your benefits, should match official spotify loc
+
+ad_free_music_listening = "Lyt til reklamefri musik";
+play_songs_in_any_order = "Afspil sange i den rækkefølge, du foretrækker";
+organize_listening_queue = "Rediger rækkefølgen på afspilningskøen";
+
+payment_notice = "EeveeSpotify tilføjer patches for at låse op for visse Premium-funktioner. Dette er gratis.";
