@@ -29,6 +29,6 @@ class EeveeSettingsViewController: SPTPageViewController {
     }
     
     @objc func openRepositoryUrl(_ sender: UIButton) {
-        UIApplication.shared.open(URL(string: "https://github.com/whoeevee/EeveeSpotify")!)
+        UIApplication.shared.open(URL(string: "https://github.com/whoeevee/EeveeSpotifyReborn")!)
     }
 }

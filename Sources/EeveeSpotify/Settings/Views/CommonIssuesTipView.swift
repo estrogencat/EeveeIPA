@@ -18,7 +18,7 @@ struct CommonIssuesTipView: View {
                     
                     Link(
                         destination: URL(
-                            string: "https://github.com/whoeevee/EeveeSpotify/blob/swift/common_issues.md"
+                            string: "https://github.com/whoeevee/EeveeSpotifyReborn/blob/swift/common_issues.md"
                         )!,
                         label: {
                             VStack {
