@@ -93,6 +93,10 @@ high_audio_quality_popup = "La qualità audio molto alta viene gestita lato serv
 playlist_downloading_popup = "Il download delle playlist viene gestito lato server e non è disponibile con questo tweak . Gli episodi di podcast e le playlist locali sono comunque scaricabili.";
 download_local_playlist = "Scarica playlist locale";
 
+//
+
+could_not_share_popup = "Impossibile condividere con la destinazione selezionata o con LiveContainer. L'URL è stato copiato.";
+
 /* MARK: Lyrics */
 
 fallback_attribute = "Fallback";
@@ -125,3 +129,11 @@ request_anonymous_token = "Richiedi Token Anonimo";
 request_anonymous_token_description = "Clicca “Richiedi Token Anonimo” per richiedere un token a Musixmatch senza autorizzazione.";
 
 lrclib_api = "Indirizzo del Server";
+
+// Snapshot of your benefits, should match official spotify loc
+
+ad_free_music_listening = "Musica senza pubblicità";
+play_songs_in_any_order = "Riproduzione dei brani in qualsiasi ordine";
+organize_listening_queue = "Organizzazione della coda di ascolto";
+
+payment_notice = "EeveeSpotify applica delle patch per sblocare alcune funzionalità Premium. È gratis.";
