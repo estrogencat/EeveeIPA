@@ -84,6 +84,9 @@ high_audio_quality_popup = "非常高的音频质量是服务器端的，并且�
 playlist_downloading_popup = "原生播放列表下载是服务器端的，无法通过此插件下载。不过可以下载播客节目。";
 download_local_playlist = "下载本地播放列表";
 
+//
+
+could_not_share_popup = "无法分享到所选目标或 LiveContainer，URL 已复制。";
 
 /* MARK: Lyrics */
 
@@ -118,3 +121,11 @@ request_anonymous_token = "请求匿名令牌";
 request_anonymous_token_description = "点击 “请求匿名令牌” 即可在无需授权的情况下向 Musixmatch 请求令牌。";
 
 lrclib_api = "服务器地址";
+
+// Snapshot of your benefits, should match official spotify loc
+
+ad_free_music_listening = "无广告聆听音乐";
+play_songs_in_any_order = "以任意顺序播放歌曲";
+organize_listening_queue = "整理播放队列";
+
+payment_notice = "EeveeSpotify 已应用补丁来解锁部分高级功能，免费使用。";
