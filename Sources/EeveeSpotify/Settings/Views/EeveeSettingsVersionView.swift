@@ -18,7 +18,7 @@ struct EeveeSettingsVersionView: View {
             if isUpdateAvailable {
                 Link(
                     "update_available".localized,
-                    destination: URL(string: "https://github.com/whoeevee/EeveeSpotify/releases")!
+                    destination: URL(string: "https://github.com/whoeevee/EeveeSpotifyReborn/releases")!
                 )
             }
         } footer: {
