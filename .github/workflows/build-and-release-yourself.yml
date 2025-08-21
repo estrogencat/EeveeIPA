@@ -1,0 +1,107 @@
+name: Create IPA Packages
+
+on:
+  workflow_dispatch:
+    inputs:
+      ipa_url:
+        description: "URL to the decrypted IPA file"
+        default: ""
+        required: true
+        type: string
+      tweak_url:
+        description: "URL to the EeveeSpotify tweak file"
+        default: ""
+        required: true
+        type: string
+
+env:
+  SWIFTPROTOBUF_VERSION: "1.29.0"
+
+jobs:
+  build:
+    runs-on: macos-latest
+    env:
+      THEOS: ${{ github.workspace }}/theos
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: '16.2.0'
+
+      - name: Hide Sensitive Inputs
+        uses: levibostian/action-hide-sensitive-inputs@v1
+
+      - name: Download and Validate IPA
+        run: |
+          wget "${{ inputs.ipa_url }}" --no-verbose -O ${{ github.workspace }}/spotify.ipa
+          file_type=$(file --mime-type -b ${{ github.workspace }}/spotify.ipa)
+          if [[ "$file_type" != "application/x-ios-app" && "$file_type" != "application/zip" ]]; then
+            echo "::error::Validation failed: The downloaded file is not a valid IPA. Detected type: $file_type."
+            exit 1
+          fi
+
+      - name: Download and Validate Tweak
+        run: |
+          wget "${{ inputs.tweak_url }}" --no-verbose -O ${{ github.workspace }}/eeveespotify.deb
+          file_type=$(file --mime-type -b ${{ github.workspace }}/eeveespotify.deb)
+          if [[ "$file_type" != "application/vnd.debian.binary-package" ]]; then
+            echo "::error::Validation failed: The file is not a valid DEB file. Detected type: $file_type."
+            exit 1
+          fi
+
+      - name: Download SwiftProtobuf
+        run: |
+          wget https://github.com/whoeevee/swift-protobuf/releases/download/${{ env.SWIFTPROTOBUF_VERSION }}/org.swift.protobuf.swiftprotobuf_${{ env.SWIFTPROTOBUF_VERSION }}_iphoneos-arm.deb
+          wget https://github.com/whoeevee/swift-protobuf/releases/download/${{ env.SWIFTPROTOBUF_VERSION }}/org.swift.protobuf.swiftprotobuf_${{ env.SWIFTPROTOBUF_VERSION }}_iphoneos-arm64.deb
+
+          echo "SWIFTPROTOBUF_ROOTFUL=org.swift.protobuf.swiftprotobuf_${{ env.SWIFTPROTOBUF_VERSION }}_iphoneos-arm.deb" >> $GITHUB_ENV
+          echo "SWIFTPROTOBUF_ROOTLESS=org.swift.protobuf.swiftprotobuf_${{ env.SWIFTPROTOBUF_VERSION }}_iphoneos-arm64.deb" >> $GITHUB_ENV
+
+      - name: Download OpenSpotifySafariExtension
+        run: |
+          git clone https://github.com/BillyCurtis/OpenSpotifySafariExtension
+          echo "OPENSPOTIFYSAFARIEXTENSION=OpenSpotifySafariExtension/OpenSpotifySafariExtension.appex" >> $GITHUB_ENV
+
+      - name: Setup insert-dylib
+        run: |
+          git clone https://github.com/Tyilo/insert_dylib.git
+          xcrun clang -x c -arch arm64 ./insert_dylib/insert_dylib/main.c -I/usr/include/ -o insert-dylib
+          sudo mv insert-dylib /usr/local/bin/
+          sudo chmod +x /usr/local/bin/insert-dylib
+
+      - name: Setup ivinject
+        run: |
+          git clone https://github.com/whoeevee/ivinject.git
+          cp -r ./ivinject/KnownFrameworks ~/.ivinject
+          wget https://github.com/whoeevee/ivinject/releases/download/first/ivinject-arm64
+          sudo mv ivinject-arm64 /usr/local/bin/
+          sudo chmod +x /usr/local/bin/ivinject-arm64
+
+      - name: Setup ipapatch
+        run: |
+          wget https://github.com/asdfzxcvbn/ipapatch/releases/download/v2.1.0/ipapatch.macos-arm64
+          sudo mv ipapatch.macos-arm64 /usr/local/bin/ipapatch
+          sudo chmod +x /usr/local/bin/ipapatch
+
+      - name: Create EeveeSpotify Package
+        run: |
+          ivinject-arm64 eeveespotify.ipa EeveeSpotify.ipa \
+            -i eeveespotify.deb "$SWIFTPROTOBUF_ROOTFUL" "$OPENSPOTIFYSAFARIEXTENSION" \
+            -s - -d --level Optimal
+
+      - name: Create Patched Package
+        run: ipapatch -input EeveeSpotify.ipa -output EeveeSpotify-patched.ipa
+   
+      - name: Upload to GitHub Releases
+        uses: softprops/action-gh-release@v2.0.1
+        with:
+          tag_name: eevee-${{ github.run_number }}
+          name: EeveeSpotify (${{ github.run_number }})
+          files: EeveeSpotify.ipa EeveeSpotify-patched.ipa
+          draft: true
+
+      - name: Output Release URL
+        run: |
+          echo "::notice::Release available at: https://github.com/${{ github.repository }}/releases"
