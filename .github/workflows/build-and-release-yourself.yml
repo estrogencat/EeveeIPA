@@ -99,7 +99,9 @@ jobs:
         with:
           tag_name: eevee-${{ github.run_number }}
           name: EeveeSpotify (${{ github.run_number }})
-          files: EeveeSpotify.ipa EeveeSpotify-patched.ipa
+          files: |
+            EeveeSpotify.ipa 
+            EeveeSpotify-patched.ipa
           draft: true
 
       - name: Output Release URL
