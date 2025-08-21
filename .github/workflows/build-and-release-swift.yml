@@ -156,6 +156,37 @@ jobs:
 
         ipapatch -input "$EEVEESPOTIFY_PACKAGE" -output "$EEVEESPOTIFY_PATCHED_PACKAGE"
 
+    - name: Compose Changelog
+      if: env.LATEST_EEVEESPOTIFY_VERSION != env.EEVEESPOTIFY_VERSION
+      env:
+        GH_TOKEN: ${{ github.token }}
+      run: |
+        last_update_repo_date=$(git log --grep="bump" --format=%cI | sed -n 2p)
+        CHANGELOG=""
+
+        gh pr list --state merged --search "merged:>${last_update_repo_date}" --json files,author \
+          | jq -r '
+              .[]
+              | .author.login as $login
+              | .files[0].path as $file
+              | "\($login) \($file)"
+            ' \
+          | tail -r \
+          | while read -r login file; do
+              lang_code=$(echo "$file" | grep -oE '/([a-zA-Z-]+)\.lproj/' | sed -E 's|/([a-zA-Z-]+)\.lproj/|\1|')
+              lang_name=$(echo "import Foundation; print(Locale.current.localizedString(forIdentifier: \"$lang_code\") ?? \"\")" | swift -)
+                
+              if [ -z "$lang_name" ]; then
+                continue
+              fi
+
+              CHANGELOG+="* Updated ${lang_name} localization by @${login}"$'\n'
+            done
+
+        echo "CHANGELOG<<EOF" >> $GITHUB_ENV
+        echo "$CHANGELOG" >> $GITHUB_ENV
+        echo "EOF" >> $GITHUB_ENV
+
     - name: Create Release
       if: env.LATEST_EEVEESPOTIFY_VERSION != env.EEVEESPOTIFY_VERSION
       uses: actions/create-release@v1
@@ -164,7 +195,7 @@ jobs:
       with:
         tag_name: swift${{ env.EEVEESPOTIFY_VERSION }}
         release_name: Swift ${{ env.EEVEESPOTIFY_VERSION }}
-        body: ""
+        body: ${{ env.CHANGELOG }}
         draft: false
         prerelease: false
 
