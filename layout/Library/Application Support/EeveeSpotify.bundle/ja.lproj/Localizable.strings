@@ -27,7 +27,7 @@ patching_description = "EeveeSpotifyは、Spotifyがユーザーデータを読�
 
 %@";
 
-overwrite_configuration = "設定を上書き";
+overwrite_configuration = "構成を上書き";
 overwrite_configuration_description = "アプリの見た目や操作感をプレミアムユーザー用のものに変更します。予期しない問題が発生する可能性があります。";
 
 // Lyrics
@@ -42,7 +42,7 @@ LRCLIB：歌詞の同期はされますが、取り扱い曲数は少ないで�
 
 Musixmatch：Spotifyが使用している提供元です。取り扱い曲数が豊富ですが、使用するにはユーザートークンが必要です。";
 lyrics_additional_info = "歌詞を読み込めないときは、「この曲の歌詞を読み込めませんでした」と表示されます。検索方法のしくみの問題でGeniusを使用している場合は誤った歌詞が表示される場合があります。";
-petitlyrics_description = "プチリリ：日本語の歌詞が豊富で、一部の海外の曲の歌詞も表示できます。歌詞の同期もされます。";
+petitlyrics_description = "PetitLyrics：日本語の歌詞が豊富で、一部の海外の曲の歌詞も表示できます。歌詞の同期もされます。";
 
 musixmatch_user_token = "Musixmatchのユーザートークン";
 user_token_placeholder = "ユーザートークン・デバッグ情報を入力";
@@ -51,7 +51,7 @@ enter_user_token = "ユーザートークンを入力";
 enter_user_token_message = "Musixmatchを使用するには、公式アプリからユーザートークンを取得する必要があります。App StoreからMusixmatchをインストールして、サインインしてから、「設定」 > 「ヘルプを見る」 > 「デバッグ情報のコピー」を選択してペーストします。";
 
 genius_fallback = "Geniusを代わりに使用";
-genius_fallback_description = "%@ に問題がある場合は、Geniusから歌詞を取得します。";
+genius_fallback_description = "%@に問題がある場合は、Geniusから歌詞を取得します。";
 
 show_fallback_reasons = "Geniusを使用した理由を表示";
 
@@ -89,7 +89,7 @@ livecontainer_sharing_description = "選択した共有先が対応していな�
 
 /* MARK: Premium PopUps */
 
-have_premium_popup = "プレミアム会員のため、データを変更したり、プレミアムの機能が制限されたりすることはありません。EeveeSpotifyの設定で変更できます。";
+have_premium_popup = "プレミアム会員のため、データを変更したり、プレミアムの機能が制限されたりすることはありません。";
 
 high_audio_quality_popup = "最高音質はサーバー側で管理されているため、利用できません。";
 playlist_downloading_popup = "プレイリストをダウンロードする機能はサーバー側で管理されているため、利用できません。ポッドキャストのエピソードや自分のローカルプレイリストはダウンロードできます。";
@@ -119,7 +119,7 @@ unknown_error = "不明なエラーが発生しました";
 // Instrumental Titles
 
 song_is_instrumental = "この曲は歌詞がありません";
-let_the_music_play = "お楽しみください";
+let_the_music_play = "音楽をお楽しみください";
 
 // liked songs title, should match official spotify loc
 
@@ -138,4 +138,4 @@ ad_free_music_listening = "広告ナシで音楽が聴ける";
 play_songs_in_any_order = "好きな曲順で再生";
 organize_listening_queue = "次に再生する楽曲のリストを整理できる";
 
-payment_notice = "EeveeSpotifyは、一部のプレミアム機能を使えるようにするパッチを適用します。利用は無料です。";
+payment_notice = "EeveeSpotifyは、無料で一部のプレミアムの機能を使えるようにするパッチを適用します。";
