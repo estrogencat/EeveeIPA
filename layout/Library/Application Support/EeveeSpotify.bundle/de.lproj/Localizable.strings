@@ -54,6 +54,9 @@ genius_fallback_description = "Lade Lyrics von Genius, falls ein Problem mit %@ 
 
 show_fallback_reasons = "Fallback-Gründe anzeigen";
 
+hide_lyrics_on_error = "Bei Fehler ausblenden";
+hide_lyrics_on_error_description = "Liedtextanzeige entfernen, wenn das Laden fehlschlägt.";
+
 romanized_lyrics = "Romanisierte Lyrics";
 romanized_lyrics_description = "Zeige romanisierte Lyrics für japanische, koreanische und chinesische Songs.";
 
@@ -75,6 +78,12 @@ static_color = "Statische Farbe";
 color_normalization_factor = "Farbnormalisierungsfaktor";
 dark_popups = "Dunkle Pop-ups";
 
+// Experiments
+show_instagram_destination = "Instagram Ziel anzeigen";
+show_instagram_destination_description = "Immer das Instagram-Freigabeziel anzeigen. %@";
+livecontainer_sharing = "An LiveContainer teilen";
+livecontainer_sharing_description = "An LiveContainer teilen und URL kopieren, wenn das ausgewählte Ziel nicht unterstützt wird.";
+
 /* MARK: Premium PopUps */
 
 have_premium_popup = "Es sieht so aus, als ob du ein aktives Premium-Abonnement hast. Der Tweak wird die Daten daher nicht patchen oder die Nutzung von serverseitigen Premium-Funktionen einschränken. Du kannst dies in den EeveeSpotify-Einstellungen verwalten.";
@@ -82,6 +91,10 @@ have_premium_popup = "Es sieht so aus, als ob du ein aktives Premium-Abonnement 
 high_audio_quality_popup = "Sehr hohe Audioqualität ist serverseitig und mit diesem Tweak nicht verfügbar.";
 playlist_downloading_popup = "Das Herunterladen von nativen Playlists ist serverseitig und nicht verfügbar. Podcast-Episoden und lokale Playlists können jedoch heruntergeladen werden.";
 download_local_playlist = "Lokale Playlist herunterladen";
+
+//
+
+could_not_share_popup = "Teilen an das gewünschte Ziel oder dem LiveContainer ist nicht möglich. Die URL wurde kopiert.";
 
 /* MARK: Lyrics */
 
@@ -115,3 +128,11 @@ request_anonymous_token = "Anonymes Token anfordern";
 request_anonymous_token_description = "Tippe auf „Anonymes Token anfordern“, um ein Token von Musixmatch ohne Autorisierung anzufordern.";
 
 lrclib_api = "Server Adresse";
+
+// Snapshot of your benefits, should match official spotify loc
+
+ad_free_music_listening = "Werbefrei Musik hören";
+play_songs_in_any_order = "Musik in beliebiger Reihenfolge abspielen";
+organize_listening_queue = "Wiedergabeliste anpassen";
+payment_notice = "EeveeSpotify wendet Patches an, um bestimmte Premium-Funktionen freizuschalten. Es ist kostenlos.";
+ 
