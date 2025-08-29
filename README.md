@@ -8,4 +8,4 @@ IPA used is grabbed from [here](https://armconverter.com/decryptedappstore/us/sp
 
 <br>
 
-Last compiled with [Release Swift 6.1.3](https://github.com/whoeevee/EeveeSpotifyReborn/releases/tag/swift6.1.3)
+Last tweak used [Release Swift 6.1.3](https://github.com/whoeevee/EeveeSpotifyReborn/releases/tag/swift6.1.3)
