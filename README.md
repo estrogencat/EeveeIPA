@@ -1,6 +1,6 @@
 # "itsburger" repository for older releases
 
-[![Create IPA Packages](https://github.com/meownyaaa/checkhere/actions/workflows/build-and-release-yourself.yml/badge.svg)](https://github.com/meownyaaa/checkhere/actions/workflows/build-and-release-yourself.yml)
+[![Create IPA Packages](https://github.com/meownyaaa/checkhere/actions/workflows/build-and-release-yourself.yml/badge.svg)](https://github.com/meownyaaa/checkhere/actions/workflows/build-and-release-yourself.yml) [![Create IPA Packages for iOS 15](https://github.com/meownyaaa/EeveeIPA/actions/workflows/build-and-release-yourself-ios15.yml/badge.svg)](https://github.com/meownyaaa/EeveeIPA/actions/workflows/build-and-release-yourself-ios15.yml)
 
  <br>
 
