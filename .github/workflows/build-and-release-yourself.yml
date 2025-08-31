@@ -97,8 +97,8 @@ jobs:
       - name: Upload to GitHub Releases
         uses: softprops/action-gh-release@v2.0.1
         with:
-          tag_name: yeah-${{ github.run_number }}
-          name: Yeah (${{ github.run_number }})
+          tag_name: latest-${{ github.run_number }}
+          name: latest patched
           files: |
             patched.ipa
           draft: false
