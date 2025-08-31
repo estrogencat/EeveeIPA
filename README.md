@@ -1,4 +1,4 @@
-# 3rd repository pin for older releases
+# "itsburger" repository for older releases
 
 [![Create IPA Packages](https://github.com/meownyaaa/checkhere/actions/workflows/build-and-release-yourself.yml/badge.svg)](https://github.com/meownyaaa/checkhere/actions/workflows/build-and-release-yourself.yml)
 
