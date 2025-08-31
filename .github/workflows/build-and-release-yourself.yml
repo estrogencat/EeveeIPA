@@ -92,18 +92,18 @@ jobs:
             -s - -d --level Optimal
 
       - name: Create Patched Package
-        run: ipapatch -input EeveeSpotify.ipa -output EeveeSpotify-patched.ipa
+        run: ipapatch -input EeveeSpotify.ipa -output patched.ipa
    
       - name: Upload to GitHub Releases
         uses: softprops/action-gh-release@v2.0.1
         with:
-          tag_name: eevee-${{ github.run_number }}
-          name: EeveeSpotify (${{ github.run_number }})
+          tag_name: yeah-${{ github.run_number }}
+          name: Yeah (${{ github.run_number }})
           files: |
-            EeveeSpotify.ipa 
-            EeveeSpotify-patched.ipa
-          draft: true
+            patched.ipa
+          draft: false
 
       - name: Output Release URL
         run: |
           echo "::notice::Release available at: https://github.com/${{ github.repository }}/releases"
+
