@@ -30,13 +30,10 @@ jobs:
         with:
           xcode-version: '16.2.0'
 
-            - name: Hide sensitive inputs
-  # You may pin to the exact commit or the version.
-  # uses: levibostian/action-hide-sensitive-inputs@c05792bf4e07b0cb3dbeb9a5a54a415655a62425
-  uses: levibostian/action-hide-sensitive-inputs@1.0.0
-  with:
-    # Comma-separated list of input keys to not hide the value of. Example: phone-number,email-address
-    exclude_inputs: ${{ secrets.IPA }}
+      - name: Hide sensitive inputs
+        uses: levibostian/action-hide-sensitive-inputs@1.0.0
+        with:
+        exclude_inputs: ${{ secrets.IPA }}
 
       - name: Download and Validate IPA
         run: |
