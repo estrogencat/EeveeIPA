@@ -1,9 +1,19 @@
 name: Daily
 
 on:
-  schedule:
-     - cron: "0 12 * * *"
-
+  workflow_dispatch:
+    inputs:
+      ipa_url:
+        description: "URL to the decrypted IPA file"
+        default: ""
+        required: true
+        type: string
+      tweak_url:
+        description: "URL to the EeveeSpotify tweak file"
+        default: ""
+        required: true
+        type: string
+        
 env:
   SWIFTPROTOBUF_VERSION: "1.29.0"
 
