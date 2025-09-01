@@ -33,7 +33,7 @@ jobs:
       - name: Hide sensitive inputs
         uses: levibostian/action-hide-sensitive-inputs@1.0.0
         with:
-        exclude_inputs: ${{ secrets.IPA }}
+          exclude_inputs: ${{ secrets.IPA }}
 
       - name: Download and Validate IPA
         run: |
