@@ -1,18 +1,11 @@
-name: Daily
+name: Secrets workflow
+
+# this workflow uses secrets named Tweak and IPA to download the files instead of
+# taking it from an input
 
 on:
-  workflow_dispatch:
-    inputs:
-      ipa_url:
-        description: "URL to the decrypted IPA file"
-        default: ""
-        required: false
-        type: string
-      tweak_url:
-        description: "URL to the EeveeSpotify tweak file"
-        default: ""
-        required: false
-        type: string  
+  schedule:
+     - cron: "0 12 * * *"  
         
 env:
   SWIFTPROTOBUF_VERSION: "1.29.0"
