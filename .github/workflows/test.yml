@@ -1,8 +1,18 @@
 name: Daily
 
 on:
-  schedule:
-     - cron: "0 12 * * *"
+  workflow_dispatch:
+    inputs:
+      ipa_url:
+        description: "URL to the decrypted IPA file"
+        default: ""
+        required: false
+        type: string
+      tweak_url:
+        description: "URL to the EeveeSpotify tweak file"
+        default: ""
+        required: false
+        type: string  
         
 env:
   SWIFTPROTOBUF_VERSION: "1.29.0"
@@ -20,8 +30,13 @@ jobs:
         with:
           xcode-version: '16.2.0'
 
-      - name: Hide Sensitive Inputs
-        uses: levibostian/action-hide-sensitive-inputs@v1
+            - name: Hide sensitive inputs
+  # You may pin to the exact commit or the version.
+  # uses: levibostian/action-hide-sensitive-inputs@c05792bf4e07b0cb3dbeb9a5a54a415655a62425
+  uses: levibostian/action-hide-sensitive-inputs@1.0.0
+  with:
+    # Comma-separated list of input keys to not hide the value of. Example: phone-number,email-address
+    exclude_inputs: ${{ secrets.IPA }}
 
       - name: Download and Validate IPA
         run: |
