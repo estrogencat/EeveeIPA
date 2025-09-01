@@ -1,4 +1,4 @@
-name: Create IPA Packages
+name: Create IPA Packages for Latest
 
 on:
   workflow_dispatch:
