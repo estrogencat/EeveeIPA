@@ -5,8 +5,10 @@
  <br>
 
 Latest tweak is grabbed from the [original repository.](https://github.com/whoeevee/EeveeSpotifyReborn/releases)
-<br>
+
 IPA used is grabbed from [here](https://armconverter.com/decryptedappstore/us/spotify), Spotify 9.0.74 is used as of 29th August 2025.
+
+iOS 15 IPA decrypted on my own iPhone 6s+ using [TrollDecrypt](https://github.com/donato-fiore/TrollDecrypt).
 
  <br>
 
