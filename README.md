@@ -10,7 +10,7 @@ iOS 15 IPA decrypted on my own iPhone 6s+ using [TrollDecrypt](https://github.co
 
  <br>
 
-Last tweak used [Release Swift 6.1.3](https://github.com/whoeevee/EeveeSpotifyReborn/releases/tag/swift6.1.3)
+Last tweak used [Release Swift 6.1.4](https://github.com/whoeevee/EeveeSpotifyReborn/releases/tag/swift6.1.4)
 
 Below is the original README.
 
