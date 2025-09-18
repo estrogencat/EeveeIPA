@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 func modifyRemoteConfiguration(_ configuration: inout UcsResponse) {
     if UserDefaults.overwriteConfiguration {
@@ -17,10 +18,6 @@ func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
     attributes["ads"] = AccountAttribute.with {
         $0.boolValue = false
     }
-    
-    attributes["audio-quality"] = AccountAttribute.with {
-        $0.stringValue = "1"
-    }
 
     attributes["can_use_superbird"] = AccountAttribute.with {
         $0.boolValue = true
@@ -32,10 +29,6 @@ func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
 
     attributes["financial-product"] = AccountAttribute.with {
         $0.stringValue = "pr:premium,tc:0"
-    }
-
-    attributes["high-bitrate"] = AccountAttribute.with {
-        $0.boolValue = true
     }
 
     attributes["is-eligible-premium-unboxing"] = AccountAttribute.with {
