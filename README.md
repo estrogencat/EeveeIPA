@@ -1,7 +1,8 @@
 # EeveeIPA
 
- <br>
 This is for people who don't want to use telegram.
+
+<br>
 
 Latest tweak is grabbed from the [original repository.](https://github.com/whoeevee/EeveeSpotifyReborn/releases)
 
