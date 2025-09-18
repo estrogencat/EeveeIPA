@@ -1,3 +1,25 @@
+# EeveeIPA
+
+ <br>
+
+Latest tweak is grabbed from the [original repository.](https://github.com/whoeevee/EeveeSpotifyReborn/releases)
+
+IPA used is grabbed from [here](https://armconverter.com/decryptedappstore/us/spotify), Spotify 9.0.78 is used as of 12th September 2025.
+
+iOS 15 IPA decrypted on my own iPhone 6s+ using [TrollDecrypt](https://github.com/donato-fiore/TrollDecrypt).
+
+ <br>
+
+Last tweak used [Release Swift 6.1.3](https://github.com/whoeevee/EeveeSpotifyReborn/releases/tag/swift6.1.3)
+
+Below is the original README.
+
+<br>
+
+
+<br>
+
+
 ![Banner](Images/banner.png?)
 
 # The original EeveeSpotify repository was disabled due to a [DMCA takedown](https://github.com/github/dmca/blob/master/2025/08/2025-08-14-spotify.md). This repository will not contain the IPA packages, as they are most likely the reason for the takedown.
@@ -5,27 +27,6 @@
 # EeveeSpotify
 
 This tweak makes Spotify think you have a Premium subscription, granting free listening, just like Spotilife, and provides some additional features like custom lyrics.
-
-## How to build an EeveeSpotify IPA using Github actions
-> [!NOTE]
-> If this your first time, complete following steps before starting:
->
-> 1. Fork this repository using the fork button on the top right
-> 2. On your forked repository, go to **Repository Settings** > **Actions**, enable **Read and Write** permissions.
-
-<details>
-  <summary>How to build the EeveeSpotify IPA</summary>
-  <ol>
-    <li>Click on <strong>Sync fork</strong>, and if your branch is out-of-date, click on <strong>Update branch</strong>.</li>
-    <li>Navigate to the <strong>Actions tab</strong> in your forked repository and select <strong>Create IPA Packages</strong> if you're on desktop/widescreen. Tap on <strong>All Workflows</strong> and select <strong>Create IPA Packages</strong> if you're on mobile/portrait.</li>
-    <li>Click the <strong>Run workflow</strong> button located on the right side.</li>
-    <li>Prepare a decrypted .ipa file <em>(we cannot provide this due to legal reasons)</em>, then upload it to a file provider (e.g., filebin.net, filemail.com, or Dropbox is recommended). Paste the URL of the decrypted IPA file in the provided field.</li>
-    <li><strong>NOTE:</strong> Make sure to provide a direct download link to the file, not a link to a webpage. Otherwise, the process will fail.</li>
-    <li>Go to the releases page of the EeveeSpotify repository (<strong>NOT</strong> the fork). Hold and copy the link of the .deb file, which corresponds to your phone's architecture.</li>
-    <li>Make sure all inputs are correct, then click <strong>Run workflow</strong> to start the process.</li>
-    <li>Wait for the build to finish. You can download the EeveeSpotify IPA from the releases section of your forked repo. (If you can't find the releases section, go to your forked repo and add /releases to the URL, i.e., github.com/user/EeveeSpotifyReborn/releases.)</li>
-  </ol>
-</details>
 
 ## The History
 
