@@ -16,6 +16,8 @@ func modifyAssignedValues(_ values: inout [AssignedValue]) {
             $0.value = "Disabled"
         }
     }
+    
+    values.removeAll(where: { $0.propertyID.scope == "ios-feature-queue" })
 }
 
 func modifyAttributes(_ attributes: inout [String: AccountAttribute]) {
