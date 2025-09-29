@@ -87,12 +87,12 @@ jobs:
 
       - name: Create EeveeSpotify Package
         run: |
-          ivinject-arm64 spotify.ipa EeveeSpotify.ipa \
+          ivinject-arm64 spotify.ipa sidestore.ipa \
             -i eeveespotify.deb "$SWIFTPROTOBUF_ROOTFUL" "$OPENSPOTIFYSAFARIEXTENSION" \
             -s - -d --level Optimal
 
       - name: Create Patched Package
-        run: ipapatch -input EeveeSpotify.ipa -output patched.ipa
+        run: ipapatch -input sidestore.ipa -output patched.ipa
    
       - name: Upload to GitHub Releases
         uses: softprops/action-gh-release@v2.0.1
@@ -100,6 +100,7 @@ jobs:
           tag_name: patch-${{ github.run_number }}
           name: latest patched
           files: |
+            sidestore.ipa
             patched.ipa
           draft: false
 
