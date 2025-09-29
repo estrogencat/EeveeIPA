@@ -101,7 +101,6 @@ jobs:
           name: latest patched
           files: |
             sidestore.ipa
-            patched.ipa
           draft: false
 
       - name: Output Release URL
