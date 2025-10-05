@@ -17,6 +17,12 @@ func modifyAssignedValues(_ values: inout [AssignedValue]) {
         }
     }
     
+    if let index = values.firstIndex(where: { $0.propertyID.name == "enable_pick_and_shuffle_dynamic_cap" }) {
+        values[index].boolValue = BoolValue.with {
+            $0.value = false
+        }
+    }
+    
     values.removeAll(where: { $0.propertyID.scope == "ios-feature-queue" })
 }
 
