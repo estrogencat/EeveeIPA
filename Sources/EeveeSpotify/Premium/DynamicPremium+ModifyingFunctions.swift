@@ -23,6 +23,7 @@ func modifyAssignedValues(_ values: inout [AssignedValue]) {
         }
     }
     
+    values.removeAll(where: { $0.propertyID.name == "pick_and_shuffle_timecap" })
     values.removeAll(where: { $0.propertyID.scope == "ios-feature-queue" })
 }
 
