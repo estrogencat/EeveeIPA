@@ -1,4 +1,5 @@
 import Orion
+import EeveeSpotifyC
 import UIKit
 
 func exitApplication() {
@@ -8,7 +9,21 @@ func exitApplication() {
     }
 }
 
-struct PremiumPatchingGroup: HookGroup { }
+struct BasePremiumPatchingGroup: HookGroup { }
+
+struct LegacyPremiumPatchingGroup: HookGroup { }
+struct ModernPremiumPatchingGroup: HookGroup { }
+
+func activatePremiumPatchingGroup() {
+    BasePremiumPatchingGroup().activate()
+    
+    if EeveeSpotify.hookTarget == .latest {
+        ModernPremiumPatchingGroup().activate()
+    }
+    else {
+        LegacyPremiumPatchingGroup().activate()
+    }
+}
 
 struct EeveeSpotify: Tweak {
     static let version = "6.1.6"
@@ -36,11 +51,18 @@ struct EeveeSpotify: Tweak {
         }
         
         if UserDefaults.patchType.isPatching {
-            PremiumPatchingGroup().activate()
+            activatePremiumPatchingGroup()
         }
         
         if UserDefaults.lyricsSource.isReplacingLyrics {
-            LyricsGroup().activate()
+            BaseLyricsGroup().activate()
+            
+            if EeveeSpotify.hookTarget == .latest {
+                ModernLyricsGroup().activate()
+            }
+            else {
+                LegacyLyricsGroup().activate()
+            }
         }
     }
 }
