@@ -62,7 +62,7 @@ romanized_lyrics = "Romanized Lyrics";
 romanized_lyrics_description = "Display romanized lyrics for Japanese, Korean, and Chinese.";
 
 musixmatch_language = "Musixmatch Lyrics Language";
-musixmatch_language_description = "You can enter a 2-letter Musixmatch language code (e.g "en") and see translated lyrics on Musixmatch if they are available.";
+musixmatch_language_description = "You can enter a 2-letter Musixmatch language code and see translated lyrics on Musixmatch if they are available.";
 
 // UI
 

@@ -62,7 +62,7 @@ romanized_lyrics = "Testi Romanizzati";
 romanized_lyrics_description = "Mostra testi romanizzati per giapponese, coreano e cinese.";
 
 musixmatch_language = "Lingua testi Musixmatch";
-musixmatch_language_description = "Puoi inserire un codice di lingua a 2 lettere per Musixmatch (es. "it") e vedere i testi tradotti su Musixmatch se disponibili.";
+musixmatch_language_description = "Puoi inserire un codice di lingua a 2 lettere per Musixmatch e vedere i testi tradotti su Musixmatch se disponibili.";
 
 // UI
 
