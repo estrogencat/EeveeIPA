@@ -17,11 +17,11 @@ struct ModernPremiumPatchingGroup: HookGroup { }
 func activatePremiumPatchingGroup() {
     BasePremiumPatchingGroup().activate()
     
-    if EeveeSpotify.hookTarget == .latest {
-        ModernPremiumPatchingGroup().activate()
+    if EeveeSpotify.hookTarget == .lastAvailableiOS14 {
+        LegacyPremiumPatchingGroup().activate()
     }
     else {
-        LegacyPremiumPatchingGroup().activate()
+        ModernPremiumPatchingGroup().activate()
     }
 }
 
