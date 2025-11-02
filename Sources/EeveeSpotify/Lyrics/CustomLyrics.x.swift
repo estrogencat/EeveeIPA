@@ -3,7 +3,10 @@ import SwiftUI
 
 //
 
-struct LyricsGroup: HookGroup { }
+struct BaseLyricsGroup: HookGroup { }
+
+struct LegacyLyricsGroup: HookGroup { }
+struct ModernLyricsGroup: HookGroup { }
 
 var lyricsState = LyricsLoadingState()
 
@@ -16,9 +19,12 @@ private let petitLyricsRepository = PetitLyricsRepository()
 //
 
 private func loadCustomLyricsForCurrentTrack() throws -> Lyrics {
-    guard let track = nowPlayingScrollViewController?.loadedTrack else {
-        throw LyricsError.noCurrentTrack
-    }
+    guard
+        let track = statefulPlayer?.currentTrack() ??
+                    nowPlayingScrollViewController?.loadedTrack
+        else {
+            throw LyricsError.noCurrentTrack
+        }
     
     let searchQuery = LyricsSearchQuery(
         title: track.trackTitle(),
@@ -115,9 +121,12 @@ private func loadCustomLyricsForCurrentTrack() throws -> Lyrics {
 }
 
 func getLyricsDataForCurrentTrack(originalLyrics: Lyrics? = nil) throws -> Data {
-    guard let track = nowPlayingScrollViewController?.loadedTrack else {
-        throw LyricsError.noCurrentTrack
-    }
+    guard
+        let track = statefulPlayer?.currentTrack() ??
+                    nowPlayingScrollViewController?.loadedTrack
+        else {
+            throw LyricsError.noCurrentTrack
+        }
     
     var lyrics = try loadCustomLyricsForCurrentTrack()
     
@@ -143,7 +152,7 @@ func getLyricsDataForCurrentTrack(originalLyrics: Lyrics? = nil) throws -> Data 
             color = Color(hex: extractedColor)
                 .normalized(lyricsColorsSettings.normalizationFactor)
         }
-        else if let uiColor = nowPlayingScrollViewController?.backgroundViewModel.color() {
+        else if let uiColor = backgroundViewModel?.color() {
             color = Color(uiColor)
                 .normalized(lyricsColorsSettings.normalizationFactor)
         }
