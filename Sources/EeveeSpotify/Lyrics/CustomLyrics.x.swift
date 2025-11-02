@@ -31,7 +31,7 @@ private func loadCustomLyricsForCurrentTrack() throws -> Lyrics {
         primaryArtist: EeveeSpotify.hookTarget == .lastAvailableiOS14
             ? track.artistTitle()
             : track.artistName(),
-        spotifyTrackId: track.URI().spt_trackIdentifier()
+        spotifyTrackId: track.trackIdentifier
     )
     
     let options = UserDefaults.lyricsOptions
@@ -120,13 +120,17 @@ private func loadCustomLyricsForCurrentTrack() throws -> Lyrics {
     return lyrics
 }
 
-func getLyricsDataForCurrentTrack(originalLyrics: Lyrics? = nil) throws -> Data {
+func getLyricsDataForCurrentTrack(_ originalPath: String, originalLyrics: Lyrics? = nil) throws -> Data {
     guard
         let track = statefulPlayer?.currentTrack() ??
                     nowPlayingScrollViewController?.loadedTrack
         else {
             throw LyricsError.noCurrentTrack
         }
+    
+    if !originalPath.contains(track.trackIdentifier) {
+        throw LyricsError.trackMismatch
+    }
     
     var lyrics = try loadCustomLyricsForCurrentTrack()
     
