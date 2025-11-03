@@ -41,6 +41,7 @@ class SPTDataLoaderServiceHook: ClassHook<NSObject>, SpotifySessionDelegate {
             if url.isLyrics {
                 respondWithCustomData(
                     try getLyricsDataForCurrentTrack(
+                        url.path,
                         originalLyrics: try? Lyrics(serializedBytes: buffer)
                     ),
                     task: task,
@@ -98,7 +99,7 @@ class SPTDataLoaderServiceHook: ClassHook<NSObject>, SpotifySessionDelegate {
         }
 
         do {
-            let data = try getLyricsDataForCurrentTrack()
+            let data = try getLyricsDataForCurrentTrack(url.path)
             let okResponse = HTTPURLResponse(url: url, statusCode: 200, httpVersion: "2.0", headerFields: [:])!
             
             orig.URLSession(session, dataTask: task, didReceiveResponse: okResponse, completionHandler: handler)
