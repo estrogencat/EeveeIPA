@@ -10,20 +10,18 @@ func modifyRemoteConfiguration(_ configuration: inout UcsResponse) {
     modifyAssignedValues(&configuration.assignedValues)
 }
 
+private let propertyToRemoveNames = [
+    "enable_common_capping",
+    "enable_pns_common_capping",
+    "enable_pick_and_shuffle_common_capping",
+    "enable_pick_and_shuffle_dynamic_cap",
+    "pick_and_shuffle_timecap", // capping
+    "should_nova_scroll_use_scrollsita" // 😡😡😡
+                                        // spotify, stop changing the scroll logic
+]
+
 func modifyAssignedValues(_ values: inout [AssignedValue]) {
-    if let index = values.firstIndex(where: { $0.propertyID.name == "enable_pick_and_shuffle_common_capping" }) {
-        values[index].enumValue = EnumValue.with {
-            $0.value = "Disabled"
-        }
-    }
-    
-    if let index = values.firstIndex(where: { $0.propertyID.name == "enable_pick_and_shuffle_dynamic_cap" }) {
-        values[index].boolValue = BoolValue.with {
-            $0.value = false
-        }
-    }
-    
-    values.removeAll(where: { $0.propertyID.name == "pick_and_shuffle_timecap" })
+    values.removeAll(where: { propertyToRemoveNames.contains($0.propertyID.name) })
     values.removeAll(where: { $0.propertyID.scope == "ios-feature-queue" })
 }
 

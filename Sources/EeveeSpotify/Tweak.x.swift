@@ -11,17 +11,26 @@ func exitApplication() {
 
 struct BasePremiumPatchingGroup: HookGroup { }
 
-struct LegacyPremiumPatchingGroup: HookGroup { }
-struct ModernPremiumPatchingGroup: HookGroup { }
+struct IOS14PremiumPatchingGroup: HookGroup { }
+struct NonIOS14PremiumPatchingGroup: HookGroup { }
+struct IOS14And15PremiumPatchingGroup: HookGroup { }
+struct LatestPremiumPatchingGroup: HookGroup { }
 
 func activatePremiumPatchingGroup() {
     BasePremiumPatchingGroup().activate()
     
     if EeveeSpotify.hookTarget == .lastAvailableiOS14 {
-        LegacyPremiumPatchingGroup().activate()
+        IOS14PremiumPatchingGroup().activate()
     }
     else {
-        ModernPremiumPatchingGroup().activate()
+        NonIOS14PremiumPatchingGroup().activate()
+        
+        if EeveeSpotify.hookTarget == .lastAvailableiOS15 {
+            IOS14And15PremiumPatchingGroup().activate()
+        }
+        else {
+            LatestPremiumPatchingGroup().activate()
+        }
     }
 }
 
@@ -42,6 +51,8 @@ struct EeveeSpotify: Tweak {
     }
     
     init() {
+        OfflineHelper.resetData(clearCaches: true)
+        
         if UserDefaults.experimentsOptions.showInstagramDestination {
             InstgramDestinationGroup().activate()
         }
