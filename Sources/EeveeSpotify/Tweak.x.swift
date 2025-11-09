@@ -51,8 +51,6 @@ struct EeveeSpotify: Tweak {
     }
     
     init() {
-        OfflineHelper.resetData(clearCaches: true)
-        
         if UserDefaults.experimentsOptions.showInstagramDestination {
             InstgramDestinationGroup().activate()
         }
