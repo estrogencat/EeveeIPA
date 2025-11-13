@@ -20,7 +20,7 @@ class SPTPlayerTrackHook: ClassHook<NSObject> {
         
         guard shouldOverrideLocalTrackURI,
               let absoluteString = uri?.absoluteString,
-              absoluteString.hasPrefix("spotify:local:") else {
+              absoluteString.isLocalTrackIdentifier else {
             return uri
         }
         
