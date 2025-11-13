@@ -8,6 +8,26 @@ var scrollDataSource: NowPlayingScrollDataSourceImplementation?
 var nowPlayingScrollViewController: NowPlayingScrollViewController?
 var npvScrollViewController: NPVScrollViewController?
 
+class LegacyNowPlayingPlatformSwiftServiceImplementationHook: ClassHook<NSObject> {
+    typealias Group = IOS14PremiumPatchingGroup
+    static let targetName = "NowPlaying_PlatformImpl.NowPlayingPlatformSwiftServiceImplementation"
+    
+    func provideStatefulPlayer() -> StatefulPlayerImplementation {
+        statefulPlayer = orig.provideStatefulPlayer()
+        return statefulPlayer!
+    }
+}
+
+class NowPlayingPlatformSwiftServiceImplementationHook: ClassHook<NSObject> {
+    typealias Group = NonIOS14PremiumPatchingGroup
+    static let targetName = "NowPlaying_PlatformImpl.NowPlayingPlatformSwiftServiceImplementation"
+    
+    func provideStatefulPlayerWithFeatureIdentifier(_ identifier: NSString) -> StatefulPlayerImplementation {
+        statefulPlayer = orig.provideStatefulPlayerWithFeatureIdentifier(identifier)
+        return statefulPlayer!
+    }
+}
+
 class NowPlayingScrollPrivateServiceImplementationHook: ClassHook<NSObject> {
     typealias Group = BaseLyricsGroup
     static let targetName = "NowPlaying_ScrollImpl.NowPlayingScrollPrivateServiceImplementation"
@@ -22,7 +42,6 @@ class NowPlayingScrollPrivateServiceImplementationHook: ClassHook<NSObject> {
             )
         }
         else {
-            statefulPlayer = Ivars<StatefulPlayerImplementation>(dependencies).statefulPlayer
             scrollDataSource = Ivars<NowPlayingScrollDataSourceImplementation>(target)
                 .$__lazy_storage_$_scrollDataSource
             npvScrollViewController = Dynamic.convert(

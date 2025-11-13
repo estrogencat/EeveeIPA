@@ -1,6 +1,6 @@
 import Foundation
 
-enum PatchType: Int {
+enum EeveePatchType: Int {
     case notSet
     case disabled
     case requests
