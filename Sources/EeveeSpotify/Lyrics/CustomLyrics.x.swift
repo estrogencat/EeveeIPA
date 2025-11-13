@@ -128,7 +128,9 @@ func getLyricsDataForCurrentTrack(_ originalPath: String, originalLyrics: Lyrics
             throw LyricsError.noCurrentTrack
         }
     
-    if !originalPath.contains(track.trackIdentifier) {
+    let trackIdentifier = track.trackIdentifier
+    
+    if !trackIdentifier.isEmpty && !originalPath.contains(trackIdentifier) {
         throw LyricsError.trackMismatch
     }
     
