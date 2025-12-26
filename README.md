@@ -1,3 +1,5 @@
+<img alt="image" src="https://github.com/user-attachments/assets/dc6dd64e-517d-44ad-9f50-c8d6f824b3f3" />
+
 # EeveeIPA
 
 This is for people who don't want to use telegram.
