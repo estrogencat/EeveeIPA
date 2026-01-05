@@ -1,3 +1,5 @@
+# Original EeveeSpotify has been discontinued.
+
 <img alt="image" src="https://github.com/user-attachments/assets/dc6dd64e-517d-44ad-9f50-c8d6f824b3f3" />
 
 # EeveeIPA
@@ -14,7 +16,7 @@ iOS 15 IPA decrypted on my own iPhone 6s+ using [TrollDecrypt](https://github.co
 
  <br>
 
-Last tweak used [Release Swift 6.2.2](https://github.com/whoeevee/EeveeSpotifyReborn/releases/tag/swift6.2.2)
+Last tweak used [Meeep1/EeveeSpotifyRevivedPublic Release Swift 6.4.8](https://github.com/Meeep1/EeveeSpotifyRevivedPublic/releases/tag/6.4.8)
 
 Below is the original README.
 
