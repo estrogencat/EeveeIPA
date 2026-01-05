@@ -1,16 +1,12 @@
-# Original EeveeSpotify has been discontinued.
-
-<img alt="image" src="https://github.com/user-attachments/assets/dc6dd64e-517d-44ad-9f50-c8d6f824b3f3" />
-
 # EeveeIPA
 
 This is for people who don't want to use telegram.
 
 <br>
 
-Latest tweak is grabbed from the [original repository.](https://github.com/whoeevee/EeveeSpotifyReborn/releases)
+Latest tweak is grabbed from the [revived repository.](https://github.com/Meeep1/EeveeSpotifyRevivedPublic)
 
-IPA used is grabbed from [armconverter](https://armconverter.com/decryptedappstore/us/spotify), or [decrypt.day](https://decrypt.day/app/id324684580). Spotify 9.1.0 is used as of 29th November 2025.
+IPA used is grabbed from [decrypt.day](https://decrypt.day/app/id324684580). Spotify 9.1.6 is used as of 2nd January 2026 (late happy new year).
 
 iOS 15 IPA decrypted on my own iPhone 6s+ using [TrollDecrypt](https://github.com/donato-fiore/TrollDecrypt).
 
