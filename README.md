@@ -6,9 +6,9 @@ This is for people who don't want to use telegram.
 
 Latest tweak is grabbed from the [revived repository.](https://github.com/Meeep1/EeveeSpotifyRevivedPublic)
 
-Spotify 9.1.28 is used as of 12th March 2026.
+Spotify 9.1.34 is used as of 16th April 2026.
 
-iOS 15 IPA decrypted on my own iPhone 6s+ using [TrollDecrypt](https://github.com/donato-fiore/TrollDecrypt).
+Both IPA versions decrypted on my own devices using [TrollDecrypt](https://github.com/donato-fiore/TrollDecrypt).
 
  <br>
 
