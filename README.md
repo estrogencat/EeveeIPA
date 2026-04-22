@@ -4,7 +4,7 @@ This is for people who don't want to use telegram.
 
 <br>
 
-Latest tweak is grabbed from the [revived repository.](https://github.com/Meeep1/EeveeSpotifyRevivedPublic)
+Latest tweak is grabbed from [jaydenjcpy's repository](https://github.com/jaydenjcpy/EeveeSpotifyRevivedPublic)
 
 Spotify 9.1.34 is used as of 16th April 2026.
 
@@ -12,7 +12,7 @@ Both IPA versions decrypted on my own devices using [TrollDecrypt](https://githu
 
  <br>
 
-Last tweak used [Meeep1/EeveeSpotifyRevivedPublic Release Swift 6.6.2](https://github.com/Meeep1/EeveeSpotifyRevivedPublic/releases/latest)
+Last tweak used [Build Rootless Deb and inject .deb into IPA #88](https://github.com/jaydenjcpy/EeveeSpotifyRevivedPublic/actions/runs/24777626535/artifacts/6577845165)
 
 Below is the original README.
 
