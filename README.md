@@ -7,7 +7,8 @@
 I created this repository a while back, as I didn't fully trust whoeevee's prebuilt IPAs (was new to the scene).<br />
 Then, I noticed that people were using it for the IPAs so I made a Telegram channel and started posting them there too. Eventually, whoeevee stopped maintaining the [original EeveeSpotify](https://github.com/whoeevee/EeveeSpotifyReborn), so I had to switch to [Meeep1 or Skye's repository](https://github.com/Meeep1/EeveeSpotifyRevivedPublic).<br />
 Then that started to break, as Skye had gone inactive, so I slowed down uploads until [Jayden forked Skye's repository](https://github.com/jaydenjcpy/EeveeSpotifyReincarnated) and fixed all of the issues that kept rising up.<br />
-<br>And yes, the Sideloadly issue is fixed as of 07/06/26. ![Meow](Images/placeholder.png)
+<br>And yes, the Sideloadly issue is fixed as of 07/06/26.
+<img src="Images/placeholder.png" alt="Placeholder" width="300" height="200">
 
 ## Downloads
 Located in [releases](https://github.com/estrogencat/EeveeIPA/releases)
