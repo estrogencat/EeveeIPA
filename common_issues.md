@@ -1,65 +1,93 @@
-On this page, you’ll find a detailed FAQ covering various topics related to EeveeSpotify, answers to common questions, and more.
+On this page, you'll find a detailed FAQ covering various topics related to EeveeSpotify, answers to common questions, and more.
 
 # Versions and Support
 
-If you have a paid certificate from a signing service, you can install the version with the patched prefix, which will fix widgets. If you don’t need widgets or are using AltStore, SideStore, Sideloadly, or TrollStore, install the original version.
+EeveeSpotify currently supports Spotify version **9.1.48** (the latest version compatible with iOS 14+). 
 
-EeveeSpotify officially supports both Spotify versions 8.9.8 and 9.0.48 (the last versions that run on iOS 14 and 15). If you are on either of these two OS versions, jailbreak your device and install the latest .deb from the releases on GitHub, along with the latest available Spotify from the App Store. Reset data within the EeveeSpotify settings afterwards so it will patch Premium.
+If you are jailbroken, install the latest .deb from the [releases page](https://github.com/jaydenjcpy/EeveeSpotifyReincarnated/releases), along with Spotify 9.1.48 from the App Store. After installation, open the EeveeSpotify settings (accessible from your Spotify profile settings) and reset data so it will properly patch Premium features.
+
+For non-jailbroken devices, use the patched IPA files available in the releases. You can install these using:
+- **TrollStore** (recommended for iOS 14-16.6.1)
+- **Sideloadly** (7-day signing)
+- **AltStore** (7-day signing)
+- **Signing services** with paid certificates
 
 EeveeSpotify only supports iOS and iPadOS and is not planned to be supported on other platforms. You can sideload the iPadOS version on an Apple Silicon Mac, though.
 
-EeveeSpotify versions are released automatically alongside Spotify versions on the App Store and are uploaded to the [EeveeSpotify IPAs](https://t.me/SpotilifeIPAs) Telegram channel. If you would like to make your own IPA, make sure you inject the SwiftProtobuf, Orion, and CydiaSubstrate frameworks.
+New versions are released when compatible Spotify updates become available. Check the [releases page](https://github.com/jaydenjcpy/EeveeSpotifyReincarnated/releases) for the latest builds, or join the [Telegram channel](https://t.me/compiledipas) for IPA downloads and updates.
 
 ## CarPlay, Siri and Dynamic Island/Lockscreen
 
-To use CarPlay, you need to either install the tweak on a jailbroken device, use TrollStore, or have a paid certificate with a CarPlay entitlement. Some additional setup steps may be required, which are described in the [related issues](https://github.com/whoeevee/EeveeSpotify/issues?q=CarPlay%20sort%3Acomments-desc).
+To use CarPlay, you need to either install the tweak on a jailbroken device, use TrollStore, or have a paid certificate with a CarPlay entitlement.
 
 To use Siri, you need to either install the tweak on a jailbroken device, use TrollStore, or have a paid certificate with a Siri entitlement.
 
-If you’re using a paid certificate, to navigate to a song from the lock screen, control center, or Dynamic Island, and to use Spatial Audio or Siri, change the app and bundle identifiers to match your provisioning profile (https://github.com/whoeevee/EeveeSpotify/issues/32).
+If you're using a paid certificate, to navigate to a song from the lock screen, control center, or Dynamic Island, and to use Spatial Audio or Siri, change the app and bundle identifiers to match your provisioning profile.
 
 # Feature Requests
 
-EeveeSpotify does not accept free feature requests. If you need something, feel free to implement it yourself, or submit a pull request if you think others may find it useful. If you’re willing to pay for a feature, open an issue to discuss further opportunities.
+EeveeSpotify does not accept free feature requests. If you need something, feel free to implement it yourself, or submit a pull request if you think others may find it useful. If you're willing to pay for a feature, open an issue to discuss further opportunities.
 
-Read the [Restrictions](https://github.com/whoeevee/EeveeSpotify?tab=readme-ov-file#restrictions) to learn which Premium features are server-sided and will never work without a Premium subscription.
+Note that many Premium features are server-sided and will never work without a Premium subscription (e.g., very high quality audio, offline downloads on mobile data).
 
 # Troubleshooting & Issues
 
+## Accessing Settings
+
+EeveeSpotify settings can be accessed from within the Spotify app:
+1. Open Spotify
+2. Tap your profile icon (top right)
+3. Scroll down to find "EeveeSpotify" in the settings list
+4. Tap to access all tweak settings
+
 ## Something Went Wrong
 
-If you're unable to sign in, see [the reason and workarounds](https://github.com/whoeevee/EeveeSpotify/blob/swift/something-went-wrong.md).
+If you're unable to sign in and see an error, try these solutions:
+1. Clear Spotify app data
+2. Reinstall the app
+3. Check your internet connection
+4. If using a VPN, try disconnecting/reconnecting
 
 ## Lyrics Not Showing Up
 
-If you see the “Couldn't load the lyrics for this song” message and no lyrics load, try resetting the data within the EeveeSpotify settings. If that doesn't help, go to the Patching section and enable Overwrite Configuration.
+If you see the "Couldn't load the lyrics for this song" message and no lyrics load:
+1. Open EeveeSpotify settings
+2. Go to the Lyrics section
+3. Try changing the lyrics source
+4. If that doesn't help, go to the Patching section and enable "Overwrite Configuration"
+5. Reset data within the EeveeSpotify settings
 
 ## Premium Not Working
 
-If all tracks are skipped, a song stops as soon as you play it, songs play in a random order, you see the “You discovered a Premium feature” popup when trying to play a song, or you encounter other restrictions:
+If all tracks are skipped, a song stops as soon as you play it, songs play in a random order, you see the "You discovered a Premium feature" popup when trying to play a song, or you encounter other restrictions:
 
-You can only use Spotify abroad for 14 days. Connect to a VPN server in any country, change your region at accounts.spotify.com, then sign out and log back into Spotify with the VPN enabled.
+**Region Issue**: You can only use Spotify abroad for 14 days. The solution:
+1. Connect to a VPN server in any country
+2. Change your region at accounts.spotify.com
+3. Sign out of Spotify
+4. Log back into Spotify with the VPN still enabled
 
-This issue is solely related to your account region, and there are no other solutions. Do not enable “Overwrite Configuration” or make any other changes. If your region is already set, still connect to a VPN, change your region to some else, sign out, and then log back into the Spotify app.
+This issue is solely related to your account region. Do not enable "Overwrite Configuration" unless you've also tried the region fix. If your region is already correct, still try connecting to a VPN, changing your region to somewhere else, signing out, and then logging back into the Spotify app.
 
 ## Downloading
 
-Downloading is not, and will never be, implemented in EeveeSpotify. While it is technically possible to intercept the audio stream or use third-party APIs, downloading simply will not be included in EeveeSpotify: the developer uses SoundCloud.
+Downloading is not, and will never be, implemented in EeveeSpotify. While it is technically possible to intercept the audio stream or use third-party APIs, downloading simply will not be included in EeveeSpotify.
 
-However, opening a pull request is always welcome. If you are a developer and manage to implement downloading that works flawlessly and natively (without third-party menus, UI elements, etc.), you will be considered a true legend and mentioned at the top of the README, contributors screen, and elsewhere.
+However, opening a pull request is always welcome. If you are a developer and manage to implement downloading that works flawlessly and natively (without third-party menus, UI elements, etc.), you will be considered a true legend and mentioned at the top of the README and contributors screen.
 
-You may see a “Download local playlist” option. This is specifically for downloading playlists that contain only local tracks from your PC within a Wi-Fi network.
+You may see a "Download local playlist" option. This is specifically for downloading playlists that contain only local tracks from your PC within a Wi-Fi network.
 
 Any issues regarding downloading of any kind will be closed.
 
 ## Spotify Connect
 
-It is known that when using Spotify Connect, you may encounter ads, be unable to skip tracks, and experience other limitations. The music is streamed directly from Spotify’s cloud to the connected device, while your phone acts only as a remote control. This is beyond EeveeSpotify’s control. If you want to avoid these limitations, use Bluetooth instead.
+When using Spotify Connect, you may encounter ads, be unable to skip tracks, and experience other limitations. The music is streamed directly from Spotify's cloud to the connected device, while your phone acts only as a remote control. This is beyond EeveeSpotify's control. If you want to avoid these limitations, use Bluetooth instead.
 
 ## Ads on Homescreen
 
-You may see ads on the home screen. This is a known issue and will not be fixed, as it is a real challenge. To learn more, read the contents of issue https://github.com/whoeevee/EeveeSpotify/issues/422.
+You may see ads on the home screen. This is a known issue and will not be fixed, as it is a real challenge to patch these server-sided ads.
 
 ## Ads in Podcasts
 
-You may see ads in podcasts. It’s surprising, but this is Spotify’s default behavior, even on Premium accounts. This won't be fixed, just skip the ads.
+You may see ads in podcasts. This is Spotify's default behavior, even on Premium accounts. This won't be fixed - just skip the ads manually.
+
