@@ -1,38 +1,31 @@
-# EeveeIPA
+# EeveeSpotifyReincarnated
 
-This is for people who don't want to use telegram.
+**Updated and maintained by [jaydenjcpy](https://github.com/jaydenjcpy) & [faroukbmiled](https://github.com/faroukbmiled), prebuilt by [estrogencat](https://github.com/estrogencat)**
 
-<br>
-
-Latest tweak is grabbed from [jaydenjcpy's repository](https://github.com/jaydenjcpy/EeveeSpotifyRevivedPublic)
-
-Spotify 9.1.40 is used as of 22nd April 2026.
-
-Both IPA versions decrypted on my own devices using [TrollDecrypt](https://github.com/donato-fiore/TrollDecrypt).
-
- <br>
-
-Last tweak used [Build Rootless Deb and inject .deb into IPA #88](https://github.com/jaydenjcpy/EeveeSpotifyRevivedPublic/actions/runs/24777626535/artifacts/6577845165)
-
-Below is the original README.
-
-<br>
-
-
-<br>
-
-
-![Banner](Images/banner.png?)
-
-# The original EeveeSpotify repository was disabled due to a [DMCA takedown](https://github.com/github/dmca/blob/master/2025/08/2025-08-14-spotify.md). This repository will not contain the IPA packages, as they are most likely the reason for the takedown.
-
-# EeveeSpotify
+**Last updated 07/06/26 (DD/MM/YY)<br>Current TestFlight BETA Version 9.1.54.1101 - Current Stable Version 9.1.48**
 
 This tweak makes Spotify think you have a Premium subscription, granting free listening, just like Spotilife, and provides some additional features like custom lyrics.
 
-## The History
+## Downloads
+Located in [releases](https://github.com/estrogencat/EeveeIPA/releases)
 
-In January 2024, Spotilife, the only tweak to get Spotify Premium, stopped working on new Spotify versions. I decompiled Spotilife, reverse-engineered Spotify, intercepted requests, etc., and created this tweak.
+## Installation
+
+For sideloaded IPAs, we recommend using **SideStore** or certificate-based signing tools like **Ksign** for best compatibility.
+
+For the PATCHED variant, only certificate-based signing tools or TrollStore can be used to install. For the REGULAR variant, any sideloading tool can be used, but [I](https://github.com/estrogencat) personally use SideStore
+
+To open Spotify links in sideloaded app, use [OpenSpotifySafariExtension](https://github.com/BillyCurtis/OpenSpotifySafariExtension). Remember to activate it and allow access in Settings > Safari > Extensions.
+
+## Where the IPA is obtained from
+1. I download Spotify from either the App Store or the TestFlight app
+2. I use TrollDecrypt on my iPhone X, jailbroken with palera1n, and then upload the IPA to my own website
+3. [Another repository](https://github.com/estrogencat/EeveeSpotifyReincarnated) is used to actually build the IPA, as this repository uses whoeevee's files. The action is modified for my own use, but you can still fork and use it as long as the secrets are filled in for the extra checkboxes **IF** you use them. build-and-release-yourself.yml is used, the deb is grabbed from Jayden's actions.
+
+<sup>Prebuilt used to be tested BEFORE uploading, but as of June 2026 they are tested after aslong as there arent any breaking bugs reported.</sup><br />
+<sup>Regular IPAs are tested using an **iPhone 12** running **iOS `26.2`** with a **Free Developer Account**.</sup><br />
+<sup>Patched IPAs are tested using an **iPhone X** running **iOS `16.7.10`** with **TrollStore**.</sup> <br><br>
+<sub><sup>inspired by notdarkn's readme</sub></sup>
 
 ## Restrictions
 
@@ -44,7 +37,31 @@ Please refrain from opening issues about the following features, as they are ser
 - AI DJ/Playlist
 - Spotify Connect (When using Spotify Connect, the device will act as a remote control and stream directly to the connected device. This is a server-sided limitation and is beyond the control of EeveeSpotify, so it will behave as if you have a Free subscription while using this feature.)
 
-It's possible to implement downloading locally, but it will never be included in EeveeSpotify (unless someone opens a pull request).
+## [Common Issues](https://github.com/jaydenjcpy/EeveeSpotifyReincarnated/blob/Master/common_issues.md)
+Please check out the hyperlink above before opening an issue
+
+## Custom Lyrics Support
+
+**Spotify 9.1.50 and above** - Full custom lyrics functionality is available with the following providers:
+
+- **Musixmatch**
+- **PetitLyrics**
+- **LRCLIB**
+- **Genius**
+
+> [!NOTE]
+> All providers work now
+
+## The History
+
+In **January 2024**, Spotilife, the only tweak to get Spotify Premium, stopped working on new Spotify versions. **[whoeevee](https://github.com/whoeevee)** decompiled Spotilife, reverse-engineered Spotify, intercepted requests, etc., and created this tweak.
+
+In **December 2025**, whoeevee, the maintainer of the EeveeSpotify tweak at the time, announced he'll be discontinuing the tweak because of the burden of keeping up with Spotify's constantly changing architectures. Soon after, **[Meep1](https://github.com/Meeep1)**, forks the original Eevee repo and continues to develop the tweak to support newer Spotify versions, under the project name EeveeSpotiyRevivedPublic.
+
+In **March 2026**, the latest EeveeSpotifyRevivedPublic release, v9.1.28, users experienced constant logging out issues and reported to Skye, however, at the time of this README.md written, EeveeSpotifyRevivedPublic hasn't released any newer updates. During March, I've been constantly annoyed by the logout issue and decided to take matters into my own hands and forked EeveeSpotifyRevivedPublic and fixed the logout issue, which will eventually lead to the creation of this repository, which will be continuing the legacy of EeveeSpotify for newer versions of Spotify.
+
+
+
 
 ## Lyrics Support
 
@@ -60,43 +77,31 @@ EeveeSpotify replaces Spotify monthly limited lyrics with one of the following f
 
 If the tweak is unable to find a song or process the lyrics, you'll see a "Couldn't load the lyrics for this song" message. The lyrics might be wrong for some songs when using Genius due to how the tweak searches songs. While I've made it work in most cases, kindly refrain from opening issues about it.
 
+
+
+
 ## How It Works
 
-**Starting with version 4.0, EeveeSpotify intercepts Spotify requests to load user data, deserializes it, and modifies the parameters in real-time. This method is the best so far and works incredibly stable, so the below explanation is no longer valid for v4.0 and later.**
+EeveeSpotify intercepts Spotify requests to load user data, deserializes it, and modifies the parameters in real-time. This method works incredibly stable across supported Spotify versions.
 
-Upon login, Spotify fetches user data and caches it in the `offline.bnk` file in the `/Library/Application Support/PersistentCache` directory. It uses its proprietary binary format to store data, incorporating a length byte before each value, among other conventions. Certain keys, such as `player-license`, `financial-product`, `streaming-rules`, and others, determine the user abilities.
-
-The tweak patches this file while initializing; Spotify loads it and assumes you have Premium. To be honest, it doesn't really patch due to challenges with dynamic length and varied bytes. The tweak extracts the username from the current `offline.bnk` file and inserts it into `premiumblank.bnk` (a file containing all premium values preset), replacing `offline.bnk`. Spotify may reload user data, and you'll be switched to the Free plan. When this happens, you'll see a popup with quick restart app and reset data actions.
-
-![Hex](Images/hex.png)
-
-Tweak also sets `trackRowsEnabled` in `SPTFreeTierArtistHubRemoteURLResolver` to `true`, so Spotify loads not just track names on the artist page, and adds a liked tracks row to the artist view models, allowing you to see the liked tracks row just like with Premium.
-
-To open Spotify links in sideloaded app, use [OpenSpotifySafariExtension](https://github.com/BillyCurtis/OpenSpotifySafariExtension). Remember to activate it and allow access in Settings > Safari > Extensions.
-
-## Support
-
-EeveeSpotify has always been free and open-source project. However, I started accepting crypto donations if you'd like to support me. I really appreciate it:
-
-USDT (TRC-20): `TK4AZZLEWrahYUkKDG8r8Pr5BmkoFjs5zU`
-
-ETH/USDC/USDT: `0x4eFf79BdfCa9d3BC01a1d145eF343871bb0a3CdF`
-
-BTC: `bc1qspsnjenfq6wgj9a7pmm2xe3up4622wqxlem0g5`
-
-TON: `UQCgt8EfLdT3QOmnC11vsndUBHryi2suTcTOVCQqBgMdmg4l`
-
-LTC: `ltc1qup3v46fm05sxd278r63957wh4qf2esehevpy76`
-
-### Donors
-
-Thanks to the following donors for supporting the project and funding the automatic release workflow:
-
-- [Randy](https://github.com/randy-420)
-- [HAMO](https://github.com/hamzaharoon1314)
+The tweak also sets `trackRowsEnabled` to `true`, allowing you to see track rows and liked tracks on artist pages just like with Premium.
 
 
 
 
+## Credits
+Thanks for all of the community's support, also, thanks to all the devs who worked along with me to revive this project Go check the other dev's out:
 
-IPA used is grabbed from [decrypt.day](https://decrypt.day/app/id324684580). 
+[Ryuk](https://github.com/faroukbmiled) - True Shuffle, App Icon, Support for Spotify v9.1.46 and above 
+
+[Mod-4](https://github.com/M0d-4) - Custom Lyrics, iPadUI fix 
+
+[estrogencat](https://github.com/estrogencat) - Icon Fixes & this repo (EeveeIPA)
+
+[Skye](https://github.com/Meeep1) - EeveeSpotifyRevivedPublic, the base of this project 
+
+[whoeevee](https://github.com/whoeevee) - EeveeSpotify & EeveeSpotifyReborn, where all this started
+
+
+
+
