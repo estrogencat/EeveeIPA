@@ -4,7 +4,7 @@
 
 **Last updated 07/06/26 (DD/MM/YY)<br>Current TestFlight BETA Version 9.1.54.1101 - Current Stable Version 9.1.48**
 
-This tweak makes Spotify think you have a Premium subscription, granting free listening, just like Spotilife, and provides some additional features like custom lyrics.
+I created this repository a while back, as I didn't fully trust whoeevee's prebuilt IPAs (was new to the scene). Eventually, I noticed that people were using it for the IPAs so I made a Telegram channel and started posting them there too. Eventually, whoeevee stopped maintaining the [original EeveeSpotify](https://github.com/whoeevee/EeveeSpotifyReborn), so I had to switch to [Meeep1 or Skye's repository](https://github.com/Meeep1/EeveeSpotifyRevivedPublic), but that eventually started to break so I slowed down uploads until Jayden forked Skye's repository and fixed all of the issues that kept rising up. Yes, the Sideloadly issue is fixed as of 07/06/26.
 
 ## Downloads
 Located in [releases](https://github.com/estrogencat/EeveeIPA/releases)
@@ -25,7 +25,7 @@ To open Spotify links in sideloaded app, use [OpenSpotifySafariExtension](https:
 <sup>Prebuilt used to be tested BEFORE uploading, but as of June 2026 they are tested after aslong as there arent any breaking bugs reported.</sup><br />
 <sup>Regular IPAs are tested using an **iPhone 12** running **iOS `26.2`** with a **Free Developer Account**.</sup><br />
 <sup>Patched IPAs are tested using an **iPhone X** running **iOS `16.7.10`** with **TrollStore**.</sup> <br><br>
-<sub><sup>inspired by notdarkn's readme</sub></sup>
+<sub><sup>inspired by [notdarkn's readme](https://github.com/NotDarkn/EeveeReincarnatedIPA/blob/Master/README.md)</sub></sup>
 
 ## Restrictions
 
