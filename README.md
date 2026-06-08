@@ -12,12 +12,16 @@ Then that started to break, as Skye had gone inactive, so I slowed down uploads 
 <br>
 <img src="Images/Sideloadly.png" alt="Placeholder" width="388" height="370">
 
-## Downloads
+> [!WARNING]
+> ### **PLEASE READ [COMMON ISSUES](common_issues.md) BEFORE MAKING AN ISSUE ELSEWHERE, IT MIGHT HAVE A FIX FOR YOUR ISSUE(s).**<br />
+> There is a chance you will be ignored, either for a while, or completely, if you report an issue already widely known, so **please** read it. You'll save yourself time doing this.
+
+# Downloads
 Located in [releases](https://github.com/estrogencat/EeveeIPA/releases)
 
 ## Installation
 
-For sideloaded IPAs, we recommend using **SideStore** or certificate-based signing tools like **Ksign** for best compatibility.
+For sideloaded IPAs, we recommend using **SideStore** or certificate-based signing tools like **Feather** for best compatibility.
 
 For the PATCHED variant, only certificate-based signing tools or TrollStore can be used to install. For the REGULAR variant, any sideloading tool can be used, but [I](https://github.com/estrogencat) personally use SideStore
 
