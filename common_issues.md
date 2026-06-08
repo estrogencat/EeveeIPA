@@ -2,12 +2,12 @@ On this page, you'll find a detailed FAQ covering various topics related to Eeve
 
 # Versions and Support
 
-EeveeSpotify currently supports Spotify version **9.1.48** (the latest version compatible with iOS 14+). 
+EeveeSpotify currently supports Spotify version **9.1.48** (the latest version compatible with iOS 16.1+). 
 
 If you are jailbroken, install the latest .deb from the [releases page](https://github.com/jaydenjcpy/EeveeSpotifyReincarnated/releases), along with Spotify 9.1.48 from the App Store. After installation, open the EeveeSpotify settings (accessible from your Spotify profile settings) and reset data so it will properly patch Premium features.
 
 For non-jailbroken devices, use the patched IPA files available in the releases. You can install these using:
-- **TrollStore** (recommended for iOS 14-16.6.1)
+- **TrollStore** (recommended for iOS 14-16.6.1, 17.0)
 - **Sideloadly** (7-day signing)
 - **AltStore** (7-day signing)
 - **Signing services** with paid certificates
@@ -15,6 +15,21 @@ For non-jailbroken devices, use the patched IPA files available in the releases.
 EeveeSpotify only supports iOS and iPadOS and is not planned to be supported on other platforms. You can sideload the iPadOS version on an Apple Silicon Mac, though.
 
 New versions are released when compatible Spotify updates become available. Check the [releases page](https://github.com/jaydenjcpy/EeveeSpotifyReincarnated/releases) for the latest builds, or join the [Telegram channel](https://t.me/compiledipas) for IPA downloads and updates.
+
+# Issues related to prebuilt IPAs
+
+In older builds from me, the WatchKit app was still present and caused some sideloaders to completely fail installing. This has since been fixed, but if you've found an older build from elsewhere then download the latest one available.
+
+![](https://github.com/user-attachments/assets/8867a723-527e-406c-8dfd-c5a902a14b24)
+![](https://github.com/user-attachments/assets/04fbb955-649b-4a79-939e-67caeac6e9b8)
+
+## Sometimes, Ksign, Esign and signing websites can have weird issues.
+With the apps, EeveeSpotify can either
+1. Just refuse to launch
+2. If you are lucky, and it does launch, you will be unable to set app icons and will be stuck with the default Spotify one.
+
+No. 2 can also happen with signing websites.
+### To fix both of these issues, switch to Feather. You can sign and install it from any app or signing website you use <sup>as far as I am aware</sup> and install EeveeSpotify from there.
 
 ## CarPlay, Siri and Dynamic Island/Lockscreen
 
@@ -90,4 +105,3 @@ You may see ads on the home screen. This is a known issue and will not be fixed,
 ## Ads in Podcasts
 
 You may see ads in podcasts. This is Spotify's default behavior, even on Premium accounts. This won't be fixed - just skip the ads manually.
-
