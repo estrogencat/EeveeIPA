@@ -23,8 +23,8 @@ In older builds from me, the WatchKit app was still present and caused some side
 ![](https://github.com/user-attachments/assets/8867a723-527e-406c-8dfd-c5a902a14b24)
 ![](https://github.com/user-attachments/assets/04fbb955-649b-4a79-939e-67caeac6e9b8)
 
-## Sometimes, Ksign, Esign and signing websites can have weird issues.
-With the apps mentioned above, EeveeSpotify can either
+## Sometimes, Ksign, Esign, and signing websites can have weird issues.
+With the apps mentioned above, EeveeSpotify can either:
 1. Just refuse to launch
 2. If you are lucky, and it does launch, you will be unable to set app icons and will be stuck with the default Spotify one.
 
