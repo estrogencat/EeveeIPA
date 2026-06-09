@@ -3,7 +3,7 @@
 
 **Updated and maintained by [jaydenjcpy](https://github.com/jaydenjcpy) & [faroukbmiled](https://github.com/faroukbmiled), prebuilt by [estrogencat](https://github.com/estrogencat)**
 
-**Last updated 07/06/26 (DD/MM/YY)<br>Current TestFlight BETA Version 9.1.58.380 - Current Stable Version 9.1.48**
+**Last updated 09/06/26 (DD/MM/YY)<br>Current TestFlight BETA Version 9.1.58.380 - Current Stable Version 9.1.48**
 
 I created this repository a while back, as I didn't fully trust whoeevee's prebuilt IPAs (was new to the scene).<br />
 Then, I noticed that people were using it for the IPAs so I made a Telegram channel and started posting them there too. Eventually, whoeevee stopped maintaining the [original EeveeSpotify](https://github.com/whoeevee/EeveeSpotifyReborn), so I had to switch to [Meeep1 or Skye's repository](https://github.com/Meeep1/EeveeSpotifyRevivedPublic).<br />
