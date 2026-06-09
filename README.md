@@ -3,7 +3,7 @@
 
 **Updated and maintained by [jaydenjcpy](https://github.com/jaydenjcpy) & [faroukbmiled](https://github.com/faroukbmiled), prebuilt by [estrogencat](https://github.com/estrogencat)**
 
-**Last updated 07/06/26 (DD/MM/YY)<br>Current TestFlight BETA Version 9.1.54.1101 - Current Stable Version 9.1.48**
+**Last updated 07/06/26 (DD/MM/YY)<br>Current TestFlight BETA Version 9.1.58.380 - Current Stable Version 9.1.48**
 
 I created this repository a while back, as I didn't fully trust whoeevee's prebuilt IPAs (was new to the scene).<br />
 Then, I noticed that people were using it for the IPAs so I made a Telegram channel and started posting them there too. Eventually, whoeevee stopped maintaining the [original EeveeSpotify](https://github.com/whoeevee/EeveeSpotifyReborn), so I had to switch to [Meeep1 or Skye's repository](https://github.com/Meeep1/EeveeSpotifyRevivedPublic).<br />
@@ -12,12 +12,20 @@ Then that started to break, as Skye had gone inactive, so I slowed down uploads 
 <br>
 <img src="Images/Sideloadly.png" alt="Placeholder" width="388" height="370">
 
+# Downloads
+
 > [!WARNING]
-> ### **PLEASE READ [COMMON ISSUES](common_issues.md) BEFORE MAKING AN ISSUE ELSEWHERE, IT MIGHT HAVE A FIX FOR YOUR ISSUE(s).**<br />
+> <h1><b>PLEASE READ <a href="common_issues.md">COMMON ISSUES</a> BEFORE MAKING AN ISSUE ELSEWHERE, IT MIGHT HAVE A FIX FOR YOUR ISSUE(s).</b></h1><br />
 > There is a chance you will be ignored, either for a while, or completely, if you report an issue already widely known, so **please** read it. You'll save yourself time doing this.
 
-# Downloads
-Located in [releases](https://github.com/estrogencat/EeveeIPA/releases)
+<details>
+  <summary><h3>Click to expand download links</h3></summary>
+  
+###  Located in [Releases](https://github.com/estrogencat/EeveeIPA/releases) <nobr><sub><sup>or [the Telegram channel](https://t.me/eeveespotify_hazel)</sup></sub></nobr>
+
+</details>
+
+
 
 ## Installation
 
