@@ -110,6 +110,8 @@ The tweak also sets `trackRowsEnabled` to `true`, allowing you to see track rows
 ## Credits
 Thanks for all of the community's support, also, thanks to all the devs who worked along with me to revive this project Go check the other dev's out:
 
+[Jayden](https://github.com/jaydenjcpy) - EeveeSpotifyReincarnated
+
 [Ryuk](https://github.com/faroukbmiled) - True Shuffle, App Icon, Support for Spotify v9.1.46 and above 
 
 [Mod-4](https://github.com/M0d-4) - Custom Lyrics, iPadUI fix 
