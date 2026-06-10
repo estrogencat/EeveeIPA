@@ -35,15 +35,17 @@ For the PATCHED variant, only certificate-based signing tools or TrollStore can 
 
 To open Spotify links in sideloaded app, use [OpenSpotifySafariExtension](https://github.com/BillyCurtis/OpenSpotifySafariExtension). Remember to activate it and allow access in Settings > Safari > Extensions.
 
+<sub><sup>inspired by [notdarkn's readme](https://github.com/NotDarkn/EeveeReincarnatedIPA/blob/Master/README.md)</sub></sup>
+<details>
+  <summary><h3>Lesser needed info, keeping it here just in case</h3></summary>
+  
 ## Where the IPA is obtained from
 1. I download Spotify from either the App Store or the TestFlight app
 2. I use TrollDecrypt on my iPhone X, jailbroken with palera1n, and then upload the IPA to my own website
 3. [Another repository](https://github.com/estrogencat/EeveeSpotifyReincarnated) is used to actually build the IPA, as this repository uses whoeevee's files. The action is modified for my own use, but you can still fork and use it as long as the secrets are filled in for the extra checkboxes **IF** you use them. build-and-release-yourself.yml is used, the deb is grabbed from Jayden's actions.
 
 <sup>Prebuilt used to be tested BEFORE uploading, but as of June 2026 they are tested after aslong as there arent any breaking bugs reported.</sup><br />
-<sup>Regular IPAs are tested using an **iPhone 12** running **iOS `26.2`** with a **Free Developer Account**.</sup><br />
-<sup>Patched IPAs are tested using an **iPhone X** running **iOS `16.7.10`** with **TrollStore**.</sup> <br><br>
-<sub><sup>inspired by [notdarkn's readme](https://github.com/NotDarkn/EeveeReincarnatedIPA/blob/Master/README.md)</sub></sup>
+<sup>Regular & Patched IPAs are tested using an **iPhone 12** running **iOS `26.2`** with a **WSF Basic Certificate**.</sup><br><br />
 
 ## Restrictions
 
@@ -54,9 +56,6 @@ Please refrain from opening issues about the following features, as they are ser
 - Jam (hosting a Spotify Jam and joining it remotely requires Premium; only joining in-person works)
 - AI DJ/Playlist
 - Spotify Connect (When using Spotify Connect, the device will act as a remote control and stream directly to the connected device. This is a server-sided limitation and is beyond the control of EeveeSpotify, so it will behave as if you have a Free subscription while using this feature.)
-
-## [Common Issues](https://github.com/jaydenjcpy/EeveeSpotifyReincarnated/blob/Master/common_issues.md)
-Please check out the hyperlink above before opening an issue
 
 ## Custom Lyrics Support
 
@@ -105,7 +104,7 @@ EeveeSpotify intercepts Spotify requests to load user data, deserializes it, and
 The tweak also sets `trackRowsEnabled` to `true`, allowing you to see track rows and liked tracks on artist pages just like with Premium.
 
 
-
+</details>
 
 ## Credits
 Thanks for all of the community's support, also, thanks to all the devs who worked along with me to revive this project Go check the other dev's out:
