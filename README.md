@@ -120,6 +120,9 @@ Thanks for all of the community's support, also, thanks to all the devs who work
   - [Skye](https://github.com/Meeep1) - EeveeSpotifyRevivedPublic, the base of this project 
   - [whoeevee](https://github.com/whoeevee) - EeveeSpotify & EeveeSpotifyReborn, where all this started
 
+- Icon Credits (attribution required)
+  - [Hight Quality Icons](https://www.flaticon.com/free-icon/spotify_3670145?term=spotify&page=1&position=14&origin=tag&related_id=3670145)
+
 
 
 
