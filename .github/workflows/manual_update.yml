@@ -1,4 +1,5 @@
-name: Manual README version update
+name: Manual README Sync
+
 on:
   workflow_dispatch:
     inputs:
@@ -11,7 +12,7 @@ on:
         type: boolean
         default: true
       update_date:
-        description: "Update the 'Last updated' date to today?"
+        description: "Update the 'Last updated' date to match latest release?"
         type: boolean
         default: true
       scan_limit:
@@ -35,9 +36,19 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # update the date if the toggle is checked
+          # update the date using the absolute latest release!
           if [ "${{ inputs.update_date }}" = "true" ]; then
-            CURRENT_DATE=$(date +"%d/%m/%y")
+            echo "fetching the publish date of the absolute latest release..."
+            
+            # grab the tag of the newest release
+            LATEST_TAG=$(gh release list --limit 1 --json tagName -q '.[0].tagName')
+            
+            # grab its raw publish timestamp (looks like 2026-06-11T13:45:03Z)
+            RAW_DATE=$(gh release view "$LATEST_TAG" --json publishedAt -q '.publishedAt')
+            
+            # convert it to DD/MM/YY
+            CURRENT_DATE=$(date -d "$RAW_DATE" +"%d/%m/%y")
+            
             echo "updating the last updated date to $CURRENT_DATE..."
             sed -i -E 's|\*\*Last updated [`0-9/]*|\*\*Last updated `'"$CURRENT_DATE"'`|g' README.md
           else
