@@ -1,0 +1,110 @@
+name: Manual README version update
+on:
+  workflow_dispatch:
+    inputs:
+      update_testflight:
+        description: "Update the TestFlight (BETA) version?"
+        type: boolean
+        default: true
+      update_stable:
+        description: "Update the Stable version?"
+        type: boolean
+        default: true
+      update_date:
+        description: "Update the 'Last updated' date to today?"
+        type: boolean
+        default: true
+      scan_limit:
+        description: "How many past releases to scan backwards"
+        type: number
+        default: 10
+
+permissions:
+  contents: write
+  pull-requests: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: sync readme data
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # update the date if the toggle is checked
+          if [ "${{ inputs.update_date }}" = "true" ]; then
+            CURRENT_DATE=$(date +"%d/%m/%y")
+            echo "updating the last updated date to $CURRENT_DATE..."
+            sed -i -E 's|\*\*Last updated [`0-9/]*|\*\*Last updated `'"$CURRENT_DATE"'`|g' README.md
+          else
+            echo "date update toggled off, skipping!"
+          fi
+
+          # scan for versions if at least one toggle is checked
+          if [ "${{ inputs.update_testflight }}" = "true" ] || [ "${{ inputs.update_stable }}" = "true" ]; then
+            echo "scanning the last ${{ inputs.scan_limit }} releases..."
+            
+            # fetch a list of the recent releases formatted as TAG|NAME
+            RELEASES=$(gh release list -L ${{ inputs.scan_limit }} --json name,tagName -q '.[] | "\(.tagName)|\(.name)"')
+            
+            # if a toggle is off, we set its flag to true so the loop ignores it!
+            if [ "${{ inputs.update_testflight }}" = "true" ]; then FOUND_BETA=false; else FOUND_BETA=true; echo "skipping testflight scan..."; fi
+            if [ "${{ inputs.update_stable }}" = "true" ]; then FOUND_STABLE=false; else FOUND_STABLE=true; echo "skipping stable scan..."; fi
+
+            # loop through the releases one by one
+            while IFS='|' read -r TAG_NAME REL_NAME; do
+              # stop searching if we already found what we need (or skipped it)
+              if [ "$FOUND_BETA" = true ] && [ "$FOUND_STABLE" = true ]; then
+                echo "done searching! stopping scan."
+                break
+              fi
+
+              # fetch the file names for this specific release
+              ASSET_NAMES=$(gh release view "$TAG_NAME" --json assets --jq '.assets[].name' 2>/dev/null || echo "")
+
+              # extract the version number safely
+              VERSION=$(echo "$REL_NAME" | grep -oE '[0-9]+\.[0-9]+\.[0-9]+(\.[0-9]+)?' | head -n 1)
+              if [ -z "$VERSION" ]; then
+                VERSION=$(echo "$TAG_NAME" | grep -oE '[0-9]+\.[0-9]+\.[0-9]+(\.[0-9]+)?' | head -n 1)
+              fi
+
+              # if we are looking for a beta and this release has the beta file...
+              if [ "$FOUND_BETA" = false ] && echo "$ASSET_NAMES" | grep -q "TestFlight-ES"; then
+                echo "-> found newest testflight: $VERSION ($TAG_NAME)"
+                sed -i -E 's|Current TestFlight BETA Version [`0-9.]*|Current TestFlight BETA Version `'"$VERSION"'`|g' README.md
+                FOUND_BETA=true
+              fi
+
+              # if we are looking for a stable and this release has the stable file...
+              if [ "$FOUND_STABLE" = false ] && echo "$ASSET_NAMES" | grep -q "EeveeSpotify"; then
+                echo "-> found newest stable: $VERSION ($TAG_NAME)"
+                sed -i -E 's|Current Stable Version [`0-9.]*|Current Stable Version `'"$VERSION"'`|g' README.md
+                FOUND_STABLE=true
+              fi
+            done <<< "$RELEASES"
+            
+            # only warn if we were actually looking for them and didn't find them!
+            if [ "$FOUND_BETA" = false ]; then echo "warning: could not find a testflight release in the last ${{ inputs.scan_limit }} releases."; fi
+            if [ "$FOUND_STABLE" = false ]; then echo "warning: could not find a stable release in the last ${{ inputs.scan_limit }} releases."; fi
+          else
+            echo "all version updates toggled off, skipping scan entirely!"
+          fi
+
+      - name: commit and push fixes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          
+          # check if there are actually any changes to commit before pushing
+          if git diff --cached --quiet; then
+            echo "no changes needed in the readme! everything is up to date :3"
+          else
+            git commit -m "docs: manually synced readme versions/date [skip ci]"
+            git push
+            echo "successfully synced and pushed the readme!"
+          fi
