@@ -1,5 +1,5 @@
 # EeveeSpotifyReincarnated
-<img src="Images/placeholder.png" alt="Placeholder" width="64" height="64">
+<img src="Files/placeholder.png" alt="Placeholder" width="64" height="64">
 
 **Updated and maintained by [jaydenjcpy](https://github.com/jaydenjcpy) & [faroukbmiled](https://github.com/faroukbmiled), prebuilt by [estrogencat](https://github.com/estrogencat)**
 
@@ -10,12 +10,12 @@ Then, I noticed that people were using it for the IPAs so I made a Telegram chan
 Then that started to break, as Skye had gone inactive, so I slowed down uploads until [Jayden forked Skye's repository](https://github.com/jaydenjcpy/EeveeSpotifyReincarnated) and fixed all of the issues that kept rising up.<br />
 <br>And yes, the Sideloadly issue is fixed as of 07/06/26.
 <br>
-<img src="Images/Sideloadly.png" alt="Placeholder" width="388" height="370">
+<img src="Files/Sideloadly.png" alt="Placeholder" width="388" height="370">
 
 # Downloads
 
 > [!WARNING]
-> <h1><b>PLEASE READ <a href="common_issues.md">COMMON ISSUES</a> BEFORE MAKING AN ISSUE ELSEWHERE, IT MIGHT HAVE A FIX FOR YOUR ISSUE(s).</b></h1><br />
+> <h1><b>PLEASE READ <a href="Files/common_issues.md">COMMON ISSUES</a> BEFORE MAKING AN ISSUE ELSEWHERE, IT MIGHT HAVE A FIX FOR YOUR ISSUE(s).</b></h1><br />
 > There is a chance you will be ignored, either for a while, or completely, if you report an issue already widely known, so <b>please</b> read it. You'll save yourself time doing this.
 
 <details>
@@ -109,17 +109,17 @@ The tweak also sets `trackRowsEnabled` to `true`, allowing you to see track rows
 ## Credits
 Thanks for all of the community's support, also, thanks to all the devs who worked along with me to revive this project Go check the other dev's out:
 
-[Jayden](https://github.com/jaydenjcpy) - EeveeSpotifyReincarnated
+- EeveeSpotifyReincarnated
 
-[Ryuk](https://github.com/faroukbmiled) - True Shuffle, App Icon, Support for Spotify v9.1.46 and above 
+  - [Jayden](https://github.com/jaydenjcpy) - EeveeSpotifyReincarnated
+  - [Ryuk](https://github.com/faroukbmiled) - True Shuffle, App Icon, Support for Spotify v9.1.46 and above 
+  - [Mod-4](https://github.com/M0d-4) - Custom Lyrics, iPadUI fix 
+  - [estrogencat](https://github.com/estrogencat) - Icon Fixes
 
-[Mod-4](https://github.com/M0d-4) - Custom Lyrics, iPadUI fix 
+- EeveeSpotify (OG)
 
-[estrogencat](https://github.com/estrogencat) - Icon Fixes & this repo (EeveeIPA)
-
-[Skye](https://github.com/Meeep1) - EeveeSpotifyRevivedPublic, the base of this project 
-
-[whoeevee](https://github.com/whoeevee) - EeveeSpotify & EeveeSpotifyReborn, where all this started
+  - [Skye](https://github.com/Meeep1) - EeveeSpotifyRevivedPublic, the base of this project 
+  - [whoeevee](https://github.com/whoeevee) - EeveeSpotify & EeveeSpotifyReborn, where all this started
 
 
 
