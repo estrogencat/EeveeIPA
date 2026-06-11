@@ -41,7 +41,7 @@ To open Spotify links in sideloaded app, use [OpenSpotifySafariExtension](https:
 ## Where the IPA is obtained from
 1. I download Spotify from either the App Store or the TestFlight app
 2. I use TrollDecrypt on my iPhone X, jailbroken with palera1n, and then upload the IPA to my own website
-3. [Another repository](https://github.com/estrogencat/EeveeSpotifyReincarnated) is used to actually build the IPA, as this repository uses whoeevee's files. The action is modified for my own use, but you can still fork and use it as long as the secrets are filled in for the extra checkboxes **IF** you use them. build-and-release-yourself.yml is used, the deb is grabbed from Jayden's actions.
+3. [nother repository is used to actually build the IPA, as this repository uses whoeevee's files. The action is modified for my own use, but you can still fork and use it as long as the secrets are filled in for the extra checkboxes **IF** you use them. build-and-release-yourself.yml is used, the deb is grabbed from Jayden's actions.
 
 <sup>Prebuilt used to be tested BEFORE uploading, but as of June 2026 they are tested after aslong as there arent any breaking bugs reported.</sup><br />
 <sup>Regular & Patched IPAs are tested using an **iPhone 12** running **iOS `26.2`** with a **WSF Basic Certificate**.</sup><br><br />
