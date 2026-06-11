@@ -1,4 +1,4 @@
-name: ping other & update readme
+name: Ping other repo & Update README
 
 on:
   release:
