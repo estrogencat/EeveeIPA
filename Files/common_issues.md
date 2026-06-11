@@ -16,6 +16,14 @@ EeveeSpotify only supports iOS and iPadOS and is not planned to be supported on 
 
 New versions are released when compatible Spotify updates become available. Check the [releases page](https://github.com/estrogencat/EeveeIPA/releases) for the latest builds, or join the [Telegram channel](https://t.me/eeveespotify_hazel) for IPA downloads and updates.
 
+## CarPlay, Siri and Dynamic Island/Lockscreen
+
+To use CarPlay, you need to either install the tweak on a jailbroken device, use TrollStore, or have a paid certificate with a CarPlay entitlement.
+
+To use Siri, you need to either install the tweak on a jailbroken device, use TrollStore, or have a paid certificate with a Siri entitlement.
+
+If you're using a paid certificate, to navigate to a song from the lock screen, control center, or Dynamic Island, and to use Spatial Audio or Siri, change the app and bundle identifiers to match your provisioning profile.
+
 # Issues related to prebuilt IPAs
 
 In older builds from me, the WatchKit app was still present and caused some sideloaders to completely fail installing. This has since been fixed, but if you've found an older build from elsewhere then download the latest one available.
@@ -30,14 +38,6 @@ With the apps mentioned above, EeveeSpotify can either:
 
 No. 2 can also happen with signing websites.
 ### To fix both of these issues, switch to Feather. You can sign and install it from any app or signing website you use <sup>as far as I am aware</sup> and install EeveeSpotify from there.
-
-## CarPlay, Siri and Dynamic Island/Lockscreen
-
-To use CarPlay, you need to either install the tweak on a jailbroken device, use TrollStore, or have a paid certificate with a CarPlay entitlement.
-
-To use Siri, you need to either install the tweak on a jailbroken device, use TrollStore, or have a paid certificate with a Siri entitlement.
-
-If you're using a paid certificate, to navigate to a song from the lock screen, control center, or Dynamic Island, and to use Spatial Audio or Siri, change the app and bundle identifiers to match your provisioning profile.
 
 # Feature Requests
 
