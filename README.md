@@ -1,5 +1,4 @@
-# EeveeSpotifyReincarnated
-<img src="Files/placeholder.png" alt="Placeholder" width="64" height="64">
+# EeveeSpotifyReincarnated <img src="Files/placeholder.png" alt="IItsSocks dead sticker, goober sticker pack" style="height: 1em; vertical-align: middle;">
 
 **Updated and maintained by [jaydenjcpy](https://github.com/jaydenjcpy) & [faroukbmiled](https://github.com/faroukbmiled), prebuilt by [estrogencat](https://github.com/estrogencat)**
 
