@@ -106,7 +106,7 @@ The tweak also sets `trackRowsEnabled` to `true`, allowing you to see track rows
 </details>
 
 ## Credits
-Thanks for all of the community's support, also, thanks to all the devs who worked along with me to revive this project Go check the other dev's out:
+Thanks for all of the community's support, also, thanks to all the devs who worked along with me to revive this project. Go check the other dev's out:
 
 - EeveeSpotifyReincarnated
 
