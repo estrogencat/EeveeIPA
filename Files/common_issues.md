@@ -14,7 +14,7 @@ For non-jailbroken devices, use the patched IPA files available in the releases.
 
 EeveeSpotify only supports iOS and iPadOS and is not planned to be supported on other platforms. You can sideload the iPadOS version on an Apple Silicon Mac, though.
 
-New versions are released when compatible Spotify updates become available. Check the [releases page](https://github.com/jaydenjcpy/EeveeSpotifyReincarnated/releases) for the latest builds, or join the [Telegram channel](https://t.me/compiledipas) for IPA downloads and updates.
+New versions are released when compatible Spotify updates become available. Check the [releases page](https://github.com/estrogencat/EeveeIPA/releases) for the latest builds, or join the [Telegram channel](https://t.me/eeveespotify_hazel) for IPA downloads and updates.
 
 # Issues related to prebuilt IPAs
 
