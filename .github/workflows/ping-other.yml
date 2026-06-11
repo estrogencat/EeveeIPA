@@ -24,7 +24,7 @@ jobs:
           RELEASE_NAME="${{ github.event.release.name }}"
           CURRENT_DATE=$(date +"%d/%m/%y")
           
-          # strictly extract the version number (e.g. 9.1.48 or 9.1.58.1126) no matter how the title is formatted!
+          # strictly extract the version number (e.g. 9.1.48 or 9.1.58.1126)
           VERSION=$(echo "$RELEASE_NAME" | grep -oE '[0-9]+\.[0-9]+\.[0-9]+(\.[0-9]+)?' | head -n 1)
           
           echo "extracted version $VERSION from release name."
@@ -33,28 +33,26 @@ jobs:
           # fetch the list of files attached to this exact release
           ASSET_NAMES=$(gh release view "${{ github.event.release.tag_name }}" --json assets --jq '.assets[].name')
           
-          # check the file names for ur specific prefixes
-          # using | as the sed delimiter now so slashes in the text dont break everything!
+          # using single quotes around the sed command to protect the backticks from bash execution!
           if echo "$ASSET_NAMES" | grep -q "TestFlight-ES"; then
              echo "found TestFlight-ES in the file names! updating the beta text..."
-             sed -i -E "s|Current TestFlight BETA Version \`[0-9.]+\`|Current TestFlight BETA Version \`$VERSION\`|g" README.md
+             sed -i -E 's|Current TestFlight BETA Version `[0-9.]*`|Current TestFlight BETA Version `'"$VERSION"'`|g' README.md
           elif echo "$ASSET_NAMES" | grep -q "EeveeSpotify"; then
              echo "found regular EeveeSpotify in the file names! updating the stable text..."
-             sed -i -E "s|Current Stable Version [0-9.]+|Current Stable Version $VERSION|g" README.md
+             sed -i -E 's|Current Stable Version `[0-9.]*`|Current Stable Version `'"$VERSION"'`|g' README.md
           else
              echo "couldn't find a matching prefix in the files! skipping version update just to be safe..."
           fi
           
-          # always update the date globally
+          # protect the date backticks the exact same way
           echo "updating the last updated date to $CURRENT_DATE"
-          sed -i -E "s|\*\*Last updated \`[0-9]{2}/[0-9]{2}/[0-9]{2}\`|\*\*Last updated \`$CURRENT_DATE\`|g" README.md
+          sed -i -E 's|\*\*Last updated `[0-9]{2}/[0-9]{2}/[0-9]{2}`|\*\*Last updated `'"$CURRENT_DATE"'`|g' README.md
 
       - name: commit and push changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md
-          # use skip ci so it doesnt trigger other stuff randomly
           git diff --cached --quiet || git commit -m "docs: update readme to version $VERSION [skip ci]"
           git push
 
