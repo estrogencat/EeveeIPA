@@ -15,7 +15,7 @@ Then that started to break, as Skye had gone inactive, so I slowed down uploads 
 
 > [!WARNING]
 > <h1><b>PLEASE READ <a href="Files/common_issues.md">COMMON ISSUES</a> BEFORE MAKING AN ISSUE ELSEWHERE, IT MIGHT HAVE A FIX FOR YOUR ISSUE(s).</b></h1><br />
-> There is a chance you will be ignored, either for a while, or completely, if you report an issue already widely known, so <b>please</b> read it. You'll save yourself time doing this.
+> There is a chance you will be ignored, either for a while, or completely, if you report an issue already widely known so <b>please</b> read it. You'll save yourself time doing this.
 
 <details>
   <summary><h3>Click to expand download links</h3></summary>
